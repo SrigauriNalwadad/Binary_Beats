@@ -1,0 +1,35 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(1, 66, 122, 0.7), rgba(1, 179, 239, 0.7)), url('./Images/about_us.png') no-repeat center center/cover;
+}
+
+.about-section img {
+    border-radius: 10px;
+}
+
+.team-section img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer a {
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #01b3ef;
+}
+
+.img-fluid {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}

@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="store.css">
+    <title>Book Store - Binary Beats</title>
+    <link rel="icon" type="image/x-icon" href="./Images/Binary_Beats_logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+            <div class="container-fluid">
+                <img src="./Images/Binary_Beats_logo.png" alt="Binary Beats logo" class="main-logo">
+                <a class="navbar-brand" href="#">Binary Beats</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="store-home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <div class="ms-2">
+                        <button class="btn btn-outline-light" type="button">
+                            <i class="bi bi-cart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div id="grad1">
+        <main>
+            <!-- Carousel -->
+            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Images/Slide1.jpg" class="d-block w-100" alt="First slide">
+                        <div class="container">
+                            <div class="carousel-caption text-start">
+                                <h1>Exiting Offers</h1>
+                                <p>Limited Time Offer! Grab Your Favorites Now!</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Shop Now</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Images/Slide2.jpeg" class="d-block w-100" alt="Second slide">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Bestseller DSA Books</h1>
+                                <p>Buy bestseller DSA books from us now!</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Explore Now</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Images/Slide3.jpg" class="d-block w-100" alt="Third slide">
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>10% OFF</h1>
+                                <p>Get 10% OFF on your first order!</p>
+                                <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+            <!-- Books Section -->
+            <section id="books" class="mt-5">
+                <div class="container">
+                    <p class="popular-books text-center">DSA BOOKS</p>
+                    <div class="row justify-content-center">
+                        <!-- Book 1 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">Veiw details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 2 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">View details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 3 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">Veiw details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 4 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">Veiw details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 5 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">View details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 6 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">Veiw details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 7 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">Veiw details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 8 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">View details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Book 9 -->
+                        <div class="col-md-4 mb-4">
+                            <div class="card bg-dark text-light">
+                                <img src="" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Book title</h5>
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item bg-dark text-light">Author</li>
+                                    <li class="list-group-item bg-dark text-light">
+                                        Price: <span class="text-decoration-line-through">&#8377;Actual Price</span> <span class="text-success">&#8377;Discounted Price</span>
+                                    </li>
+                                </ul>
+                                <div class="card-body">
+                                    <a href="./book-details.html" class="card-link text-light">Veiw details</a>
+                                    <a href="#" class="btn btn-primary">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                                            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9z"/>
+                                            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                                          </svg>  Add to Cart
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!--Footer-->
+    <footer class="bg-dark text-light">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="./index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                        <img src="./Images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo">
+                    </a>
+                    <h5>Binary Beats Book Store</h5>
+                    <p>Binary Beats is your ultimate destination for all DSA books. From bestsellers to academic resources, we have it all!</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2024 Binary Beats Book Store. All Rights Reserved.</p>
+                    <p>
+                        <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybBogGzYzI3c1kzrzTGoF1rN5PeoFvfPygRocK8V2Iw5Q5ioB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-YuUyhMn9OB8WbK5DgEwQK4OG1yDItL4T+oiHqDxFfOtkF5zWkc4Cx6Z/5x9PpZuf" crossorigin="anonymous"></script>
+</body>
+</html>

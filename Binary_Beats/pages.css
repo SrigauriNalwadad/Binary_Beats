@@ -1,0 +1,17 @@
+#main-content{
+    color: #fff;
+    background-color: #343a40;
+    margin-bottom: 20px;
+}
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+}
+
+.gradient-background{
+    height: 100%;
+    background-color: #000000; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#000000,  #014274, #0D556D, #2C778F, #000000);
+}

@@ -26,37 +26,94 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarCollapse">
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                  <li class="nav-item">
+                  <li class="nav-item dropdown">
                     <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                       DSA
                     </button>
                     <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">DSA For Beginners</a></li>
-                      <li><a class="dropdown-item" href="#">Data Strustures</a></li>
-                      <li><a class="dropdown-item" href="#">Algorithms</a></li>
+                      <li><a class="dropdown-item" href="../DSA-for-Beginners.html">DSA For Beginners</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle">Data Structures</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="./Array.html">Arrays</a></li>
+                          <li><a class="dropdown-item" href="./String.html">Strings</a></li>
+                          <li><a class="dropdown-item" href="./Stack.html">Stack</a></li>
+                          <li><a class="dropdown-item" href="./Queue.html">Queue</a></li>
+                          <li><a class="dropdown-item" href="./Linked-List.html">Linked List</a></li>
+                          <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="./Tree.html">Tree</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                              <li><a class="dropdown-item" href="#">Binary Tree</a></li>
+                              <li><a class="dropdown-item" href="#">Binary Search Tree</a></li>
+                              <li><a class="dropdown-item" href="#">AVL Tree</a></li>
+                              <li><a class="dropdown-item" href="#">Red Black Tree</a></li>
+                            </ul>
+                          </li>
+                          <li><a class="dropdown-item" href="./Graph.html">Graph</a></li>
+                          <li><a class="dropdown-item" href="./Heap.html">Heap</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle">Algorithms</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="../Algorithms/Analysis-of-Algorithms.html">Analysis of Algorithms</a></li>
+                          <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="../Algorithms/Searching-Algorithms.html">Searching Algorithms</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                              <li><a class="dropdown-item" href="#"></a>Linear Search</li>
+                              <li><a class="dropdown-item" href="#"></a>Binary Search</li>
+                            </ul>
+                          <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="../Algorithms/Sorting-Algorithms.html">Sorting Algorithms</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                              <li><a class="dropdown-item" href="#"></a>Selection Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Bubble Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Insertion Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Merge Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Quick Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Heap Sort</li>
+                            </ul>
+                          </li>
+                          <li><a class="dropdown-item" href="../Algorithms/Greedy-Algorithms.html">Greedy Algorithms</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Dynamic-Programming.html">Dynamic Programming</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Graph-Algorithms.html">Graph Algorithms</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Recurision.html">Recursion</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Backtracking.html">Backtracking</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Branch-and-Bound.html">Branch and Bound</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Divide-and-Conqure.html">Divide and Conquer</a></li>
+                        </ul>
+                      </li>
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="../Binary-Beats-Store-main/">Store</a>
+                    <a class="nav-link" href="../Binary-Beats-Store-main/store-home.html">Store</a>
                   </li>
                   <li class="nav-item dropdown">
-                    <!-- Dropdown Element -->
                     <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        Pratice
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-dark">
-                        <li><a class="dropdown-item" href="#">Practice Prblems Difficulty Wise</a></li>
-                        <li><a class="dropdown-item" href="#">Quiz on DSA</a></li>
-                        <li><a class="dropdown-item" href="#">Curated DSA Lists</a></li>
-                      </ul>
+                      Practice
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">All DSA Problems</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="#">Easy</a></li>
+                          <li><a class="dropdown-item" href="#">Medium</a></li>
+                          <li><a class="dropdown-item" href="#">Hard</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Quiz on DSA</a></li>
+                      <li><a class="dropdown-item" href="#">Curated DSA Lists</a></li>
+                    </ul>
                   </li>
                 </ul>
+              </div>
                 <form class="d-flex" role="search">
                   <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                   <button class="btn btn-outline-success" type="submit">Search</button>
                 </form>
                 <div class="ms-2">
-                  <button class="btn btn-outline-success"  type="button" onclick="">
+                  <button class="btn btn-outline-success" type="sign-in"  onclick="document.location='./Sign-in.html'">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                       <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
                     </svg>
@@ -66,6 +123,7 @@
             </div>
           </nav>
         </section>
+  
 
   <!-- Main Content -->
   <section id="main-content">
@@ -156,31 +214,28 @@
               <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="./String.html" class="nav-link p-0 text-body-secondary">Strings</a></li>
                 <li class="nav-item mb-2"><a href="./Array.html" class="nav-link p-0 text-body-secondary">Arrays</a></li>
-                <li class="nav-item mb-2"><a href="./Matrix.html" class="nav-link p-0 text-body-secondary">Matrix</a></li>
                 <li class="nav-item mb-2"><a href="./Stack.html" class="nav-link p-0 text-body-secondary">Stack</a></li>
                 <li class="nav-item mb-2"><a href="./Queue.html" class="nav-link p-0 text-body-secondary">Queue</a></li>
                 <li class="nav-item mb-2"><a href="./Linked-List.html" class="nav-link p-0 text-body-secondary">Linked List</a></li>
                 <li class="nav-item mb-2"><a href="./Tree.html" class="nav-link p-0 text-body-secondary">Tree</a></li>
                 <li class="nav-item mb-2"><a href="./Graph.html" class="nav-link p-0 text-body-secondary">Graph</a></li>
                 <li class="nav-item mb-2"><a href="./Heap.html" class="nav-link p-0 text-body-secondary">Heap</a></li>
-                <li class="nav-item mb-2"><a href="./Hashing.html" class="nav-link p-0 text-body-secondary">Hashing</a></li>
               </ul>
             </div>
         
             <div class="col mb-3">
               <h5>Algorithms</h5>
               <ul class="nav flex-column">
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Analysis of Algorithms</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Searching Algorithms</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sorting Algorithms</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Greedy Algorithms</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Dynamic Programming</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Graph Algorithms</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pattern Searching</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Recursion</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Backtracking</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Divide and Conquer</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Branch and Bound</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Analysis-of-Algorithms.html" class="nav-link p-0 text-body-secondary">Analysis of Algorithms</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Searching-Algorithms.html" class="nav-link p-0 text-body-secondary">Searching Algorithms</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Sorting-Algorithms.html" class="nav-link p-0 text-body-secondary">Sorting Algorithms</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Greedy-Algorithms.html" class="nav-link p-0 text-body-secondary">Greedy Algorithms</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Dynamic-Programming.html" class="nav-link p-0 text-body-secondary">Dynamic Programming</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Graph-Algorithms.html" class="nav-link p-0 text-body-secondary">Graph Algorithms</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Recurision.html" class="nav-link p-0 text-body-secondary">Recursion</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Backtracking.html" class="nav-link p-0 text-body-secondary">Backtracking</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Divide-and-Conqure.html" class="nav-link p-0 text-body-secondary">Divide and Conquer</a></li>
+                <li class="nav-item mb-2"><a href="../Algorithms/Branch-and-Bound.html" class="nav-link p-0 text-body-secondary">Branch and Bound</a></li>
               </ul>
             </div>
         
@@ -188,8 +243,6 @@
               <h5>Store</h5>
               <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/store-home.html" class="nav-link p-0 text-body-secondary">Store</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-                <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
                 <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
                 <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/about.html" class="nav-link p-0 text-body-secondary">About</a></li>
               </ul>

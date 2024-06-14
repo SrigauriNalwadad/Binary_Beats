@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stack</title>
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../pages.css">
+</head>
+<body>
+    
+       <!-- Main Sesction -->
+       <section  id="main" class="gradient-background">
+
+        <!-- Navbar -->
+        <section id="nav">
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+              <img src="../images/Binary_Beats_logo.png" alt="Binary_Beats_logo" class="main-logo">
+              <a class="navbar-brand" href="../index.html">Binary Beats</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item dropdown">
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      DSA
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="../DSA-for-Beginners.html">DSA For Beginners</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle">Data Structures</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="./Array.html">Arrays</a></li>
+                          <li><a class="dropdown-item" href="./String.html">Strings</a></li>
+                          <li><a class="dropdown-item" href="./Stack.html">Stack</a></li>
+                          <li><a class="dropdown-item" href="./Queue.html">Queue</a></li>
+                          <li><a class="dropdown-item" href="./Linked-List.html">Linked List</a></li>
+                          <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="./Tree.html">Tree</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                              <li><a class="dropdown-item" href="#">Binary Tree</a></li>
+                              <li><a class="dropdown-item" href="#">Binary Search Tree</a></li>
+                              <li><a class="dropdown-item" href="#">AVL Tree</a></li>
+                              <li><a class="dropdown-item" href="#">Red Black Tree</a></li>
+                            </ul>
+                          </li>
+                          <li><a class="dropdown-item" href="./Graph.html">Graph</a></li>
+                          <li><a class="dropdown-item" href="./Heap.html">Heap</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle">Algorithms</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="../Algorithms/Analysis-of-Algorithms.html">Analysis of Algorithms</a></li>
+                          <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="../Algorithms/Searching-Algorithms.html">Searching Algorithms</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                              <li><a class="dropdown-item" href="#"></a>Linear Search</li>
+                              <li><a class="dropdown-item" href="#"></a>Binary Search</li>
+                            </ul>
+                          <li class="dropdown-submenu">
+                            <a class="dropdown-item dropdown-toggle" href="../Algorithms/Sorting-Algorithms.html">Sorting Algorithms</a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                              <li><a class="dropdown-item" href="#"></a>Selection Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Bubble Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Insertion Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Merge Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Quick Sort</li>
+                              <li><a class="dropdown-item" href="#"></a>Heap Sort</li>
+                            </ul>
+                          </li>
+                          <li><a class="dropdown-item" href="../Algorithms/Greedy-Algorithms.html">Greedy Algorithms</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Dynamic-Programming.html">Dynamic Programming</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Graph-Algorithms.html">Graph Algorithms</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Recurision.html">Recursion</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Backtracking.html">Backtracking</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Branch-and-Bound.html">Branch and Bound</a></li>
+                          <li><a class="dropdown-item" href="../Algorithms/Divide-and-Conqure.html">Divide and Conquer</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../Binary-Beats-Store-main/store-home.html">Store</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Practice
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="#">All DSA Problems</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="#">Easy</a></li>
+                          <li><a class="dropdown-item" href="#">Medium</a></li>
+                          <li><a class="dropdown-item" href="#">Hard</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="#">Quiz on DSA</a></li>
+                      <li><a class="dropdown-item" href="#">Curated DSA Lists</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="ms-2">
+                  <button class="btn btn-outline-success" type="sign-in"  onclick="document.location='./Sign-in.html'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                    </svg>
+                  </button>
+              </div>
+              </div>
+            </div>
+          </nav>
+        </section>
+  
+  
+        <!-- Footer -->
+        <sectionc id="footer">
+          <div class="dark-background">
+            <footer class="row-footer row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+              <div class="col mb-3">
+                <a href="../index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                  <img src="../images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo">
+                </a>
+                <p class="text-body-secondary">© 2024</p>
+              </div>
+          
+              <div class="col mb-3">
+          
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Data Strutures</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="./String.html" class="nav-link p-0 text-body-secondary">Strings</a></li>
+                  <li class="nav-item mb-2"><a href="./Array.html" class="nav-link p-0 text-body-secondary">Arrays</a></li>
+                  <li class="nav-item mb-2"><a href="./Stack.html" class="nav-link p-0 text-body-secondary">Stack</a></li>
+                  <li class="nav-item mb-2"><a href="./Queue.html" class="nav-link p-0 text-body-secondary">Queue</a></li>
+                  <li class="nav-item mb-2"><a href="./Linked-List.html" class="nav-link p-0 text-body-secondary">Linked List</a></li>
+                  <li class="nav-item mb-2"><a href="./Tree.html" class="nav-link p-0 text-body-secondary">Tree</a></li>
+                  <li class="nav-item mb-2"><a href="./Graph.html" class="nav-link p-0 text-body-secondary">Graph</a></li>
+                  <li class="nav-item mb-2"><a href="./Heap.html" class="nav-link p-0 text-body-secondary">Heap</a></li>
+                </ul>
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Algorithms</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="../Algorithms/Analysis-of-Algorithms.html" class="nav-link p-0 text-body-secondary">Analysis of Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Searching-Algorithms.html" class="nav-link p-0 text-body-secondary">Searching Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Sorting-Algorithms.html" class="nav-link p-0 text-body-secondary">Sorting Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Greedy-Algorithms.html" class="nav-link p-0 text-body-secondary">Greedy Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Dynamic-Programming.html" class="nav-link p-0 text-body-secondary">Dynamic Programming</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Graph-Algorithms.html" class="nav-link p-0 text-body-secondary">Graph Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Recurision.html" class="nav-link p-0 text-body-secondary">Recursion</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Backtracking.html" class="nav-link p-0 text-body-secondary">Backtracking</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Divide-and-Conqure.html" class="nav-link p-0 text-body-secondary">Divide and Conquer</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Branch-and-Bound.html" class="nav-link p-0 text-body-secondary">Branch and Bound</a></li>
+                </ul>
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Store</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/store-home.html" class="nav-link p-0 text-body-secondary">Store</a></li>
+                  <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+                  <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+              </div>
+            </footer>
+          </div>
+        </section>
+      </section>
+  
+      <!-- Bootsrap JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>  

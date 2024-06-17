@@ -1,4 +1,7 @@
+/* CSS for home page */
+
 body{
+  background-color: #343a40;
   color: #fff;
 }
 
@@ -110,4 +113,26 @@ body{
 
 .dark-background{
   background-color: #212529;
+}
+
+.modal-header{
+  background-color: #212529;
+  color: #fff;
+}
+
+#signupModal .modal-body {
+  background-color: #212529;
+  color: #fff;
+}
+#signupModal .form-control {
+  background-color: #343a40;
+  color: #fff;
+}
+#signupModal .form-select {
+  background-color: #343a40;
+  color: #fff;
+}
+
+#signupModal .invalid-feedback {
+  color: #01b3ef;
 }

@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice - Quiz on DSA</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="./practice.css">
+</head>
+<body>
+    <section id="main">
+        <section id="nav">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <img src="../images/Binary_Beats_logo.png" alt="Binary_Beats_logo" class="main-logo">
+                    <a class="navbar-brand" href="../index.html">Binary Beats</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                            <li class="nav-item dropdown">
+                                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    DSA
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="../DSA-for-Beginners.html">DSA For Beginners</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle">Data Structures</a>
+                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                            <li><a class="dropdown-item" href="../Data Structures/Array.html">Arrays</a></li>
+                                            <li><a class="dropdown-item" href="../Data Structures/String.html">Strings</a></li>
+                                            <li><a class="dropdown-item" href="../Data Structures/Stack.html">Stack</a></li>
+                                            <li><a class="dropdown-item" href="../Data Structures/Queue.html">Queue</a></li>
+                                            <li><a class="dropdown-item" href="../Data Structures/Linked-List.html">Linked List</a></li>
+                                            <li class="dropdown-submenu">
+                                                <a class="dropdown-item dropdown-toggle" href="../Data Structures/Tree.html">Tree</a>
+                                                <ul class="dropdown-menu dropdown-menu-dark">
+                                                    <li><a class="dropdown-item" href="#">Binary Tree</a></li>
+                                                    <li><a class="dropdown-item" href="#">Binary Search Tree</a></li>
+                                                    <li><a class="dropdown-item" href="#">AVL Tree</a></li>
+                                                    <li><a class="dropdown-item" href="#">Red Black Tree</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="../Data Structures/Graph.html">Graph</a></li>
+                                            <li><a class="dropdown-item" href="../Data Structures/Heap.html">Heap</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle">Algorithms</a>
+                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                            <li><a class="dropdown-item"
+                                                    href="../Algorithms/Analysis-of-Algorithms.html">Analysis of Algorithms</a></li>
+                                            <li class="dropdown-submenu">
+                                                <a class="dropdown-item dropdown-toggle"
+                                                    href="../Algorithms/Searching-Algorithms.html">Searching Algorithms</a>
+                                                <ul class="dropdown-menu dropdown-menu-dark">
+                                                    <li><a class="dropdown-item" href="#">Linear Search</a></li>
+                                                    <li><a class="dropdown-item" href="#">Binary Search</a></li>
+                                                </ul>
+                                            </li>
+                                            <li class="dropdown-submenu">
+                                                <a class="dropdown-item dropdown-toggle"
+                                                    href="../Algorithms/Sorting-Algorithms.html">Sorting Algorithms</a>
+                                                <ul class="dropdown-menu dropdown-menu-dark">
+                                                    <li><a class="dropdown-item" href="#">Selection Sort</a></li>
+                                                    <li><a class="dropdown-item" href="#">Bubble Sort</a></li>
+                                                    <li><a class="dropdown-item" href="#">Insertion Sort</a></li>
+                                                    <li><a class="dropdown-item" href="#">Merge Sort</a></li>
+                                                    <li><a class="dropdown-item" href="#">Quick Sort</a></li>
+                                                    <li><a class="dropdown-item" href="#">Heap Sort</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a class="dropdown-item" href="../Algorithms/Greedy-Algorithms.html">Greedy
+                                                    Algorithms</a></li>
+                                            <li><a class="dropdown-item" href="../Algorithms/Dynamic-Programming.html">Dynamic
+                                                    Programming</a></li>
+                                            <li><a class="dropdown-item" href="../Algorithms/Graph-Algorithms.html">Graph
+                                                    Algorithms</a></li>
+                                            <li><a class="dropdown-item" href="../Algorithms/Recursion.html">Recursion</a></li>
+                                            <li><a class="dropdown-item" href="../Algorithms/Backtracking.html">Backtracking</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="../Algorithms/Branch-and-Bound.html">Branch and
+                                                    Bound</a></li>
+                                            <li><a class="dropdown-item" href="../Algorithms/Divide-and-Conqure.html">Divide and
+                                                    Conquer</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../Binary-Beats-Store-main/store-home.html">Store</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Practice
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a class="dropdown-item" href="./All-DSA-Problems.html">All DSA Problems</a></li>
+                                    <li class="dropdown-submenu">
+                                        <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
+                                        <ul class="dropdown-menu dropdown-menu-dark">
+                                            <li><a class="dropdown-item" href="#">Easy</a></li>
+                                            <li><a class="dropdown-item" href="#">Medium</a></li>
+                                            <li><a class="dropdown-item" href="#">Hard</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a class="dropdown-item" href="./Quiz.html">Quiz on DSA</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                    <div class="ms-2">
+                        <button class="btn btn-outline-success" type="sign-in" onclick="document.location='./Sign-in.html'">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                class="bi bi-person-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <!-- Filter Section -->
+        <div class="sidebar">
+            <h2>Filters</h2>
+            <button class="btn btn-outline-success" onclick="clearFilters()">Clear Filters</button>
+            <div class="section">
+                <h3>DIFFICULTY</h3>
+                <div class="checkbox"><input type="checkbox" id="easy"><label for="easy">Easy</label></div>
+                <div class="checkbox"><input type="checkbox" id="medium"><label for="medium">Medium</label></div>
+                <div class="checkbox"><input type="checkbox" id="hard"><label for="hard">Hard</label></div>
+            </div>
+
+            <div class="section">
+                <h3>TOPICS</h3>
+                <div class="checkbox"><input type="checkbox" id="arrays"><label for="arrays">Arrays</label></div>
+                <div class="checkbox"><input type="checkbox" id="strings"><label for="strings">Strings</label></div>
+                <div class="checkbox"><input type="checkbox" id="stack"><label for="stack">Stack</label></div>
+                <div class="checkbox"><input type="checkbox" id="queue"><label for="queue">Queue</label></div>
+                <div class="checkbox"><input type="checkbox" id="linked-list"><label for="linked-list">Linked List</label></div>
+                <div class="checkbox"><input type="checkbox" id="trees"><label for="trees">Trees</label></div>
+                <div class="checkbox"><input type="checkbox" id="graph"><label for="graph">Graph</label></div>
+                <div class="checkbox"><input type="checkbox" id="heap"><label for="heap">Heap</label></div>
+                <div class="checkbox"><input type="checkbox" id="recursion"><label for="recursion">Recursion</label></div>
+                <div class="checkbox"><input type="checkbox" id="dynamic-programming"><label for="dynamic-programming">Dynamic Programming</label></div>
+                <div class="checkbox"><input type="checkbox" id="backtracking"><label for="backtracking">Backtracking</label></div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Your main content goes here -->
+            <h1>Welcome to Binary Beats - One Stop for DSA</h1>
+            <p>pleased with your situation and not hoping for change or improvement:
+              content with He seems fairly content with (his) life.
+              [ + to infinitive ] They're content to socialize with a very small circle of people.
+               Fewer examples
+              I was just content to see my daughter in such a stable relationship but a grandchild, that really was the icing on the cake.
+              I'd be content with a modest income.
+              He's quite content living on his own.
+              I'm content to sit at the back.
+              They were content with second hand clothes.
+               SMART Vocabulary: related words and phrases
+              Related word
+              contentment
+              Idiom
+              not content with something/doing something
+               
+              content
+              verb [ T ]
+              UK  /kənˈtent/ US  /kənˈtent/
+               
+              to make someone feel happy and satisfied:
+              You're quite easily contented, aren't you?
+              My explanation seemed to content him.
+               SMART Vocabulary: related words and phrases
+              Phrasal verb
+              content yourself with something
+               
+              content
+              noun [ U ]   literary
+              UK  /kənˈtent/ US/kənˈtent/
+              content noun [U] (HAPPINESS)
+               
+              a happy and satisfied feeling:
+              Once had he resolved what to do, there followed almost immediately a feeling of content.
+              Synonym
+              contentment
+              See also
+              to your heart's content
+               More examples
+               SMART Vocabulary: related words and phrases
+              content
+              noun
+              UK  /ˈkɒn.tent/ US  /ˈkɑːn.tent/
+              content noun (INFORMATION)
+               contents [ plural ]
+               
+              B2
+              the articles or parts contained in a magazine or book, with the number of the page they begin on:
+              table of contents Scroll down the table of (= list of) contents to find areas that interest you.
+              See more
+               
+              B2 [ S or U ]
+              the ideas that are contained in a piece of writing, a speech, or a film:
+              It's a very stylish and beautiful film, but it lacks content.
+              We've discussed the unusual form of the book - now, what about the content?
+               
+              [ U ]
+              information, images, video, etc. that are included as part of something such as a website:
+              All this cool content is available to subscribers only.
+              He used a work account to download and share inappropriate content.
+              I follow her on social media because I love her content.
+               More examples
+               SMART Vocabulary: related words and phrases
+              content noun (AMOUNT)
+               contents [ plural ]
+               
+              B1
+              everything that is contained within something:
+              contents of The contents of his bag spilled all over the floor.
+              See more
+               
+              C2 [ S ]
+              the amount of a particular substance contained in something:
+              high fat content Chocolate has a high fat content.
+               More examples
+               SMART Vocabulary: related words and phrases
+              Grammar
+              Content or contents?
+              Content and contents are nouns. …
+              (Definition of content from the Cambridge Advanced Learner's Dictionary & Thesaurus © Cambridge University Press)
+              content | AMERICAN DICTIONARY
+              content
+              adjective
+              US  /kənˈtent/
+              Add to word list 
+              pleased with your situation and not needing or desiring it to be better:
+              Skating this year with a sprained ankle, he said he was content just to make the Olympic team.
+              contented
+              adjective US  /kənˈten·tɪd/
+              Our dog leads a happy and contented life.
+              contentment
+              noun [ U ] US  /kənˈtent·mənt/ (also content)
+              Her greatest happiness and contentment was found in being a devoted wife, mother, and grandmother.
+               
+              content
+              verb [ T ]
+              US  /kənˈtent/
+               
+              to make yourself accept something as satisfactory, although it could be better:
+              We had to content ourselves with watching the sea lions from the shore.
+              content
+              noun [ U ]
+              US  /ˈkɑn·tent/
+              content noun [U] (SUBJECT)
+               
+              the subject or ideas contained in something written, said, created, or represented:
+              academic/educational content
+              It’s easy to update the content of the Web site.
+               
+              ART
+              Content is also the things represented or suggested in something written or created as art, or the ideas it communicates.
+              content noun [U] (AMOUNT)
+               
+              the amount of a particular substance contained in something:
+              This type of milk has a lower fat content.
+              (Definition of content from the Cambridge Academic Content Dictionary © Cambridge University Press)
+              content | BUSINESS ENGLISH
+              content
+              noun
+              UK  /ˈkɒntent/ US 
+               contents [ plural ]
+              Add to word list 
+              everything that is contained within something:
+              A spokesman has refused to disclose the contents of the shipment.
+              Her parents' home contents insurance policy covered her for the loss of the phone.
+               
+              [ U ]
+              (also contents [ plural ])
+              the ideas that are contained in something:
+              New guidelines cover the content of advertising for children.
+              Our description of the contents of the report wpleased with your situation and not hoping for change or improvement:
+              content with He seems fairly content with (his) life.
+              [ + to infinitive ] They're content to socialize with a very small circle of people.
+               Fewer examples
+              I was just content to see my daughter in such a stable relationship but a grandchild, that really was the icing on the cake.
+              I'd be content with a modest income.
+              He's quite content living on his own.
+              I'm content to sit at the back.
+              They were content with second hand clothes.
+               SMART Vocabulary: related words and phrases
+              Related word
+              contentment
+              Idiom
+              not content with something/doing something
+               
+              content
+              verb [ T ]
+              UK  /kənˈtent/ US  /kənˈtent/
+               
+              to make someone feel happy and satisfied:
+              You're quite easily contented, aren't you?
+              My explanation seemed to content him.
+               SMART Vocabulary: related words and phrases
+              Phrasal verb
+              content yourself with something
+               
+              content
+              noun [ U ]   literary
+              UK  /kənˈtent/ US/kənˈtent/
+              content noun [U] (HAPPINESS)
+               
+              a happy and satisfied feeling:
+              Once had he resolved what to do, there followed almost immediately a feeling of content.
+              Synonym
+              contentment
+              See also
+              to your heart's content
+               More examples
+               SMART Vocabulary: related words and phrases
+              content
+              noun
+              UK  /ˈkɒn.tent/ US  /ˈkɑːn.tent/
+              content noun (INFORMATION)
+               contents [ plural ]
+               
+              B2
+              the articles or parts contained in a magazine or book, with the number of the page they begin on:
+              table of contents Scroll down the table of (= list of) contents to find areas that interest you.
+              See more
+               
+              B2 [ S or U ]
+              the ideas that are contained in a piece of writing, a speech, or a film:
+              It's a very stylish and beautiful film, but it lacks content.
+              We've discussed the unusual form of the book - now, what about the content?
+               
+              [ U ]
+              information, images, video, etc. that are included as part of something such as a website:
+              All this cool content is available to subscribers only.
+              He used a work account to download and share inappropriate content.
+              I follow her on social media because I love her content.
+               More examples
+               SMART Vocabulary: related words and phrases
+              content noun (AMOUNT)
+               contents [ plural ]
+               
+              B1
+              everything that is contained within something:
+              contents of The contents of his bag spilled all over the floor.
+              See more
+               
+              C2 [ S ]
+              the amount of a particular substance contained in something:
+              high fat content Chocolate has a high fat content.
+               More examples
+               SMART Vocabulary: related words and phrases
+              Grammar
+              Content or contents?
+              Content and contents are nouns. …
+              (Definition of content from the Cambridge Advanced Learner's Dictionary & Thesaurus © Cambridge University Press)
+              content | AMERICAN DICTIONARY
+              content
+              adjective
+              US  /kənˈtent/
+              Add to word list 
+              pleased with your situation and not needing or desiring it to be better:
+              Skating this year with a sprained ankle, he said he was content just to make the Olympic team.
+              contented
+              adjective US  /kənˈten·tɪd/
+              Our dog leads a happy and contented life.
+              contentment
+              noun [ U ] US  /kənˈtent·mənt/ (also content)
+              Her greatest happiness and contentment was found in being a devoted wife, mother, and grandmother.
+               
+              content
+              verb [ T ]
+              US  /kənˈtent/
+               
+              to make yourself accept something as satisfactory, although it could be better:
+              We had to content ourselves with watching the sea lions from the shore.
+              content
+              noun [ U ]
+              US  /ˈkɑn·tent/
+              content noun [U] (SUBJECT)
+               
+              the subject or ideas contained in something written, said, created, or represented:
+              academic/educational content
+              It’s easy to update the content of the Web site.
+               
+              ART
+              Content is also the things represented or suggested in something written or created as art, or the ideas it communicates.
+              content noun [U] (AMOUNT)
+               
+              the amount of a particular substance contained in something:
+              This type of milk has a lower fat content.
+              (Definition of content from the Cambridge Academic Content Dictionary © Cambridge University Press)
+              content | BUSINESS ENGLISH
+              content
+              noun
+              UK  /ˈkɒntent/ US 
+               contents [ plural ]
+              Add to word list 
+              everything that is contained within something:
+              A spokesman has refused to disclose the contents of the shipment.
+              Her parents' home contents insurance policy covered her for the loss of the phone.
+               
+              [ U ]
+              (also contents [ plural ])
+              the ideas that are contained in something:
+              New guidelines cover the content of advertising for children.
+              Our description of the contents of the report wpleased with your situation and not hoping for change or improvement:
+              content with He seems fairly content with (his) life.
+              [ + to infinitive ] They're content to socialize with a very small circle of people.
+               Fewer examples
+              I was just content to see my daughter in such a stable relationship but a grandchild, that really was the icing on the cake.
+              I'd be content with a modest income.
+              He's quite content living on his own.
+              I'm content to sit at the back.
+              They were content with second hand clothes.
+               SMART Vocabulary: related words and phrases
+              Related word
+              contentment
+              Idiom
+              not content with something/doing something
+               
+              content
+              verb [ T ]
+              UK  /kənˈtent/ US  /kənˈtent/
+               
+              to make someone feel happy and satisfied:
+              You're quite easily contented, aren't you?
+              My explanation seemed to content him.
+               SMART Vocabulary: related words and phrases
+              Phrasal verb
+              content yourself with something
+               
+              content
+              noun [ U ]   literary
+              UK  /kənˈtent/ US/kənˈtent/
+              content noun [U] (HAPPINESS)
+               
+              a happy and satisfied feeling:
+              Once had he resolved what to do, there followed almost immediately a feeling of content.
+              Synonym
+              contentment
+              See also
+              to your heart's content
+               More examples
+               SMART Vocabulary: related words and phrases
+              content
+              noun
+              UK  /ˈkɒn.tent/ US  /ˈkɑːn.tent/
+              content noun (INFORMATION)
+               contents [ plural ]
+               
+              B2
+              the articles or parts contained in a magazine or book, with the number of the page they begin on:
+              table of contents Scroll down the table of (= list of) contents to find areas that interest you.
+              See more
+               
+              B2 [ S or U ]
+              the ideas that are contained in a piece of writing, a speech, or a film:
+              It's a very stylish and beautiful film, but it lacks content.
+              We've discussed the unusual form of the book - now, what about the content?
+               
+              [ U ]
+              information, images, video, etc. that are included as part of something such as a website:
+              All this cool content is available to subscribers only.
+              He used a work account to download and share inappropriate content.
+              I follow her on social media because I love her content.
+               More examples
+               SMART Vocabulary: related words and phrases
+              content noun (AMOUNT)
+               contents [ plural ]
+               
+              B1
+              everything that is contained within something:
+              contents of The contents of his bag spilled all over the floor.
+              See more
+               
+              C2 [ S ]
+              the amount of a particular substance contained in something:
+              high fat content Chocolate has a high fat content.
+               More examples
+               SMART Vocabulary: related words and phrases
+              Grammar
+              Content or contents?
+              Content and contents are nouns. …
+              (Definition of content from the Cambridge Advanced Learner's Dictionary & Thesaurus © Cambridge University Press)
+              content | AMERICAN DICTIONARY
+              content
+              adjective
+              US  /kənˈtent/
+              Add to word list 
+              pleased with your situation and not needing or desiring it to be better:
+              Skating this year with a sprained ankle, he said he was content just to make the Olympic team.
+              contented
+              adjective US  /kənˈten·tɪd/
+              Our dog leads a happy and contented life.
+              contentment
+              noun [ U ] US  /kənˈtent·mənt/ (also content)
+              Her greatest happiness and contentment was found in being a devoted wife, mother, and grandmother.
+               
+              content
+              verb [ T ]
+              US  /kənˈtent/
+               
+              to make yourself accept something as satisfactory, although it could be better:
+              We had to content ourselves with watching the sea lions from the shore.
+              content
+              noun [ U ]
+              US  /ˈkɑn·tent/
+              content noun [U] (SUBJECT)
+               
+              the subject or ideas contained in something written, said, created, or represented:
+              academic/educational content
+              It’s easy to update the content of the Web site.
+               
+              ART
+              Content is also the things represented or suggested in something written or created as art, or the ideas it communicates.
+              content noun [U] (AMOUNT)
+               
+              the amount of a particular substance contained in something:
+              This type of milk has a lower fat content.
+              (Definition of content from the Cambridge Academic Content Dictionary © Cambridge University Press)
+              content | BUSINESS ENGLISH
+              content
+              noun
+              UK  /ˈkɒntent/ US 
+               contents [ plural ]
+              Add to word list 
+              everything that is contained within something:
+              A spokesman has refused to disclose the contents of the shipment.
+              Her parents' home contents insurance policy covered her for the loss of the phone.
+               
+              [ U ]
+              (also contents [ plural ])
+              the ideas that are contained in something:
+              New guidelines cover the content of advertising for children.
+              Our description of the contents of the report wpleased with your situation and not hoping for change or improvement:
+              content with He seems fairly content with (his) life.
+              [ + to infinitive ] They're content to socialize with a very small circle of people.
+               Fewer examples
+              I was just content to see my daughter in such a stable relationship but a grandchild, that really was the icing on the cake.
+              I'd be content with a modest income.
+              He's quite content living on his own.
+              I'm content to sit at the back.
+              They were content with second hand clothes.
+               SMART Vocabulary: related words and phrases
+              Related word
+              contentment
+              Idiom
+              not content with something/doing something
+               
+              content
+              verb [ T ]
+              UK  /kənˈtent/ US  /kənˈtent/
+               
+              to make someone feel happy and satisfied:
+              You're quite easily contented, aren't you?
+              My explanation seemed to content him.
+               SMART Vocabulary: related words and phrases
+              Phrasal verb
+              content yourself with something
+               
+              content
+              noun [ U ]   literary
+              UK  /kənˈtent/ US/kənˈtent/
+              content noun [U] (HAPPINESS)
+               
+              a happy and satisfied feeling:
+              Once had he resolved what to do, there followed almost immediately a feeling of content.
+              Synonym
+              contentment
+              See also
+              to your heart's content
+               More examples
+               SMART Vocabulary: related words and phrases
+              content
+              noun
+              UK  /ˈkɒn.tent/ US  /ˈkɑːn.tent/
+              content noun (INFORMATION)
+               contents [ plural ]
+               
+              B2
+              the articles or parts contained in a magazine or book, with the number of the page they begin on:
+              table of contents Scroll down the table of (= list of) contents to find areas that interest you.
+              See more
+               
+              B2 [ S or U ]
+              the ideas that are contained in a piece of writing, a speech, or a film:
+              It's a very stylish and beautiful film, but it lacks content.
+              We've discussed the unusual form of the book - now, what about the content?
+               
+              [ U ]
+              information, images, video, etc. that are included as part of something such as a website:
+              All this cool content is available to subscribers only.
+              He used a work account to download and share inappropriate content.
+              I follow her on social media because I love her content.
+               More examples
+               SMART Vocabulary: related words and phrases
+              content noun (AMOUNT)
+               contents [ plural ]
+               
+              B1
+              everything that is contained within something:
+              contents of The contents of his bag spilled all over the floor.
+              See more
+               
+              C2 [ S ]
+              the amount of a particular substance contained in something:
+              high fat content Chocolate has a high fat content.
+               More examples
+               SMART Vocabulary: related words and phrases
+              Grammar
+              Content or contents?
+              Content and contents are nouns. …
+              (Definition of content from the Cambridge Advanced Learner's Dictionary & Thesaurus © Cambridge University Press)
+              content | AMERICAN DICTIONARY
+              content
+              adjective
+              US  /kənˈtent/
+              Add to word list 
+              pleased with your situation and not needing or desiring it to be better:
+              Skating this year with a sprained ankle, he said he was content just to make the Olympic team.
+              contented
+              adjective US  /kənˈten·tɪd/
+              Our dog leads a happy and contented life.
+              contentment
+              noun [ U ] US  /kənˈtent·mənt/ (also content)
+              Her greatest happiness and contentment was found in being a devoted wife, mother, and grandmother.
+               
+              content
+              verb [ T ]
+              US  /kənˈtent/
+               
+              to make yourself accept something as satisfactory, although it could be better:
+              We had to content ourselves with watching the sea lions from the shore.
+              content
+              noun [ U ]
+              US  /ˈkɑn·tent/
+              content noun [U] (SUBJECT)
+               
+              the subject or ideas contained in something written, said, created, or represented:
+              academic/educational content
+              It’s easy to update the content of the Web site.
+               
+              ART
+              Content is also the things represented or suggested in something written or created as art, or the ideas it communicates.
+              content noun [U] (AMOUNT)
+               
+              the amount of a particular substance contained in something:
+              This type of milk has a lower fat content.
+              (Definition of content from the Cambridge Academic Content Dictionary © Cambridge University Press)
+              content | BUSINESS ENGLISH
+              content
+              noun
+              UK  /ˈkɒntent/ US 
+               contents [ plural ]
+              Add to word list 
+              everything that is contained within something:
+              A spokesman has refused to disclose the contents of the shipment.
+              Her parents' home contents insurance policy covered her for the loss of the phone.
+               
+              [ U ]
+              (also contents [ plural ])
+              the ideas that are contained in something:
+              New guidelines cover the content of advertising for children.
+              Our description of the contents of the report w</p>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./practice.js"></script>
+</body>
+</html>

@@ -1,70 +1,37 @@
-function clearFilters() {
-    document.querySelectorAll('.sidebar input[type="checkbox"]').forEach(checkbox => {
-        checkbox.checked = false;
-    });
+let questions = [];
+
+// Function to fetch questions from the server
+async function fetchQuestions(topic) {
+    try {
+        const response = await fetch(`http://localhost:5454/api/quiz/get?topic=${topic}`, {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTUzMzQ5NjksImV4cCI6MzQzMDY3MDgzOSwiZW1haWwiOiJzY2phZ2F0aGFjaGlkYW1AZ21haWwuY29tIn0.oZwPQ0yn96WYVCB9tubFeLrQi1lJA0PqCRv9ld__1vA',
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+
+        const data = await response.json();
+        questions = data;
+        console.log(questions);
+
+        // Check if questions array is null or empty
+        if (!questions || questions.length === 0) {
+            showNoQuestionsMessage();
+        } else {
+            startQuiz(); // Start the quiz after fetching questions
+        }
+
+    } catch (error) {
+        console.error('Error fetching questions:', error);
+    }
 }
 
-// To sort
-document.addEventListener('DOMContentLoaded', function () {
-    const sortByDropdown = document.querySelector('.sort-by-dropdown .dropdown-menu');
-    const currentSortElement = document.getElementById('currentSort');
-
-    sortByDropdown.addEventListener('click', function (e) {
-        const selectedSort = e.target.getAttribute('data-sort');
-        if (selectedSort) {
-            currentSortElement.textContent = selectedSort;
-
-            // Remove active class from all items and add it to the selected one
-            const items = sortByDropdown.querySelectorAll('.dropdown-item');
-            items.forEach(item => {
-                item.classList.remove('active');
-            });
-            e.target.classList.add('active');
-        }
-    });
-});
-
-// Quiz
-
-const questions = [
-    {
-        question: "Which is the largest animal in the world?",
-        answers: [
-            { text: "Shark", correct: false},
-            { text: "Blue whale", correct: true},
-            { text: "Elephant", correct: false},
-            { text: "Giraffe", correct: false},
-        ]
-    },
-    {
-        question: "Which is the smallest country in the world?",
-        answers: [
-            { text: "Vatican City", correct: true},
-            { text: "Bhutan", correct: false},
-            { text: "Nepal", correct: false},
-            { text: "Shri Lanka", correct: false},
-        ]  
-    },
-    {
-        question: "Which is the largest desert in the world in the world?",
-        answers: [
-            { text: "Kalahari", correct: false},
-            { text: "Gobi", correct: false},
-            { text: "Sahara", correct: false},
-            { text: "Antartica", correct: true},
-        ]  
-    },
-    {
-        question: "Which is the smallest continent in the world?",
-        answers: [
-            { text: "Asia", correct: false},
-            { text: "Australia", correct: true},
-            { text: "Arctic", correct: false},
-            { text: "Africa", correct: false},
-        ]  
-    }
-];
-
+// DOM elements
 const questionElement = document.getElementById("question");
 const answerButtons = document.getElementById("answer-buttons");
 const nextButton = document.getElementById("next-btn");
@@ -72,49 +39,49 @@ const nextButton = document.getElementById("next-btn");
 let currentQuestionIndex = 0;
 let score = 0;
 
-function startQuiz(){
+function startQuiz() {
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
 }
 
-function showQuestion(){
+function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
 
-    currentQuestion.answers.forEach(answer => {
+    currentQuestion.options.forEach(answer => {
         const button = document.createElement("button");
-        button.innerHTML = answer.text;
+        button.innerHTML = answer.value;
         button.classList.add("ans-key");
         answerButtons.appendChild(button);
-        if(answer.correct){
-            button.dataset.correct = answer.correct;
+        if (answer.isCorrect) {
+            button.dataset.isCorrect = answer.isCorrect;
         }
-        button.addEventListener("click",selectAnswer);
+        button.addEventListener("click", selectAnswer);
     });
 }
 
-function resetState(){
+function resetState() {
     nextButton.style.display = "none";
-    while(answerButtons.firstChild){
+    while (answerButtons.firstChild) {
         answerButtons.removeChild(answerButtons.firstChild);
     }
 }
 
-function selectAnswer(e){
+function selectAnswer(e) {
     const selectedBtn = e.target;
-    const isCorrect = selectedBtn.dataset.correct === "true";
-    if(isCorrect){
+    const correct = selectedBtn.dataset.isCorrect === "true";
+    if (correct) {
         selectedBtn.classList.add("correct");
         score++;
-    }else{
+    } else {
         selectedBtn.classList.add("incorrect");
     }
     Array.from(answerButtons.children).forEach(button => {
-        if(button.dataset.correct === "true"){
+        if (button.dataset.isCorrect === "true") {
             button.classList.add("correct");
         }
         button.disabled = true;
@@ -122,28 +89,52 @@ function selectAnswer(e){
     nextButton.style.display = "block";
 }
 
-function showScore(){
+function showScore() {
     resetState();
     questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
     nextButton.innerHTML = "Play Again";
     nextButton.style.display = "block";
 }
 
-function handleNextButton(){
+function handleNextButton() {
     currentQuestionIndex++;
-    if(currentQuestionIndex < questions.length){
+    if (currentQuestionIndex < questions.length) {
         showQuestion();
-    }else{
+    } else {
         showScore();
     }
 }
 
-nextButton.addEventListener("click", ()=>{
-    if(currentQuestionIndex < questions.length){
+nextButton.addEventListener("click", () => {
+    if (currentQuestionIndex < questions.length) {
         handleNextButton();
-    }else{
+    } else {
         startQuiz();
     }
-})
+});
 
-startQuiz();
+function showNoQuestionsMessage() {
+    resetState();
+    questionElement.innerHTML = "No questions available for the selected topic.";
+    nextButton.style.display = "none";
+}
+
+function updateFilters() {
+    const selectedFilters = [];
+    const checkboxes = document.querySelectorAll(".sidebar input[type='checkbox']:checked");
+    
+    checkboxes.forEach(checkbox => {
+        selectedFilters.push(checkbox.id);
+    });
+    const topic = selectedFilters.join(",");
+    fetchQuestions(topic);
+}
+
+function clearFilters() {
+    const checkboxes = document.querySelectorAll(".sidebar input[type='checkbox']");
+    checkboxes.forEach(checkbox => checkbox.checked = false);
+    fetchQuestions("");
+}
+
+// Fetch questions when the page loads
+fetchQuestions("");

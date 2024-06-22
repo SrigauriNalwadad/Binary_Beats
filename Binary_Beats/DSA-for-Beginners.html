@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DSA-for-Beginners</title>
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./pages.css">
+    <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+</head>
+<body>
+    
+    <!-- Main Sesction -->
+    <section  id="main" class="gradient-background">
+        <!-- Navbar -->
+        <section id="nav">
+          <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <div class="container-fluid">
+              <img src="./images/Binary_Beats_logo.png" alt="Binary_Beats_logo" class="main-logo">
+              <a class="navbar-brand" href="../index.html">Binary Beats</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                  <li class="nav-item dropdown">
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      DSA
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="./DSA-for-Beginners.html">DSA For Beginners</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle">Data Structures</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="./Data Structures/Array.html">Arrays</a></li>
+                          <li><a class="dropdown-item" href="./Data Structures/String.html">Strings</a></li>
+                          <li><a class="dropdown-item" href="./Data Structures/Stack.html">Stack</a></li>
+                          <li><a class="dropdown-item" href="./Data Structures/Queue.html">Queue</a></li>
+                          <li><a class="dropdown-item" href="./Data Structures/Linked-List.html">Linked List</a></li>
+                          <li class="dropdown-submenu"><a class="dropdown-item" href="./Data Structures/Tree.html">Tree</a></li>
+                          <li><a class="dropdown-item" href="./Data Structures/Graph.html">Graph</a></li>
+                          <li><a class="dropdown-item" href="./Data Structures/Heap.html">Heap</a></li>
+                        </ul>
+                      </li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle">Algorithms</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item dropdown-toggle" href="./Algorithms/Searching-Algorithms.html">Searching Algorithms</a></li>
+                          <li><a class="dropdown-item" href="./Algorithms/Sorting-Algorithms.html">Sorting Algorithms</a></li>
+                          <li><a class="dropdown-item" href="./Algorithms/Greedy-Algorithms.html">Greedy Algorithms</a></li>
+                          <li><a class="dropdown-item" href="./Algorithms/Dynamic-Programming.html">Dynamic Programming</a></li>
+                          <li><a class="dropdown-item" href="./Algorithms/Graph-Algorithms.html">Graph Algorithms</a></li>
+                          <li><a class="dropdown-item" href="./Algorithms/Recurision.html">Recursion</a></li>
+                          <li><a class="dropdown-item" href="./Algorithms/Backtracking.html">Backtracking</a></li>
+                          <li><a class="dropdown-item" href="./Algorithms/Branch-and-Bound.html">Branch and Bound</a></li>
+                          <li><a class="dropdown-item" href="./Algorithms/Divide-and-Conqure.html">Divide and Conquer</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Binary-Beats-Store-main/store-home.html">Store</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                      Practice
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item" href="./Practice/All-DSA-Problems.html">All DSA Problems</a></li>
+                      <li class="dropdown-submenu">
+                        <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a class="dropdown-item" href="#">Easy</a></li>
+                          <li><a class="dropdown-item" href="#">Medium</a></li>
+                          <li><a class="dropdown-item" href="#">Hard</a></li>
+                        </ul>
+                      </li>
+                      <li><a class="dropdown-item" href="./Practice/Quiz.html">Quiz on DSA</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <div class="ms-2">
+                  <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#signinModal">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                      <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                    </svg>
+                  </button>
+              </div>
+              </div>
+            </div>
+          </nav>
+        </section>
+
+        <!-- Sign In Modal -->
+        <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form action="#" method="post" class="needs-validation" novalidate>
+                          <div class="mb-3">
+                              <label for="email" class="form-label">Email</label>
+                              <input type="email" class="form-control" id="email" name="email" required>
+                              <div class="invalid-feedback">
+                                  Please enter a valid email address.
+                              </div>
+                          </div>
+                          <div class="mb-3">
+                              <label for="password" class="form-label">Password</label>
+                              <input type="password" class="form-control" id="password" name="password" required>
+                              <div class="invalid-feedback">
+                                  Please enter your password.
+                              </div>
+                          </div>
+                          <div class="modal-footer">
+                              <button type="submit" class="btn btn-primary">Sign In</button>
+                              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                          </div>
+                          <div class="mt-3 text-center">
+                              <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Create Account</a></p>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+            <!-- Sign Up Modal -->
+            <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="#" method="post" class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your first name.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your last name.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your phone number.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                  <label for="phone" class="form-label">Password</label>
+                                  <input type="password" class="form-control" id="password" name="password" required>
+                                  <div class="invalid-feedback">
+                                      Please enter your password.
+                                  </div>
+                              </div>
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-primary">Sign Up</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+  
+
+  <!-- Main Content -->
+  <section id="main-content">
+    <div class=" container">
+      <div class="main-header p-3 pb-md-4 mx-auto">
+        <h2 class="fs-1">DSA for Beginners</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+      </div>
+    </div>
+    <div class="container px-4 py-5" id="hanging-icons">
+      <h2 class="pb-2 border-bottom">Overveiw</h2>
+      <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+              <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+              <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="fs-2">Chapters</h3>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <a href="#chapters-section" class="btn btn-primary">
+              Start learning  
+            </a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-ui-checks" viewBox="0 0 16 16">
+              <path d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="fs-2">Quizs</h3>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="btn btn-primary">
+              Primary button
+            </a>
+          </div>
+        </div>
+        <div class="col d-flex align-items-start">
+          <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16">
+              <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
+              <path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="fs-2">Problems</h3>
+            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <a href="#" class="btn btn-primary">
+              Primary button
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Steps to learn DSA part -->
+  <section id="steps">
+    <div class="container">
+      <h3 class="fs-1" id="chapters-section">Chapters</h3>
+      <div class="steps">
+        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
+          <div class="single-chapter-heading-div">
+              <h3 class="single-chapter-title">Introduction to DSA</h3>
+              <p class="single-chapter-icon-heading">
+                  <span class="single-chapter-icon single-chapter-icon-0">
+                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
+                  </span>
+              </p>
+          </div>
+          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
+              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
+          </div>
+          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
+              <a href="#what-is-dsa" class="indexes-link" data-page-id="1">
+                  <p class="single-track-title">What is DSA | DSA Full Form</p>
+              </a>
+              <a href="#what-is-data-structure" class="indexes-link" data-page-id="1">
+                  <p class="single-track-title">What is Data Structure?</p>
+              </a>
+              <a href="#data-structures-types" class="indexes-link" data-page-id="1">
+                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
+              </a>
+              <a href="#what-is-algorithm" class="indexes-link" data-page-id="1">
+                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
+              </a>
+              <a href="#time-complexity-and-space-complexity" class="indexes-link" data-page-id="1">
+                  <p class="single-track-title">Time Complexity and Space Complexity</p>
+              </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Post Content Here -->
+    <div class="content">
+      <div class="content-heading">
+            <h1 id="what-is-dsa">What is DSA | DSA Full Form</h1>
+      </div>
+          <p class="content-subheading"><strong>What is DSA?</strong></p>
+          <p>DSA stands for Data Structures and Algorithms. It is a combination of two important topics in computer science. Having a good understanding of DSA is crucial for computer science students because it helps them become better programmers. People who know DSA well are often more successful in tech job interviews.</p>
+      
+          <p class="content-subheading"><strong>DSA Full Form</strong></p>
+          <p>DSA means Data Structures and Algorithms in computer science.</p>
+      
+          <hr>
+      
+          <p class="content-subheading"><strong>What is a Data Structure?</strong></p>
+          <p>A data structure is a specific way to store and organize data in our devices so that we can use it efficiently. The main goal of using data structures is to save time and space. An efficient data structure uses less memory and allows faster data processing.</p>
+      
+          <p class="content-subheading"><strong>What is an Algorithm?</strong></p>
+          <p>An algorithm is a set of clear instructions used to solve a problem or perform a task. Simply put, it is a step-by-step process to complete a specific task or solve a particular problem.</p>
+
+          <br>
+          <hr>
+          <br>
+
+          <div class="content-heading">
+            <h1 id="what-is-data-structure">What is Data Structure?</h1>
+          </div>
+          <p>A data structure is a method of organizing and storing data in a computer so that it can be used efficiently. It involves the way data is logically arranged and how it is implemented in a computer program.</p>
+      
+          <p><strong>Classification:</strong></p>
+          <p>Data structures are divided into two main categories:</p>
+          <ul>
+            <li><strong>Linear Data Structure:</strong> Data elements are arranged in a sequence, one after the other. Examples: Array, Stack, Queue.</li>
+            <li><strong>Non-linear Data Structure:</strong> Data elements are not arranged in a sequence. Examples: Trees, Graphs.</li>
+          </ul>
+      
+          <p class="content-subheading"><strong>Applications of Data Structures:</strong></p>
+          <p>Data structures are used in many computer programs and applications, such as:</p>
+          <ul>
+            <li><strong>Databases:</strong> Organize and store data for efficient access and manipulation.</li>
+            <li><strong>Operating Systems:</strong> Manage resources like memory and files.</li>
+            <li><strong>Computer Graphics:</strong> Represent shapes and graphical elements.</li>
+            <li><strong>Artificial Intelligence:</strong> Represent knowledge and information.</li>
+          </ul>
+      
+          <p class="content-subheading"><strong>Advantages of Data Structures:</strong></p>
+          <p>Using data structures has several benefits:</p>
+          <ul>
+            <li><strong>Efficiency:</strong> Allows fast storage and retrieval of data, which is crucial for performance.</li>
+            <li><strong>Flexibility:</strong> Easy to organize and change data.</li>
+            <li><strong>Reusability:</strong> Can be used in multiple programs, reducing repetitive code.</li>
+            <li><strong>Maintainability:</strong> Makes programs easier to understand, change, and maintain.</li>
+          </ul>
+
+          <br>
+          <hr>
+          <br>
+
+          <div class="content-heading">
+            <h1 id="data-structures-types">Data Structure Types, Classifications, and Applications</h1>
+          </div>
+          <p><strong>What is Data Structure:</strong></p>
+          <p>A data structure is a method of storing and organizing data on a computer so it can be accessed and updated efficiently. Data structures are used not only for organizing data but also for processing, retrieving, and storing it. Different types of data structures are used in almost every software program, so it’s essential to understand them well.</p>
+          <p>Data structures are key in arranging data in memory, making it easier to manage. They are crucial for efficiently organizing, processing, accessing, and storing data. Various types of data structures have different characteristics, uses, advantages, and disadvantages. So, how do you choose the right data structure for a task? Let’s explore what data structures are, the types available, their classifications, and their applications.</p>
+          <p>We’ve compiled a complete guide to help you understand data structures, their types, classifications, and applications. In this article, we will discuss each data structure in detail to help you choose the best one for your needs.</p>
+      
+          <p class="content-subheading"><strong>Classification of Data Structure:</strong></p>
+          <p>Data structures have various uses in our daily lives. They help solve different mathematical and logical problems by organizing and processing large amounts of data quickly. Let’s look at the different types of data structures and their uses.</p>
+          <ul>
+            <li><strong>Linear Data Structure:</strong> Data elements are arranged sequentially. Examples: Array, Stack, Queue, Linked List.</li>
+            <li><strong>Static Data Structure:</strong> Fixed memory size. Easier to access elements. Example: Array.</li>
+            <li><strong>Dynamic Data Structure:</strong> Size can be changed during runtime. Efficient in terms of memory usage. Examples: Queue, Stack.</li>
+            <li><strong>Non-linear Data Structure:</strong> Data elements are not arranged sequentially. Cannot traverse all elements in one go. Examples: Trees, Graphs.</li>
+          </ul>
+      
+          <p class="content-subheading"><strong>Applications of Data Structures:</strong></p>
+          <p>Data structures are used in various applications, including:</p>
+          <ul>
+            <li><strong>Databases:</strong> Organize and store data for quick access and manipulation.</li>
+            <li><strong>Operating Systems:</strong> Manage system resources like memory and files.</li>
+            <li><strong>Computer Graphics:</strong> Represent shapes and graphical elements.</li>
+            <li><strong>Artificial Intelligence:</strong> Store and manage knowledge and information.</li>
+            <li><strong>Web Development:</strong> Manage data efficiently for faster website performance.</li>
+          </ul>
+      
+          <p class="content-subheading"><strong>Advantages of Data Structures:</strong></p>
+          <p>Using data structures has several benefits:</p>
+          <ul>
+            <li><strong>Efficiency:</strong> Fast data storage and retrieval.</li>
+            <li><strong>Flexibility:</strong> Easy to organize and modify data.</li>
+            <li><strong>Reusability:</strong> Can be used across multiple programs, reducing redundant code.</li>
+            <li><strong>Maintainability:</strong> Makes programs easier to understand and update.</li>
+          </ul>
+
+          <br>
+          <hr>
+          <br>
+
+          <div class="content-heading">
+            <h1 id="what-is-algorithm">Introduction to Algorithms</h1>
+          </div>
+      
+          <p><strong>Definition of Algorithm:</strong></p>
+          <p>The word Algorithm means “A set of finite rules or instructions to be followed in calculations or other problem-solving operations” or “A procedure for solving a mathematical problem in a finite number of steps that frequently involves recursive operations”. Therefore, Algorithm refers to a sequence of finite steps to solve a particular problem.</p>
+      
+          <p class="content-subheading"><strong>Use of Algorithms:</strong></p>
+          <p>Algorithms play a crucial role in various fields and have many applications, including:</p>
+          <ul>
+            <li><strong>Computer Science:</strong> Basis of computer programming, solving problems from sorting and searching to AI and machine learning.</li>
+            <li><strong>Mathematics:</strong> Solving mathematical problems like finding the optimal solution to systems of linear equations or shortest path in a graph.</li>
+            <li><strong>Operations Research:</strong> Optimization and decision making in transportation, logistics, and resource allocation.</li>
+            <li><strong>Artificial Intelligence:</strong> Developing intelligent systems for tasks such as image recognition, natural language processing, and decision-making.</li>
+            <li><strong>Data Science:</strong> Analyzing, processing, and extracting insights from large data sets in fields like marketing, finance, and healthcare.</li>
+          </ul>
+      
+          <p class="content-subheading"><strong>Characteristics of an Algorithm:</strong></p>
+          <p>For a set of instructions to be considered an algorithm, it must have the following characteristics:</p>
+          <ul>
+            <li><strong>Clear and Unambiguous:</strong> Each step should be clear and lead to only one meaning.</li>
+            <li><strong>Well-Defined Inputs:</strong> Should clearly define inputs, which may or may not be taken.</li>
+            <li><strong>Well-Defined Outputs:</strong> Should produce at least one output.</li>
+            <li><strong>Finiteness:</strong> Should terminate after a finite time.</li>
+            <li><strong>Feasible:</strong> Simple, generic, and independent of any programming language.</li>
+            <li><strong>Language Independent:</strong> The algorithm should be implementable in any programming language.</li>
+          </ul>
+      
+          <p class="content-subheading"><strong>Example of an Algorithm:</strong></p>
+          <p>Let’s understand the characteristics of an algorithm by using an example:</p>
+          <div class="example">
+            <p><strong>Algorithm to add two numbers:</strong></p>
+            <ol>
+              <li>Start</li>
+              <li>Declare three integers a, b, and c</li>
+              <li>Define values of a and b</li>
+              <li>Add values of a and b</li>
+              <li>Store the output of step 4 to c</li>
+              <li>Print the value of c</li>
+              <li>Stop</li>
+            </ol>
+          </div>
+
+          <br>
+          <hr>
+          <br>
+
+          <div class="content-heading">
+            <h1 id="time-complexity-and-space-complexity">Time Complexity and Space Complexity</h1>
+          </div>
+      
+          <p>Generally, there is always more than one way to solve a problem in computer science with different algorithms. Therefore, it is highly required to use a method to compare the solutions in order to judge which one is more optimal. The method must be:</p>
+          <ul>
+            <li>Independent of the machine and its configuration, on which the algorithm is running on.</li>
+            <li>Shows a direct correlation with the number of inputs.</li>
+            <li>Can distinguish two algorithms clearly without ambiguity.</li>
+          </ul>
+          <p>There are two such methods used, time complexity and space complexity which are discussed below:</p>
+      
+          <p class="content-subheading"><strong>Time Complexity:</strong></p>
+          <p>The time complexity of an algorithm quantifies the amount of time taken by an algorithm to run as a function of the length of the input. Note that the time to run is a function of the length of the input and not the actual execution time of the machine on which the algorithm is running on.</p>
+      
+          <p><strong>Definition:</strong></p>
+          <p>The valid algorithm takes a finite amount of time for execution. The time required by the algorithm to solve a given problem is called the time complexity of the algorithm. Time complexity is a very useful measure in algorithm analysis.</p>
+          <p>It is the time needed for the completion of an algorithm. To estimate the time complexity, we need to consider the cost of each fundamental instruction and the number of times the instruction is executed.</p>
+      
+          <div class="example">
+            <p><strong>Example 1: Addition of two scalar variables.</strong></p>
+            <p><strong>Algorithm:</strong> ADD SCALAR(A, B)</p>
+            <p><strong>Description:</strong> Perform arithmetic addition of two numbers</p>
+            <p><strong>Input:</strong> Two scalar variables A and B</p>
+            <p><strong>Output:</strong> Variable C, which holds the addition of A and B</p>
+            <code>
+              C &lt;- A + B
+              return C
+            </code>
+            <p>The addition of two scalar numbers requires one addition operation. The time complexity of this algorithm is constant, so T(n) = O(1).</p>
+          </div>
+      
+          <p>In order to calculate time complexity of an algorithm, it is assumed that a constant time <em>c</em> is taken to execute one operation, and then the total operations for an input length of <em>N</em> are calculated. Consider an example to understand the process of calculation: Suppose a problem is to find whether a pair (X, Y) exists in an array, <em>A</em> of <em>N</em> elements whose sum is <em>Z</em>. The simplest idea is to consider every pair and check if it satisfies the given condition or not.</p>
+      
+          <p>The pseudo-code is as follows:</p>
+          <code>
+            int a[n];
+            for(int i = 0;i < n;i++)
+              cin >> a[i];
+              
+            for(int i = 0;i < n;i++)
+              for(int j = 0;j < n;j++)
+                if(i != j && a[i] + a[j] == z)
+                  return true;
+            return false;
+          </code>
+      
+          <p>Below is the implementation of the above approach:</p>
+          <code>
+            // C++ program for the above approach
+            #include &lt;bits/stdc++.h&gt;
+            using namespace std;
+             
+            // Function to find a pair in the given
+            // array whose sum is equal to z
+            bool findPair(int a[], int n, int z)
+            {
+                // Iterate through all the pairs
+                for (int i = 0; i < n; i++)
+                    for (int j = 0; j < n; j++)
+             
+                        // Check if the sum of the pair
+                        // (a[i], a[j]) is equal to z
+                        if (i != j && a[i] + a[j] == z)
+                            return true;
+             
+                return false;
+            }
+             
+            // Driver Code
+            int main()
+            {
+                // Given Input
+                int a[] = { 1, -2, 1, 0, 5 };
+                int z = 0;
+                int n = sizeof(a) / sizeof(a[0]);
+             
+                // Function Call
+                if (findPair(a, n, z))
+                    cout << "True";
+                else
+                    cout << "False";
+                return 0;
+            }
+          </code>
+          <p><strong>Output:</strong> False</p>
+      
+          <p>Assuming that each of the operations in the computer takes approximately constant time, let it be <em>c</em>. The number of lines of code executed actually depends on the value of <em>Z</em>. During analyses of the algorithm, mostly the worst-case scenario is considered, i.e., when there is no pair of elements with sum equals <em>Z</em>. In the worst case:</p>
+          <ul>
+            <li><em>N * c</em> operations are required for input.</li>
+            <li>The outer loop <em>i</em> loop runs <em>N</em> times.</li>
+            <li>For each <em>i</em>, the inner loop <em>j</em> loop runs <em>N</em> times.</li>
+            <li>So total execution time is <em>N * c + N * N * c + c</em>. Now ignore the lower order terms since the lower order terms are relatively insignificant for large input, therefore only the highest order term is taken (without constant) which is <em>N * N</em> in this case. Different notations are used to describe the limiting behavior of a function, but since the worst case is taken so big-O notation will be used to represent the time complexity.</li>
+          </ul>
+          <p>Hence, the time complexity is <strong>O(N<sup>2</sup>)</strong> for the above algorithm. Note that the time complexity is solely based on the number of elements in array <em>A</em> i.e the input length, so if the length of the array will increase the time of execution will also increase.</p>
+          <p>Order of growth is how the time of execution depends on the length of the input. In the above example, it is clearly evident that the time of execution quadratically depends on the length of the array. Order of growth will help to compute the running time with ease.</p>
+      
+          <div class="example">
+            <p><strong>Another Example:</strong> Let’s calculate the time complexity of the below algorithm:</p>
+            <code>
+              count = 0 
+              for (int i = N; i > 0; i /= 2) 
+                for (int j = 0; j < i; j++) 
+                  count++;
+            </code>
+            <p>This is a tricky case. In the first look, it seems like the complexity is <strong>O(N * log N)</strong>. <em>N</em> for the <em>j</em> loop and <em>log(N)</em> for the <em>i</em> loop. But it’s wrong. Let’s see why.</p>
+            <p>Think about how many times <code>count++</code> will run:</p>
+            <ul>
+              <li>When <em>i = N</em>, it will run <em>N</em> times.</li>
+              <li>When <em>i = N / 2</em>, it will run <em>N / 2</em> times.</li>
+              <li>When <em>i = N / 4</em>, it will run <em>N / 4</em> times.</li>
+              <li>And so on.</li>
+            </ul>
+            <p>The total number of times <code>count++</code> will run is <em>N + N / 2 + N / 4 + … + 1 = 2 * N</em>. So the time complexity will be <strong>O(N)</strong>.</p>
+          </div>
+      
+          <p>Some general time complexities are listed below with the input range for which they are accepted in competitive programming:</p>
+          <table>
+            <tr>
+              <th>Input Length</th>
+              <th>Worst Accepted Time Complexity</th>
+              <th>Usually type of solutions</th>
+            </tr>
+            <tr>
+              <td>10 - 12</td>
+              <td>O(N!)</td>
+              <td>Recursion and backtracking</td>
+            </tr>
+            <tr>
+              <td>15-18</td>
+              <td>O(2<sup>N</sup> * N)</td>
+              <td>Recursion, backtracking, and bit manipulation</td>
+            </tr>
+            <tr>
+              <td>18-22</td>
+              <td>O(2<sup>N</sup> * N)</td>
+              <td>Recursion, backtracking, and bit manipulation</td>
+            </tr>
+            <tr>
+              <td>30-40</td>
+              <td>O(2<sup>N/2</sup> * N)</td>
+              <td>Meet in the middle, Divide and Conquer</td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td>O(N<sup>4</sup>)</td>
+              <td>Dynamic programming, Constructive</td>
+            </tr>
+            <tr>
+              <td>400</td>
+              <td>O(N<sup>3</sup>)</td>
+              <td>Dynamic programming, Constructive</td>
+            </tr>
+            <tr>
+              <td>2K</td>
+              <td>O(N<sup>2</sup> * log N)</td>
+              <td>Dynamic programming, Binary Search, Sorting, Divide and Conquer</td>
+            </tr>
+            <tr>
+              <td>10K</td>
+              <td>O(N<sup>2</sup>)</td>
+              <td>Dynamic programming, Graph, Trees, Constructive</td>
+            </tr>
+            <tr>
+              <td>1M</td>
+              <td>O(N * log N)</td>
+              <td>Sorting, Binary Search, Divide and Conquer</td>
+            </tr>
+            <tr>
+              <td>100M</td>
+              <td>O(N), O(log N), O(1)</td>
+              <td>Constructive, Mathematical, Greedy Algorithms</td>
+            </tr>
+          </table>
+      
+          <p class="content-subheading"><strong>Space Complexity:</strong></p>
+          <p><strong>Definition:</strong></p>
+          <p>Problem-solving using computer requires memory to hold temporary data or final result while the program is in execution. The amount of memory required by the algorithm to solve a given problem is called space complexity of the algorithm.</p>
+          <p>The space complexity of an algorithm quantifies the amount of space taken by an algorithm to run as a function of the length of the input. Consider an example: Suppose a problem to find the frequency of array elements.</p>
+          <p>It is the amount of memory needed for the completion of an algorithm.</p>
+          <p>To estimate the memory requirement we need to focus on two parts:</p>
+          <ul>
+            <li><strong>A fixed part:</strong> It is independent of the input size. It includes memory for instructions (code), constants, variables, etc.</li>
+            <li><strong>A variable part:</strong> It is dependent on the input size. It includes memory for recursion stack, referenced variables, etc.</li>
+          </ul>
+      
+          <div class="example">
+            <p><strong>Example: Addition of two scalar variables</strong></p>
+            <p><strong>Algorithm:</strong> ADD SCALAR(A, B)</p>
+            <p><strong>Description:</strong> Perform arithmetic addition of two numbers</p>
+            <p><strong>Input:</strong> Two scalar variables A and B</p>
+            <p><strong>Output:</strong> Variable C, which holds the addition of A and B</p>
+            <code>
+              C &lt;- A + B
+              return C
+            </code>
+            <p>The addition of two scalar numbers requires one extra memory location to hold the result. Thus the space complexity of this algorithm is constant, hence S(n) = O(1).</p>
+          </div>
+      
+          <p>The pseudo-code is as follows:</p>
+          <code>
+            int freq[n];
+            int a[n];
+            for(int i = 0; i < n; i++) {
+              cin >> a[i];
+              freq[a[i]]++;
+            }
+          </code>
+          <p>Below is the implementation of the above approach:</p>
+          <code>
+            // C++ program for the above approach
+            #include &lt;bits/stdc++.h&gt;
+            using namespace std;
+             
+            // Function to count frequencies of array items
+            void countFreq(int arr[], int n)
+            {
+                unordered_map<int, int> freq;
+             
+                // Traverse through array elements and
+                // count frequencies
+                for (int i = 0; i < n; i++)
+                    freq[arr[i]]++;
+             
+                // Traverse through map and print frequencies
+                for (auto x : freq)
+                    cout << x.first << " " << x.second << endl;
+            }
+             
+            // Driver Code
+            int main()
+            {
+                // Given array
+                int arr[] = { 10, 20, 20, 10, 10, 20, 5, 20 };
+                int n = sizeof(arr) / sizeof(arr[0]);
+             
+                // Function Call
+                countFreq(arr, n);
+                return 0;
+            }
+          </code>
+          <p><strong>Output:</strong></p>
+          <code>
+            5 1
+            20 4
+            10 3
+          </code>
+          <p>Here two arrays of length <em>N</em>, and variable <em>i</em> are used in the algorithm so, the total space used is <em>N * c + N * c + 1 * c = 2N * c + c</em>, where <em>c</em> is a unit space taken. For many inputs, constant <em>c</em> is insignificant, and it can be said that the space complexity is <strong>O(N)</strong>.</p>
+      
+          <p>There is also auxiliary space, which is different from space complexity. The main difference is where space complexity quantifies the total space used by the algorithm, auxiliary space quantifies the extra space that is used in the algorithm apart from the given input. In the above example, the auxiliary space is the space used by the <code>freq[]</code> array because that is not part of the given input. So total auxiliary space is <em>N * c + c</em> which is <strong>O(N)</strong> only.</p>
+        </div>
+    </div>
+
+  </section>
+
+       
+  <!-- Footer -->
+  <sectionc id="footer">
+    <div class="dark-background">
+      <footer class="row-footer row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+          <a href="./index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <img src="./images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo">
+          </a>
+          <p class="text-body-secondary">© 2024</p>
+        </div>
+    
+        <div class="col mb-3">
+    
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Data Strutures</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="./Data Structures/String.html" class="nav-link p-0 text-body-secondary">Strings</a></li>
+            <li class="nav-item mb-2"><a href="./Data Structures/Array.html" class="nav-link p-0 text-body-secondary">Arrays</a></li>
+            <li class="nav-item mb-2"><a href="./Data Structures/Stack.html" class="nav-link p-0 text-body-secondary">Stack</a></li>
+            <li class="nav-item mb-2"><a href="./Data Structures/Queue.html" class="nav-link p-0 text-body-secondary">Queue</a></li>
+            <li class="nav-item mb-2"><a href="./Data Structures/Tree.html" class="nav-link p-0 text-body-secondary">Linked List</a></li>
+            <li class="nav-item mb-2"><a href="./Data Structures/Linked-List" class="nav-link p-0 text-body-secondary">Tree</a></li>
+            <li class="nav-item mb-2"><a href="./Data Structures/Graph.html" class="nav-link p-0 text-body-secondary">Graph</a></li>
+            <li class="nav-item mb-2"><a href="./Data Structures/Heap.html" class="nav-link p-0 text-body-secondary">Heap</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Algorithms</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="./Algorithms/Searching-Algorithms.html" class="nav-link p-0 text-body-secondary">Searching Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="./Algorithms/Sorting-Algorithms.html" class="nav-link p-0 text-body-secondary">Sorting Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="./Algorithms/Greedy-Algorithms.html" class="nav-link p-0 text-body-secondary">Greedy Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="./Algorithms/Dynamic-Programming.html" class="nav-link p-0 text-body-secondary">Dynamic Programming</a></li>
+            <li class="nav-item mb-2"><a href="./Algorithms/Graph-Algorithms.html" class="nav-link p-0 text-body-secondary">Graph Algorithms</a></li>
+            <li class="nav-item mb-2"><a href="./Algorithms/Recurision.html" class="nav-link p-0 text-body-secondary">Recursion</a></li>
+            <li class="nav-item mb-2"><a href="./Algorithms/Backtracking.html" class="nav-link p-0 text-body-secondary">Backtracking</a></li>
+            <li class="nav-item mb-2"><a href="./Algorithms/Divide-and-Conqure.html" class="nav-link p-0 text-body-secondary">Divide and Conquer</a></li>
+            <li class="nav-item mb-2"><a href="./Algorithms/Branch-and-Bound.html" class="nav-link p-0 text-body-secondary">Branch and Bound</a></li>
+          </ul>
+        </div>
+    
+        <div class="col mb-3">
+          <h5>Store</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="./Binary-Beats-Store-main/store-home.html" class="nav-link p-0 text-body-secondary">Store</a></li>
+            <li class="nav-item mb-2"><a href="./Binary-Beats-Store-main/contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+            <li class="nav-item mb-2"><a href="./Binary-Beats-Store-main/about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+      </footer>
+
+    </div>
+  </section>
+    
+
+      
+</section>
+
+
+  
+
+    <!-- Bootsrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+    <script src="./pages.js"></script>
+</body>
+</html>

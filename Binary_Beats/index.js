@@ -34,18 +34,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Handle Sign Up form submission
     document.querySelector('#signupModal form').addEventListener('submit', function (event) {
         event.preventDefault();
-    
+
         const form = event.target;
-    
+
         if (form.checkValidity()) {
             const formData = new FormData(form);
-    
+
             // Replace with your actual API endpoint for user registration
             const apiUrl = 'http://localhost:5454/auth/signup';
-    
+
             email = formData.get('email');
             password = formData.get('password');
-    
+
             fetch(apiUrl, {
                 method: 'POST',
                 headers: {
@@ -69,54 +69,69 @@ document.addEventListener('DOMContentLoaded', function () {
                 .then(data => {
                     // Assuming the API returns a JWT token upon successful registration
                     const jwtToken = data.jwt; // Adjust according to your API response
-    
+
                     // Save the JWT token in localStorage
-                    localStorage.removeItem("jwtToken")
-                    localStorage.setItem('jwtToken', jwtToken);
-    
+                    localStorage.removeItem("jwt")
+                    localStorage.setItem('jwt', jwtToken);
+
                     // Hide sign-up modal and show sign-in modal
                     const signUpModal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
                     signUpModal.hide();
                     showSignInModal();
-    
+
                     // Optionally, you can clear the form fields after successful submission
                     form.reset();
-    
+
                     // Show a success message or alert
                     alert('Account created successfully! Please sign in.');
                 })
                 .catch(error => {
-                    console.error('Error:', error);
+                    alert("Error signing Up")
                     // Handle error scenarios, e.g., display error message to user
                 });
         } else {
             form.classList.add('was-validated');
         }
     });
-    
 
-    // Handle Sign In form submission
+
     document.querySelector('#signinModal form').addEventListener('submit', function (event) {
         event.preventDefault();
 
-        // Simulate form submission and authentication
         const form = event.target;
-        if (form.checkValidity()) {
+        const formData = new FormData(form);
 
-            const formData = new FormData(form);
-            if(formData.get('email')!=email || formData.get('password')!=password){
-                alert("Invalid credentials");
-            }
-            // Simulate successful sign-in (normally, you would validate credentials against your server)
-            const signInModal = bootstrap.Modal.getInstance(document.getElementById('signinModal'));
-            signInModal.hide();
-            
+        const myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
 
-            // Redirect to the home page after successful sign-in
-            window.location.href = 'index.html';
-        } else {
-            form.classList.add('was-validated');
-        }
+        const raw = JSON.stringify({
+            "password": formData.get('password'),
+            "email": formData.get('email'),
+        });
+
+        const requestOptions = {
+            method: "POST",
+            headers: myHeaders,
+            body: raw,
+            redirect: "follow"
+        };
+
+        fetch("http://localhost:5454/auth/login", requestOptions)
+            .then((response) => response.json())  
+            .then((result) => {
+                console.log(result.jwt);  
+                localStorage.removeItem("jwt");
+                localStorage.setItem('jwt', result.jwt);
+                location.reload();
+            })
+            .catch((error) => console.error('Error:', error));
+
     });
 
 });
+
+function logout(){
+    localStorage.removeItem("jwt");
+    alert("Logout Successful");
+    
+}

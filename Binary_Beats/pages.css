@@ -1,0 +1,126 @@
+/* CSS for DSA pages */
+
+#main-content{
+    color: #fff;
+    background-color: #2e3236;
+    margin-bottom: 20px;
+}
+
+.icon-square {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem;
+}
+
+.gradient-background{
+    height: 100%;
+    background-color: #000000; /* For browsers that do not support gradients */
+    background-image: linear-gradient(#000000,  #014274, #0D556D, #2C778F, #000000);
+}
+
+.py-5 {
+    padding-bottom: 2rem !important;
+}
+
+.sub-heading .fs-1{
+    margin-top: 30px;
+}
+
+.dropdown-container {
+    width: 1260px;
+    background-color: #2e3236;
+    color: #fff;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0px 10px;
+    margin: 30px 8px;
+    border: 1px solid #ddd;
+}
+
+.dropdown-header {
+    padding: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown-content {
+    display: block;
+    padding: 10px 0;
+}
+
+.chapters-dropdown-item {
+    font-size: 20px;
+    padding: 12px 15px;
+    border-top: 1px solid #444;
+    cursor: pointer;
+}
+
+.chapters-dropdown-item a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.chapters-dropdown-item:hover {
+    background-color: #444;
+}
+
+.chapters-dropdown-item a:hover{
+    text-decoration: underline;
+}
+
+.dropdown-arrow {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-container.closed .dropdown-content {
+    display: none;
+}
+
+.dropdown-container.closed .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.content{
+    width: 1260px;
+    height: auto;
+    background-color: #2e3236;
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid white;
+    border-radius: 3px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.content-heading {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+.content-subheading {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+.example {
+    background-color: #36454F;
+    border-left: 4px solid #ccc;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+code {
+    display: block;
+    color: #89CFF0;
+    background-color: #616569;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    white-space: pre-wrap;
+}

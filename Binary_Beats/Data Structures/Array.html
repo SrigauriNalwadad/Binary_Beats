@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures - Arrays</title>
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../pages.css">
+    <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
+</head>
+<body>
+    
+    <!-- Main Sesction -->
+    <section  id="main" class="gradient-background">
+
+      <!-- Navbar -->
+      <section id="nav">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+          <div class="container-fluid">
+            <img src="../images/Binary_Beats_logo.png" alt="Binary_Beats_logo" class="main-logo">
+            <a class="navbar-brand" href="../index.html">Binary Beats</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item dropdown">
+                  <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    DSA
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="../DSA-for-Beginners.html">DSA For Beginners</a></li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle">Data Structures</a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="./Array.html">Arrays</a></li>
+                        <li><a class="dropdown-item" href="./String.html">Strings</a></li>
+                        <li><a class="dropdown-item" href="./Stack.html">Stack</a></li>
+                        <li><a class="dropdown-item" href="./Queue.html">Queue</a></li>
+                        <li><a class="dropdown-item" href="./Linked-List.html">Linked List</a></li>
+                        <li><a class="dropdown-item" href="./Tree.html">Tree</a></li>
+                        <li><a class="dropdown-item" href="./Graph.html">Graph</a></li>
+                        <li><a class="dropdown-item" href="./Heap.html">Heap</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle">Algorithms</a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="../Algorithms/Searching-Algorithms.html">Searching Algorithms</a>
+                        <li><a class="dropdown-item" href="../Algorithms/Sorting-Algorithms.html">Sorting Algorithms</a></li>
+                        <li><a class="dropdown-item" href="../Algorithms/Greedy-Algorithms.html">Greedy Algorithms</a></li>
+                        <li><a class="dropdown-item" href="../Algorithms/Dynamic-Programming.html">Dynamic Programming</a></li>
+                        <li><a class="dropdown-item" href="../Algorithms/Graph-Algorithms.html">Graph Algorithms</a></li>
+                        <li><a class="dropdown-item" href="../Algorithms/Recurision.html">Recursion</a></li>
+                        <li><a class="dropdown-item" href="../Algorithms/Backtracking.html">Backtracking</a></li>
+                        <li><a class="dropdown-item" href="../Algorithms/Branch-and-Bound.html">Branch and Bound</a></li>
+                        <li><a class="dropdown-item" href="../Algorithms/Divide-and-Conqure.html">Divide and Conquer</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../Binary-Beats-Store-main/store-home.html">Store</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                    Practice
+                  </button>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
+                    <li class="dropdown-submenu">
+                      <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
+                      <ul class="dropdown-menu dropdown-menu-dark">
+                        <li><a class="dropdown-item" href="#">Easy</a></li>
+                        <li><a class="dropdown-item" href="#">Medium</a></li>
+                        <li><a class="dropdown-item" href="#">Hard</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+              <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
+              <div class="ms-2">
+                <button class="btn btn-outline-success" type="button" data-bs-toggle="modal" data-bs-target="#signinModal">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                  </svg>
+                </button>
+            </div>
+            </div>
+          </div>
+        </nav>
+      </section>
+      <!-- Sign In Modal -->
+      <div class="modal fade" id="signinModal" tabindex="-1" aria-labelledby="signinModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signinModalLabel">Sign In</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="#" method="post" class="needs-validation" novalidate>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                            <div class="invalid-feedback">
+                                Please enter a valid email address.
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                            <div class="invalid-feedback">
+                                Please enter your password.
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary">Sign In</button>
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <p>Don't have an account? <a href="#" data-bs-toggle="modal" data-bs-target="#signupModal" data-bs-dismiss="modal">Create Account</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+          <!-- Sign Up Modal -->
+          <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                          <form action="#" method="post" class="needs-validation" novalidate>
+                              <div class="mb-3">
+                                  <label for="firstName" class="form-label">First Name</label>
+                                  <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                  <div class="invalid-feedback">
+                                      Please enter your first name.
+                                  </div>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="lastName" class="form-label">Last Name</label>
+                                  <input type="text" class="form-control" id="lastName" name="lastName" required>
+                                  <div class="invalid-feedback">
+                                      Please enter your last name.
+                                  </div>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="email" class="form-label">Email</label>
+                                  <input type="email" class="form-control" id="email" name="email" required>
+                                  <div class="invalid-feedback">
+                                      Please enter a valid email address.
+                                  </div>
+                              </div>
+                              <div class="mb-3">
+                                  <label for="phone" class="form-label">Phone Number</label>
+                                  <input type="tel" class="form-control" id="phone" name="phone" required>
+                                  <div class="invalid-feedback">
+                                      Please enter your phone number.
+                                  </div>
+                              </div>
+                              <div class="mb-3">
+                                <label for="phone" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" required>
+                                <div class="invalid-feedback">
+                                    Please enter your password.
+                                </div>
+                            </div>
+                              <div class="modal-footer">
+                                  <button type="submit" class="btn btn-primary">Sign Up</button>
+                                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                              </div>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+    <!-- Main Content -->
+    <section id="main-content">
+      <div class=" container">
+        <div class="main-header p-3 pb-md-4 mx-auto">
+          <h2 class="fs-1">Array Data Structure</h2>
+          <p class="fs-6 text-body-secondary">This comprehensive guide to Array Data Structures covers the basics, how to get started, learning techniques, strategies, resources, and common problems to help you effectively understand and use arrays in programming.</p>
+        </div>
+      </div>
+      <div class="container px-4 py-5" id="hanging-icons">
+        <h2 class="pb-2 border-bottom">Overveiw</h2>
+        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16">
+                <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
+                <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="fs-2">Chapters</h3>
+              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+              <a href="#chapters-section" class="btn btn-primary">
+                Start Learning
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-ui-checks" viewBox="0 0 16 16">
+                <path d="M7 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zM2 1a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm0 8a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2zm.854-3.646a.5.5 0 0 1-.708 0l-1-1a.5.5 0 1 1 .708-.708l.646.647 1.646-1.647a.5.5 0 1 1 .708.708zm0 8a.5.5 0 0 1-.708 0l-1-1a.5.5 0 0 1 .708-.708l.646.647 1.646-1.647a.5.5 0 0 1 .708.708zM7 10.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm0-5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 8a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="fs-2">Quizs</h3>
+              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+              <a href="#" class="btn btn-primary">
+                Primary button
+              </a>
+            </div>
+          </div>
+          <div class="col d-flex align-items-start">
+            <div class="icon-square text-body-emphasis bg-body-secondary d-inline-flex align-items-center justify-content-center fs-4 flex-shrink-0 me-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16">
+                <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
+                <path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="fs-2">Problems</h3>
+              <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+              <a href="#" class="btn btn-primary">
+                Primary button
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps to learn DSA part -->
+    <section id="steps">
+      <div class="container">
+        <div class="sub-heading">
+          <h3 class="fs-1" id="chapters-section">Chapters</h3>
+        </div>
+        <!-- New Collapsible Section for DSA Introduction -->
+        <div class="dropdown-container">
+          <div class="dropdown-header" onclick="toggleDropdown()">
+              Introduction to Arrays
+              <span class="dropdown-arrow">▲</span>
+          </div>
+          <div class="dropdown-content">
+              <div class="chapters-dropdown-item"><a href="#what-is-an-array">What is an Array?</a></div>
+              <div class="chapters-dropdown-item"><a href="#types-of-arrays">Types of Arrays</a></div>
+              <div class="chapters-dropdown-item"><a href="#diferent-ways-of-accessing-elements">Different ways of accessing array elements | Array Operations</a></div>
+              <div class="chapters-dropdown-item"><a href="#inserting-elements-in-an-array">Inserting Elements in an Array | Array Operations</a></div>
+              <div class="chapters-dropdown-item"><a href="#deleting-elements-in-an-array-operations">Deleting Elements in an Array | Array Operations</a></div>
+          </div>
+      </div>
+      </div>
+
+      <!-- Post Content Here -->
+      <div class="content">
+        <div class="content-heading">
+            <h1 id="what-is-an-array">What is an Array?</h1>
+        </div>
+        <p>An array is a type of linear data structure where elements are stored in a sequence. All elements in an array are of the same type and are stored next to each other in memory.</p>
+    
+        <p class="content-subheading"><strong>Array Representation in Data Structures</strong></p>
+        <p>The representation of an array is defined by its declaration, which means allocating memory for an array of a specified size.</p>
+    
+        <hr>
+    
+        <p class="content-subheading"><strong>Array Declaration</strong></p>
+        <p>Arrays can be declared in various ways in different programming languages. Here are some examples:</p>
+    
+        <p class="content-subheading"><strong>C++</strong></p>
+        <pre>
+    <code class="language-cpp">
+int arr[5];    // Array to store integers
+char arr[10];  // Array to store characters
+float arr[20]; // Array to store floats
+    </code>
+        </pre>
+    
+        <p class="content-subheading"><strong>C</strong></p>
+        <pre>
+    <code class="language-c">
+int arr[5];    // Array to store integers
+char arr[10];  // Array to store characters
+float arr[20]; // Array to store floats
+    </code>
+        </pre>
+    
+        <p class="content-subheading"><strong>Java</strong></p>
+        <pre>
+    <code class="language-java">
+int[] arr = new int[5];    // Array to store integers
+char[] arr = new char[10]; // Array to store characters
+float[] arr = new float[20]; // Array to store floats
+    </code>
+        </pre>
+    
+        <p class="content-subheading"><strong>Python</strong></p>
+        <pre>
+    <code class="language-python">
+arr = [None] * 5   // Array to store any data type, initialized with None
+arr = [0] * 10     // Array to store integers, initialized with 0
+arr = [''] * 20    // Array to store characters, initialized with empty strings
+    </code>
+        </pre>
+    
+        <hr>
+    
+        <p class="content-subheading"><strong>Static Memory Allocation</strong></p>
+        <p>The above declarations are examples of static or compile-time memory allocation. This means that the array's memory is allocated when the program is compiled. Here, a fixed size of memory (specified in the square brackets <code>[]</code>) is allocated for storage.</p>
+        <p>However, this approach has limitations:</p>
+        <ul>
+            <li>If the array is declared larger than needed, memory is wasted.</li>
+            <li>If the array is declared smaller than needed, there won't be enough memory to store all elements.</li>
+        </ul>
+        <p>In situations where the size of the array is not known in advance, static memory allocation is not ideal.</p>
+    
+      </div>
+
+      <div class="content">
+        <div class="content-heading">
+          <h1 id="types-of-arrays">Types of Arrays</h1>
+      </div>
+      <p>There are majorly three types of arrays:</p>
+      <ul>
+          <li>One-dimensional array (1-D arrays)</li>
+          <li>Two-dimensional (2D) array</li>
+          <li>Three-dimensional array</li>
+      </ul>
+  
+      <hr>
+  
+      <p class="content-subheading"><strong>1. One-dimensional array (1-D arrays):</strong></p>
+      <p>You can imagine a 1D array as a row, where elements are stored one after another.</p>
+      <!-- <img src="path/to/1d-array.png" alt="1D array"> -->
+      <p>Syntax for Declaration of Single Dimensional Array:</p>
+      <pre>
+  <code>data_type array_name[array_size];</code>
+      </pre>
+      <p>where,</p>
+      <ul>
+          <li><strong>data_type:</strong> is a type of data of each array block.</li>
+          <li><strong>array_name:</strong> is the name of the array using which we can refer to it.</li>
+          <li><strong>array_size:</strong> is the number of blocks of memory array going to have.</li>
+      </ul>
+      <p>For Example:</p>
+      <pre>
+  <code class="language-cpp">int nums[5];</code>
+      </pre>
+  
+      <hr>
+  
+      <p class="content-subheading"><strong>2. Two-dimensional (2D) array:</strong></p>
+      <p>Multidimensional arrays can be considered as an array of arrays or as a matrix consisting of rows and columns.</p>
+      <!-- <img src="path/to/2d-array.png" alt="2D array"> -->
+      <p>Syntax for Declaration of Two-Dimensional Array:</p>
+      <pre>
+  <code>data_type array_name[sizeof_1st_dimension][sizeof_2nd_dimension];</code>
+      </pre>
+      <p>where,</p>
+      <ul>
+          <li><strong>data_type:</strong> is a type of data of each array block.</li>
+          <li><strong>array_name:</strong> is the name of the array using which we can refer to it.</li>
+          <li><strong>sizeof_dimension:</strong> is the number of blocks of memory array going to have in the corresponding dimension.</li>
+      </ul>
+      <p>For Example:</p>
+      <pre>
+  <code class="language-cpp">int nums[5][10];</code>
+      </pre>
+  
+      <hr>
+  
+      <p class="content-subheading"><strong>3. Three-dimensional array:</strong></p>
+      <p>A 3-D Multidimensional array contains three dimensions, so it can be considered an array of two-dimensional arrays.</p>
+      <!-- <img src="path/to/3d-array.png" alt="3D array"> -->
+      <p>Syntax for Declaration of Three-Dimensional Array:</p>
+      <pre>
+  <code>data_type array_name[sizeof_1st_dimension][sizeof_2nd_dimension][sizeof_3rd_dimension];</code>
+      </pre>
+      <p>where,</p>
+      <ul>
+          <li><strong>data_type:</strong> is a type of data of each array block.</li>
+          <li><strong>array_name:</strong> is the name of the array using which we can refer to it.</li>
+          <li><strong>sizeof_dimension:</strong> is the number of blocks of memory array going to have in the corresponding dimension.</li>
+      </ul>
+      <p>For Example:</p>
+      <pre>
+  <code class="language-cpp">int nums[5][10][2];</code>
+      </pre>
+
+  </div>
+        
+  
+  <div class="content">
+    <div class="content-heading">
+      <h1 id="diferent-ways-of-accessing-elements">Different ways of accessing array elements | Array Operations</h1>
+  </div>
+  <p>In this article, two unique and different ways of accessing an element from an array rather than the conventional<pre><code>arr[i]</code></pre>expression are discussed below.</p>
+  <ul>
+      <li>Using pointer <pre><code>*(arr+1)</code></pre></li>
+      <li>Using a little manipulation <pre><code>i[arr]</code></pre> for using arrays and the reason behind that.</li>
+  </ul>
+  <p>The below example is another simplest way of accessing array elements in C++.</p>
+  <pre>
+    <code class="language-cpp">
+#include &lt;iostream&gt;
+using namespace std;
+
+int main()
+{
+  double num[] = { 11, 12, 13, 14, 15, 16 };
+  double add = 0;
+  double count = 0;
+  double avg;
+  cout &lt;&lt; "The number is=";
+
+  for (const double& n : num) {
+      cout &lt;&lt; n &lt;&lt; " " &lt;&lt;endl;
+
+      add += n;
+
+      ++count;
+  }
+  cout &lt;&lt; "Addition of numbers= " &lt;&lt; add &lt;&lt; endl;
+  avg = add / count;
+  cout &lt;&lt; "average of numbers= " &lt;&lt; avg &lt;&lt; endl;
+
+  return 0;
+}
+  </code>
+</pre>
+
+  <p>Output</p>
+  <pre>
+    <code class="language-cpp">
+The number is=11 
+12 
+13 
+14 
+15 
+16 
+Addition of numbers= 81
+average of numbers= 13.5
+  </code>
+</pre>
+  <p>Example:</p>
+  <p><pre><code class="language-cpp">int a[10];</code></pre></p>
+  <p>gets stored like:</p>
+  <ul>
+      <li><strong>*(a)</strong> - which points to the first element.</li>
+      <li><strong>*(a+1)</strong> - which points to the second element.</li>
+      <li>Similarly, we can have the last element pointed by <code>*(a+(n-1))</code> where <code>n-1</code> is used as arrays in C++ have zero-based indexing.</li>
+  </ul>
+  <p>Using this concept let us discuss the first method of accessing the arrays:</p>
+  <p><strong>Using the concept of pointers</strong></p>
+  <p>Below is the C++ program to implement the above concept:</p>
+  <pre>
+    <code class="language-cpp">
+// C++ program to demonstrate the above approach
+#include &lt;iostream&gt;
+using namespace std;
+
+// Driver Code
+int main()
+{
+  int arr[10];
+
+  // Conventional method
+  // for(int i = 0; i<10; i++)
+  //{
+  // arr[i] = i+1;
+  //}
+
+  // Pointer Method
+  for (int i = 0; i < 10; i++) {
+      *(arr + i) = i + 1;
+  }
+
+  cout &lt;&lt; "Values : ";
+
+  for (int i = 0; i < 10; i++) {
+      cout &lt;&lt; *(arr + i) &lt;&lt; ' ';
+  }
+
+  return 0;
+}
+  </code>
+</pre>
+  <p>Output</p>
+  <pre><code class="language-cpp">
+Values : 1 2 3 4 5 6 7 8 9 10 
+  </code></pre>
+  </div>
+    
+  <div class="content">
+    <div class="content-heading">
+      <h1 id="inserting-elements-in-an-array">Inserting Elements in an Array | Array Operations</h1>
+  </div>
+  <p>In this post, we will look into insertion operations in an array, i.e., how to insert elements into an array, such as:</p>
+  <ul>
+      <li><a href="#inserting-elements-at-the-end">Inserting Elements in an Array at the End</a></li>
+      <li><a href="#inserting-elements-at-any-position">Inserting Elements in an Array at any Position in the Middle</a></li>
+      <li><a href="#inserting-elements-in-a-sorted-array">Inserting Elements in a Sorted Array</a></li>
+  </ul>
+  <h2 id="inserting-elements-at-the-end">1. Inserting Elements in an Array at the End:</h2>
+  <p>In an unsorted array, the insert operation is faster as compared to a sorted array because we don’t have to care about the position at which the element is to be placed.</p>
+  <pre><code class="language-cpp">
+// C++ program to insert an element at the end
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// Function to insert a key into an array 
+int insertSorted(int arr[], int n, int key, int capacity) { 
+  // Check if the array is already full 
+  if (n >= capacity) 
+      return n; 
+  // Add the key at the end of the array
+  arr[n] = key; 
+  // Return the updated size of the array
+  return (n + 1); 
+} 
+
+int main() {
+  int arr[20] = {12, 16, 20, 40, 50, 70}; 
+  int capacity = sizeof(arr) / sizeof(arr[0]);
+  int n = 6; 
+  int i, key = 26;
+
+  cout &lt;&lt; "\nBefore Insertion: "; 
+  for (i = 0; i &lt; n; i++) 
+      cout &lt;&lt; arr[i] &lt;&lt; " "; 
+
+  // Inserting the key into the array 
+  n = insertSorted(arr, n, key, capacity);
+
+  cout &lt;&lt; "\nAfter Insertion: "; 
+  for (i = 0; i &lt; n; i++) 
+      cout &lt;&lt; arr[i] &lt;&lt; " "; 
+
+  return 0;
+}
+  </code></pre>
+  <p>Output</p>
+  <pre><code class="language-cpp">
+Before Insertion: 12 16 20 40 50 70 
+After Insertion: 12 16 20 40 50 70 26 
+  </code></pre>
+  <p><strong>Time Complexity:</strong> O(n)</p>
+  <p><strong>Auxiliary Space:</strong> O(1)</p>
+  
+  <h2 id="inserting-elements-at-any-position">2. Inserting Elements in an Array at any Position:</h2>
+  <p>Insert operation in an array at any position can be performed by shifting elements to the right, which are on the right side of the required position.</p>
+  <pre><code class="language-cpp">
+// C++ Program to insert an element at a specific position
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// Function to insert element at a specific position
+void insertElement(int arr[], int n, int x, int pos) {
+  // Shift elements to the right
+  for (int i = n - 1; i >= pos; i--)
+      arr[i + 1] = arr[i];
+  arr[pos] = x;
+}
+
+int main() {
+  int arr[15] = {2, 4, 1, 8, 5};
+  int n = 5;
+
+  cout &lt;&lt; "Before insertion: ";
+  for (int i = 0; i &lt; n; i++)
+      cout &lt;&lt; arr[i] &lt;&lt; " ";
+  cout &lt;&lt; endl;
+
+  int x = 10, pos = 2;
+
+  // Function call
+  insertElement(arr, n, x, pos);
+  n++;
+
+  cout &lt;&lt; "After insertion: ";
+  for (int i = 0; i &lt; n; i++)
+      cout &lt;&lt; arr[i] &lt;&lt; " ";
+
+  return 0;
+}
+  </code></pre>
+  <p>Output</p>
+  <pre><code class="language-cpp">
+Before insertion: 2 4 1 8 5 
+After insertion: 2 4 10 1 8 5 
+  </code></pre>
+  <p><strong>Time Complexity:</strong> O(N)</p>
+  <p><strong>Auxiliary Space:</strong> O(1)</p>
+  
+  <h2 id="inserting-elements-in-a-sorted-array">3. Inserting Elements in a Sorted Array:</h2>
+  <p>In a sorted array, a search operation is performed for the possible position of the given element by using Binary search, and then an insert operation is performed followed by shifting the elements. In an unsorted array, the insert operation is faster as compared to the sorted array because we don’t have to care about the position at which the element is placed.</p>
+  <pre><code class="language-cpp">
+// C program to insert an element in a sorted array
+#include &lt;stdio.h&gt;
+
+// Function to insert a key in a sorted array
+int insertSorted(int arr[], int n, int key, int capacity) {
+  // Check if the array is already full
+  if (n >= capacity)
+      return n;
+
+  int i;
+  for (i = n - 1; (i >= 0 && arr[i] > key); i--)
+      arr[i + 1] = arr[i];
+  arr[i + 1] = key;
+
+  return (n + 1);
+}
+
+int main() {
+  int arr[20] = {12, 16, 20, 40, 50, 70};
+  int capacity = sizeof(arr) / sizeof(arr[0]);
+  int n = 6;
+  int i, key = 26;
+
+  printf("\nBefore Insertion: ");
+  for (i = 0; i < n; i++)
+      printf("%d ", arr[i]);
+
+  // Function call
+  n = insertSorted(arr, n, key, capacity);
+
+  printf("\nAfter Insertion: ");
+  for (i = 0; i < n; i++)
+      printf("%d ", arr[i]);
+
+  return 0;
+}
+  </code></pre>
+  <p>Output</p>
+  <pre><code class="language-cpp">
+Before Insertion: 12 16 20 40 50 70 
+After Insertion: 12 16 20 26 40 50 70 
+  </code></pre>
+  <p><strong>Time Complexity:</strong> O(N) [In the worst case all elements may have to be moved]</p>
+  <p><strong>Auxiliary Space:</strong> O(1)</p>
+  </div>
+    
+ 
+  <div class="content">
+    <div class="content-heading">
+      <h1 id="deleting-elements-in-an-array-operations">Deleting Elements in an Array | Array Operations</h1>
+  </div>
+  <p><strong>Last Updated: 21 Jul, 2023</strong></p>
+  <p>In this post, we will look into deletion operation in an Array, i.e., how to delete an element from an Array, such as:</p>
+  <ul>
+      <li><a href="#deleting-elements-in-an-array-when-it-is-unsorted">Deleting Elements from an Array when it is Unsorted</a></li>
+      <li><a href="deleting-elements-in-an-array-when-it-is-sorted">Deleting Elements from an Array when it is Sorted</a></li>
+  </ul>
+  <h2 id="deleting-elements-in-an-array-when-it-is-unsorted">Deleting Elements in an Array when it is Unsorted</h2>
+  <p>In the delete operation, the element to be deleted is searched using linear search, and then the delete operation is performed followed by shifting the elements.</p>
+  <pre><code class="language-cpp">
+// C++ program to implement delete operation in a
+// unsorted array
+#include &lt;iostream&gt;
+using namespace std;
+
+// To search a key to be deleted
+int findElement(int arr[], int n, int key);
+
+// Function to delete an element
+int deleteElement(int arr[], int n, int key)
+{
+  // Find position of element to be deleted
+  int pos = findElement(arr, n, key);
+
+  if (pos == -1) {
+      cout &lt;&lt; "Element not found";
+      return n;
+  }
+
+  // Deleting element
+  int i;
+  for (i = pos; i &lt; n - 1; i++)
+      arr[i] = arr[i + 1];
+
+  return n - 1;
+}
+
+// Function to implement search operation
+int findElement(int arr[], int n, int key)
+{
+  int i;
+  for (i = 0; i &lt; n; i++)
+      if (arr[i] == key)
+          return i;
+
+  return -1;
+}
+
+// Driver's code
+int main()
+{
+  int i;
+  int arr[] = { 10, 50, 30, 40, 20 };
+
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int key = 30;
+
+  cout &lt;&lt; "Array before deletion\n";
+  for (i = 0; i &lt; n; i++)
+      cout &lt;&lt; arr[i] &lt;&lt; " ";
+
+  // Function call
+  n = deleteElement(arr, n, key);
+
+  cout &lt;&lt; "\n\nArray after deletion\n";
+  for (i = 0; i &lt; n; i++)
+      cout &lt;&lt; arr[i] &lt;&lt; " ";
+
+  return 0;
+}
+  </code></pre>
+  <p>Output:</p>
+  <pre><code class="language-cpp">
+Array before deletion
+10 50 30 40 20 
+
+Array after deletion
+10 50 40 20 
+  </code></pre>
+  <p>Time Complexity: O(N)<br>
+  Auxiliary Space: O(1)</p>
+  <h2 id="deleting-elements-in-an-array-when-it-is-sorted">Deleting Elements in an Array when it is Sorted</h2>
+  <p>In the delete operation, the element to be deleted is searched using binary search, and then the delete operation is performed followed by shifting the elements.</p>
+  <pre><code class="language-cpp">
+// C++ program to implement delete operation in a
+// sorted array
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// To search a key to be deleted
+int binarySearch(int arr[], int low, int high, int key);
+
+/* Function to delete an element */
+int deleteElement(int arr[], int n, int key)
+{
+  // Find position of element to be deleted
+  int pos = binarySearch(arr, 0, n - 1, key);
+
+  if (pos == -1) {
+      cout &lt;&lt; "Element not found";
+      return n;
+  }
+
+  // Deleting element
+  int i;
+  for (i = pos; i &lt; n - 1; i++)
+      arr[i] = arr[i + 1];
+
+  return n - 1;
+}
+
+int binarySearch(int arr[], int low, int high, int key)
+{
+  if (high &lt; low)
+      return -1;
+  int mid = (low + high) / 2;
+  if (key == arr[mid])
+      return mid;
+  if (key &gt; arr[mid])
+      return binarySearch(arr, (mid + 1), high, key);
+  return binarySearch(arr, low, (mid - 1), key);
+}
+
+// Driver code
+int main()
+{
+  int i;
+  int arr[] = { 10, 20, 30, 40, 50 };
+
+  int n = sizeof(arr) / sizeof(arr[0]);
+  int key = 30;
+
+  cout &lt;&lt; "Array before deletion\n";
+  for (i = 0; i &lt; n; i++)
+      cout &lt;&lt; arr[i] &lt;&lt; " ";
+
+  // Function call
+  n = deleteElement(arr, n, key);
+
+  cout &lt;&lt; "\n\nArray after deletion\n";
+  for (i = 0; i &lt; n; i++)
+      cout &lt;&lt; arr[i] &lt;&lt; " ";
+}
+  </code></pre>
+  <p>Output:</p>
+  <pre><code class="language-cpp">
+Array before deletion
+10 20 30 40 50 
+
+Array after deletion
+10 20 40 50 
+  </code></pre>
+  <p>Time Complexity: O(N). In the worst case, all elements may have to be moved.<br>
+  Auxiliary Space: O(log N). An implicit stack will be used.</p>
+  </div>
+      
+  <div class="content">
+    <div class="content-heading">
+        <h1 id="searching-elements-in-an-array-array-operations">Searching Elements in an Array | Array Operations</h1>
+    </div>
+    <p><strong>Last Updated: 23 May, 2024</strong></p>
+    <p>In this post, we will look into search operations in an array, i.e., how to search for an element in an array using various techniques:</p>
+    <ul>
+        <li>Searching in an Unsorted Array using Linear Search</li>
+        <li>Searching in a Sorted Array using Linear Search</li>
+        <li>Searching in a Sorted Array using Binary Search</li>
+        <li>Searching in a Sorted Array using Fibonacci Search</li>
+    </ul>
+    <h2 id="searching-operations-in-an-unsorted-array-using-linear-search">Searching operations in an Unsorted Array using Linear Search</h2>
+    <p>In an unsorted array, the search operation can be performed by linear traversal from the first element to the last element, i.e., Linear Search</p>
+    <h3>Coding implementation of the search operation:</h3>
+    <pre><code>// C++ program to implement linear
+// search in unsorted array
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// Function to implement search operation
+int findElement(int arr[], int n, int key)
+{
+    int i;
+    for (i = 0; i &lt; n; i++)
+        if (arr[i] == key)
+            return i;
+
+    // If the key is not found
+    return -1;
+}
+
+// Driver's Code
+int main()
+{
+    int arr[] = { 12, 34, 10, 6, 40 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    // Using a last element as search element
+    int key = 40;
+
+    // Function call
+    int position = findElement(arr, n, key);
+
+    if (position == -1)
+        cout &lt;&lt; "Element not found";
+    else
+        cout &lt;&lt; "Element Found at Position: "
+             &lt;&lt; position + 1;
+
+    return 0;
+}
+    </code></pre>
+    <p>Output:</p>
+    <pre><code>Element Found at Position: 5
+Time Complexity: O(N)
+Auxiliary Space: O(1)
+    </code></pre>
+    <h2 id="searching-in-a-sorted-array-using-linear-search">Searching in a Sorted Array using Linear Search</h2>
+    <p>In a sorted array, the most trivial method for the search operation is by using Linear Search.</p>
+    <h3>Search Operation in a sorted array</h3>
+    <pre><code>// C++ program to implement linear
+// search in sorted array
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// Function to implement search operation
+int findElement(int arr[], int n, int key)
+{
+    int i;
+    for (i = 0; i &lt; n; i++)
+        if (arr[i] == key)
+            return i;
+
+    // If the key is not found
+    return -1;
+}
+
+// Driver's Code
+int main()
+{
+    int arr[] = { 5, 6, 7, 8, 9, 10 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    // Using a last element as search element
+    int key = 10;
+
+    // Function call
+    int position = findElement(arr, n, key);
+
+    if (position == -1)
+        cout &lt;&lt; "Element not found";
+    else
+        cout &lt;&lt; "Element Found at Position: "
+             &lt;&lt; position + 1;
+
+    return 0;
+}
+    </code></pre>
+    <p>Output:</p>
+    <pre><code>Element Found at Position: 6
+Time Complexity: O(N)
+Auxiliary Space: O(1)
+    </code></pre>
+    <h2 id="searching-in-a-sorted-array-using-binary-search">Searching in a Sorted Array using Binary Search</h2>
+    <p>In a sorted array, the search operation can be performed efficiently by using binary search.</p>
+    <h3>Search Operation in a sorted array</h3>
+    <pre><code>// C++ program to implement binary search in sorted array
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int binarySearch(int arr[], int low, int high, int key)
+{
+    if (high &lt; low)
+        return -1;
+    int mid = (low + high) / 2; /*low + (high - low)/2;*/
+    if (key == arr[mid])
+        return mid;
+    if (key &gt; arr[mid])
+        return binarySearch(arr, (mid + 1), high, key);
+    return binarySearch(arr, low, (mid - 1), key);
+}
+
+/* Driver code */
+int main()
+{
+    // Let us search 3 in below array
+    int arr[] = { 5, 6, 7, 8, 9, 10 };
+    int n, key;
+
+    n = sizeof(arr) / sizeof(arr[0]);
+    key = 10;
+
+    // Function call
+    cout &lt;&lt; "Index: " &lt;&lt; binarySearch(arr, 0, n - 1, key)
+         &lt;&lt; endl;
+    return 0;
+}
+    </code></pre>
+    <p>Output:</p>
+    <pre><code>Index: 5
+Time Complexity: O(log(n)) Using Binary Search
+Auxiliary Space: O(log(n)) due to recursive calls, otherwise iterative version uses Auxiliary Space of O(1).
+    </code></pre>
+    <h2 id="searching-in-a-sorted-array-using-fibonacci-search">Searching in a Sorted Array using Fibonacci Search</h2>
+    <p>Fibonacci Search is a comparison-based technique that uses Fibonacci numbers to search an element in a sorted array.</p>
+    <h3>Untitled</h3>
+    <pre><code>// C++ program of the above approach
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+using std::cout;
+
+// Utility function to find minimum of two elements
+int minimum(int x, int y) { return (x &lt; y) ? x : y; }
+
+/* Returns index of x if present,  else returns -1 */
+int fibonacciSearch(int arr[], int x, int n)
+{
+    /* Initialize fibonacci numbers */
+    int fibMMm2 = 0; // (m-2)'th Fibonacci No.
+    int fibMMm1 = 1; // (m-1)'th Fibonacci No.
+    int fibM = fibMMm2 + fibMMm1; // m'th Fibonacci
+
+    /* fibM is going to store the smallest Fibonacci
+       Number greater than or equal to n */
+    while (fibM &lt; n) {
+        fibMMm2 = fibMMm1;
+        fibMMm1 = fibM;
+        fibM = fibMMm2 + fibMMm1;
+    }
+
+    // Marks the eliminated range from front
+    int offset = -1;
+
+    /* while there are elements to be inspected. Note that
+       we compare arr[fibMm2] with x. When fibM becomes 1,
+       fibMm2 becomes 0 */
+    while (fibM &gt; 1) {
+        // Check if fibMm2 is a valid location
+        int i = minimum(offset + fibMMm2, n - 1);
+
+        /* If x is greater than the value at index fibMm2,
+           cut the subarray array from offset to i */
+        if (arr[i] &lt; x) {
+            fibM = fibMMm1;
+            fibMMm1 = fibMMm2;
+            fibMMm2 = fibM - fibMMm1;
+            offset = i;
+        }
+
+        /* If x is greater than the value at index fibMm2,
+           cut the subarray after i+1  */
+        else if (arr[i] &gt; x) {
+            fibM = fibMMm2;
+            fibMMm1 = fibMMm1 - fibMMm2;
+            fibMMm2 = fibM - fibMMm1;
+        }
+
+        /* element found. return index */
+        else
+            return i;
+    }
+
+    /* comparing the last element with x */
+    if (fibMMm1 &amp;&amp; arr[offset + 1] == x)
+        return offset + 1;
+
+    /*element not found. return -1 */
+    return -1;
+}
+
+// Driver Code
+int main()
+{
+    int arr[] = { 10, 22, 35, 40, 45,  50,
+                  80, 82, 85, 90, 100, 235 };
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int x = 235;
+    int ind = fibonacciSearch(arr, x, n);
+    if (ind &gt;= 0)
+        cout &lt;&lt; "Found at index: " &lt;&lt; ind;
+    else
+        cout &lt;&lt; x &lt;&lt; " isn't present in the array";
+
+    return 0;
+}
+    </code></pre>
+    <p>Output:</p>
+    <pre><code>Found at index: 11
+Time Complexity: O(log(n)) Using Fibonacci Search
+Auxiliary Space: O(1) Using Fibonacci Search
+    </code></pre>
+</div>
+
+
+  </section>
+
+        
+    <!-- Footer -->
+        <sectionc id="footer">
+          <div class="dark-background">
+            <footer class="row-footer row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+              <div class="col mb-3">
+                <a href="../index.html" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                  <img src="../images/Binary_Beats_complete_logo.png" alt="Binary_Beats_complete_logo" class="footer-logo">
+                </a>
+                <p class="text-body-secondary">© 2024</p>
+              </div>
+          
+              <div class="col mb-3">
+          
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Data Strutures</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="./String.html" class="nav-link p-0 text-body-secondary">Strings</a></li>
+                  <li class="nav-item mb-2"><a href="./Array.html" class="nav-link p-0 text-body-secondary">Arrays</a></li>
+                  <li class="nav-item mb-2"><a href="./Stack.html" class="nav-link p-0 text-body-secondary">Stack</a></li>
+                  <li class="nav-item mb-2"><a href="./Queue.html" class="nav-link p-0 text-body-secondary">Queue</a></li>
+                  <li class="nav-item mb-2"><a href="./Linked-List.html" class="nav-link p-0 text-body-secondary">Linked List</a></li>
+                  <li class="nav-item mb-2"><a href="./Tree.html" class="nav-link p-0 text-body-secondary">Tree</a></li>
+                  <li class="nav-item mb-2"><a href="./Graph.html" class="nav-link p-0 text-body-secondary">Graph</a></li>
+                  <li class="nav-item mb-2"><a href="./Heap.html" class="nav-link p-0 text-body-secondary">Heap</a></li>
+                </ul>
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Algorithms</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="../Algorithms/Searching-Algorithms.html" class="nav-link p-0 text-body-secondary">Searching Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Sorting-Algorithms.html" class="nav-link p-0 text-body-secondary">Sorting Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Greedy-Algorithms.html" class="nav-link p-0 text-body-secondary">Greedy Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Dynamic-Programming.html" class="nav-link p-0 text-body-secondary">Dynamic Programming</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Graph-Algorithms.html" class="nav-link p-0 text-body-secondary">Graph Algorithms</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Recurision.html" class="nav-link p-0 text-body-secondary">Recursion</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Backtracking.html" class="nav-link p-0 text-body-secondary">Backtracking</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Divide-and-Conqure.html" class="nav-link p-0 text-body-secondary">Divide and Conquer</a></li>
+                  <li class="nav-item mb-2"><a href="../Algorithms/Branch-and-Bound.html" class="nav-link p-0 text-body-secondary">Branch and Bound</a></li>
+                </ul>
+              </div>
+          
+              <div class="col mb-3">
+                <h5>Store</h5>
+                <ul class="nav flex-column">
+                  <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/store-home.html" class="nav-link p-0 text-body-secondary">Store</a></li>
+                  <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/contact.html" class="nav-link p-0 text-body-secondary">Contact</a></li>
+                  <li class="nav-item mb-2"><a href="../Binary-Beats-Store-main/about.html" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+              </div>
+            </footer>
+
+          </div>
+        </section>
+      
+    </section>
+        
+    
+
+    <!-- Bootsrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="../index.js"></script>
+    <script src="../pages.js"></script>
+    <!-- Highlight JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>

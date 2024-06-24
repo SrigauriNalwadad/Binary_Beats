@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pages.css">
     <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
 </head>
 <body>
     
@@ -72,14 +74,6 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Easy</a></li>
-                      <li><a class="dropdown-item" href="#">Medium</a></li>
-                      <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                  </li>
                   <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
                 </ul>
               </li>
@@ -197,8 +191,8 @@
   <section id="main-content">
     <div class=" container">
       <div class="main-header p-3 pb-md-4 mx-auto">
-        <h2 class="fs-1">DSA for Beginners</h2>
-        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+        <h2 class="fs-1">Searching Algorithms</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Searching Algorithms, you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
       </div>
     </div>
     <div class="container px-4 py-5" id="hanging-icons">
@@ -213,7 +207,7 @@
           </div>
           <div>
             <h3 class="fs-2">Chapters</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <p>2 Chapters are there for this module. We will cover all concepts related to Searching Algorithms.</p>
             <a href="#chapters-section" class="btn btn-primary">
               Start learning  
             </a>
@@ -227,9 +221,9 @@
           </div>
           <div>
             <h3 class="fs-2">Quizs</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Quiz on the topics being learnt in this module to enusure your knowlege.</p>
+            <a href="../Practice/Quiz.html" class="btn btn-primary">
+              Quiz
             </a>
           </div>
         </div>
@@ -242,9 +236,9 @@
           </div>
           <div>
             <h3 class="fs-2">Problems</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Practice Problems on the topics being covered in this module.</p>
+            <a href="../Practice/All-DSA-Problems.html" class="btn btn-primary">
+              Practice
             </a>
           </div>
         </div>
@@ -255,42 +249,197 @@
   <!-- Steps to learn DSA part -->
   <section id="steps">
     <div class="container">
-      <h3 class="fs-1" id="chapters-section">Chapters</h3>
-      <div class="steps">
-        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
-          <div class="single-chapter-heading-div">
-              <h3 class="single-chapter-title">Introduction to DSA</h3>
-              <p class="single-chapter-icon-heading">
-                  <span class="single-chapter-icon single-chapter-icon-0">
-                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
-                  </span>
-              </p>
-          </div>
-          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
-              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
-          </div>
-          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
-              <a href="https://www.geeksforgeeks.org/what-is-dsa-dsa-full-form/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is DSA | DSA Full Form</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/data-structure-meaning/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Data Structure?</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/most-important-type-of-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Most important type of Algorithms</p>
-              </a>
-          </div>
+      <div class="sub-heading">
+        <h3 class="fs-1" id="chapters-section">Chapters</h3>
       </div>
+      <!-- New Collapsible Section for DSA Introduction -->
+      <div class="dropdown-container">
+        <div class="dropdown-header" onclick="toggleDropdown()">
+            Searching Algorithms
+            <span class="dropdown-arrow">▲</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="chapters-dropdown-item"><a href="#linear-search">Linear Search</a></div>
+            <div class="chapters-dropdown-item"><a href="#binary-search">Binary Search</a></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Post Content Here -->
+    <div class="content">
+      <div class="content-heading">
+          <h2 id="linear-search">Linear Search Algorithm</h2>
       </div>
+      <div class="content-text">
+          <p>Linear Search (or Sequential Search) is a straightforward method for searching an element within a collection of elements:</p>
+          <ul>
+              <li><strong>Algorithm:</strong> The steps involved in Linear Search are:</li>
+              <ol>
+                  <li><strong>Start:</strong> Begin at the first element of the collection.</li>
+                  <li><strong>Compare:</strong> Compare the current element with the desired element.</li>
+                  <li><strong>Found:</strong> If a match is found, return the index of the current element.</li>
+                  <li><strong>Move:</strong> If no match, move to the next element in the collection.</li>
+                  <li><strong>Repeat:</strong> Repeat steps 2-4 until the end of the collection.</li>
+                  <li><strong>Not found:</strong> If the end of the collection is reached without finding the desired element, return that the element is not present.</li>
+              </ol>
+              <li><strong>Example:</strong> Consider an array <code>arr[] = {10, 50, 30, 70, 80, 20, 90, 40}</code> and we want to find the element <code>30</code>. Linear Search checks each element sequentially until it finds the element or reaches the end.</li>
+          </ul>
+          <h3>Implementation in C++:</h3>
+          <pre><code class="language-cpp">
+  #include &lt;bits/stdc++.h&gt;
+  using namespace std;
+  
+  int search(int arr[], int N, int x) {
+      for (int i = 0; i &lt; N; i++) {
+          if (arr[i] == x)
+              return i;
+      }
+      return -1;
+  }
+  
+  int main(void) {
+      int arr[] = { 2, 3, 4, 10, 40 };
+      int x = 10;
+      int N = sizeof(arr) / sizeof(arr[0]);
+  
+      // Function call
+      int result = search(arr, N, x);
+      (result == -1)
+          ? cout &lt;&lt; "Element is not present in array"
+          : cout &lt;&lt; "Element is present at index " &lt;&lt; result;
+      return 0;
+  }
+          </code></pre>
+          <p><strong>Output:</strong> <code>Element is present at index 3</code></p>
+          <h3>Time and Space Complexity:</h3>
+          <ul>
+              <li><strong>Time Complexity:</strong></li>
+              <ul>
+                  <li><strong>Best Case:</strong> O(1) - When the element is found at the first position.</li>
+                  <li><strong>Worst Case:</strong> O(N) - When the element is found at the last position or is not present.</li>
+                  <li><strong>Average Case:</strong> O(N)</li>
+              </ul>
+              <li><strong>Auxiliary Space:</strong> O(1) - Constant space used beyond the input array.</li>
+          </ul>
+          <p>Linear Search is simple but effective for small datasets or unordered lists where other search algorithms like binary search are not applicable.</p>
       </div>
-      
-  </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="content-heading">
+        <h2 id="binary-search">Binary Search Algorithm</h2>
+    </div>
+    <div class="content-text">
+        <p>Binary Search is an efficient searching algorithm used to locate a target value within a sorted array:</p>
+        <ul>
+            <li><strong>Algorithm:</strong> Binary search operates by repeatedly dividing the search interval in half. The steps are:</li>
+            <ol>
+                <li><strong>Divide:</strong> Find the middle index <code>mid</code> of the array.</li>
+                <li><strong>Compare:</strong> Compare the middle element with the target value.</li>
+                <li><strong>Search space adjustment:</strong> Based on the comparison, adjust the search space to the left or right half.</li>
+                <li><strong>Repeat:</strong> Continue the process until the target value is found or the search space is exhausted.</li>
+                <li><strong>Found:</strong> If the target is found at <code>mid</code>, return the index.</li>
+                <li><strong>Not found:</strong> If the target is not found, return -1.</li>
+            </ol>
+            <li><strong>Example:</strong> Consider an array <code>arr[] = {2, 5, 8, 12, 16, 23, 38, 56, 72, 91}</code> and the target <code>23</code>. Binary search efficiently locates <code>23</code> by halving the search space iteratively.</li>
+        </ul>
+        <h3>Iterative Binary Search Implementation in C++:</h3>
+        <pre><code class="language-cpp">
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// Iterative Binary Search function
+int binarySearch(int arr[], int low, int high, int x) {
+    while (low &lt;= high) {
+        int mid = low + (high - low) / 2;
+
+        // Check if x is present at mid
+        if (arr[mid] == x)
+            return mid;
+
+        // If x greater, ignore left half
+        if (arr[mid] &lt; x)
+            low = mid + 1;
+
+        // If x is smaller, ignore right half
+        else
+            high = mid - 1;
+    }
+
+    // If we reach here, then element was not present
+    return -1;
+}
+
+// Driver code
+int main(void) {
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int result = binarySearch(arr, 0, n - 1, x);
+    (result == -1)
+        ? cout &lt;&lt; "Element is not present in array"
+        : cout &lt;&lt; "Element is present at index " &lt;&lt; result;
+    return 0;
+}
+        </code></pre>
+        <p><strong>Output:</strong> <code>Element is present at index 3</code></p>
+        <h3>Recursive Binary Search Implementation in C++:</h3>
+        <pre><code class="language-cpp">
+#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+// Recursive Binary Search function
+int binarySearch(int arr[], int low, int high, int x) {
+    if (high &gt;= low) {
+        int mid = low + (high - low) / 2;
+
+        // If the element is present at the middle
+        if (arr[mid] == x)
+            return mid;
+
+        // If element is smaller than mid, then
+        // it can only be present in left subarray
+        if (arr[mid] &gt; x)
+            return binarySearch(arr, low, mid - 1, x);
+
+        // Else the element can only be present
+        // in right subarray
+        return binarySearch(arr, mid + 1, high, x);
+    }
+
+    // If element is not present in array
+    return -1;
+}
+
+// Driver code
+int main(void) {
+    int arr[] = { 2, 3, 4, 10, 40 };
+    int x = 10;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int result = binarySearch(arr, 0, n - 1, x);
+    (result == -1)
+        ? cout &lt;&lt; "Element is not present in array"
+        : cout &lt;&lt; "Element is present at index " &lt;&lt; result;
+    return 0;
+}
+        </code></pre>
+        <p><strong>Output:</strong> <code>Element is present at index 3</code></p>
+        <h3>Complexity Analysis:</h3>
+        <ul>
+            <li><strong>Time Complexity:</strong></li>
+            <ul>
+                <li><strong>Best Case:</strong> O(1) - When the element is found at the middle position.</li>
+                <li><strong>Average Case:</strong> O(log N) - Efficiently halves the search space.</li>
+                <li><strong>Worst Case:</strong> O(log N) - When the element is not present or located at the far ends.</li>
+            </ul>
+            <li><strong>Auxiliary Space:</strong> O(1) - Constant space is used beyond the input array.</li>
+        </ul>
+        <p>Binary Search is highly efficient for searching in large sorted datasets and is a fundamental algorithm in computer science.</p>
+    </div>
+  </div>
+  
 
 
 
@@ -356,6 +505,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../index.js"></script>
   <script src="../pages.js"></script>
+  <!-- Highlight JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 
 </body>

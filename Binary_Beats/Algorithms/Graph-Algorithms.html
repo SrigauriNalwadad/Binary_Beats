@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pages.css">
     <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
 </head>
 <body>
     
@@ -72,14 +74,6 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Easy</a></li>
-                      <li><a class="dropdown-item" href="#">Medium</a></li>
-                      <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                  </li>
                   <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
                 </ul>
               </li>
@@ -198,8 +192,8 @@
   <section id="main-content">
     <div class=" container">
       <div class="main-header p-3 pb-md-4 mx-auto">
-        <h2 class="fs-1">DSA for Beginners</h2>
-        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+        <h2 class="fs-1">Graph Algorithms</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Graph Algorithms, you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
       </div>
     </div>
     <div class="container px-4 py-5" id="hanging-icons">
@@ -214,9 +208,9 @@
           </div>
           <div>
             <h3 class="fs-2">Chapters</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <p>6 Chapters are there for this module. We will cover all concepts related to Graph Algorithms.</p>
             <a href="#chapters-section" class="btn btn-primary">
-              Start learning  
+              Start learning
             </a>
           </div>
         </div>
@@ -228,9 +222,9 @@
           </div>
           <div>
             <h3 class="fs-2">Quizs</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Quiz on the topics being learnt in this module to enusure your knowlege.</p>
+            <a href="../Practice/Quiz.html" class="btn btn-primary">
+              Quiz
             </a>
           </div>
         </div>
@@ -243,9 +237,9 @@
           </div>
           <div>
             <h3 class="fs-2">Problems</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Practice Problems on the topics being covered in this module.</p>
+            <a href="../Practice/All-DSA-Problems.html" class="btn btn-primary">
+              Prctice
             </a>
           </div>
         </div>
@@ -256,43 +250,491 @@
   <!-- Steps to learn DSA part -->
   <section id="steps">
     <div class="container">
-      <h3 class="fs-1" id="chapters-section">Chapters</h3>
-      <div class="steps">
-        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
-          <div class="single-chapter-heading-div">
-              <h3 class="single-chapter-title">Introduction to DSA</h3>
-              <p class="single-chapter-icon-heading">
-                  <span class="single-chapter-icon single-chapter-icon-0">
-                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
-                  </span>
-              </p>
-          </div>
-          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
-              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
-          </div>
-          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
-              <a href="https://www.geeksforgeeks.org/what-is-dsa-dsa-full-form/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is DSA | DSA Full Form</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/data-structure-meaning/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Data Structure?</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/most-important-type-of-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Most important type of Algorithms</p>
-              </a>
-          </div>
+      <div class="sub-heading">
+        <h3 class="fs-1" id="chapters-section">Chapters</h3>
       </div>
-      </div>
-      </div>
-      
-  </section>
+      <!-- New Collapsible Section for DSA Introduction -->
+      <div class="dropdown-container">
+        <div class="dropdown-header" onclick="toggleDropdown()">
+            Graph Algorithms
+            <span class="dropdown-arrow">▲</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="chapters-dropdown-item"><a href="#what-is-graph-data-structure">What is Graph Data Structure?</a></div>
+            <div class="chapters-dropdown-item"><a href="#components-of-graph-data-structures">Components of Graph Data Structure</a></div>
+            <div class="chapters-dropdown-item"><a href="#types-of-graph-data-structure">Types Of Graph Data Structure</a></div>
+            <div class="chapters-dropdown-item"><a href="#representation-of-graph-data-structure">Representation of Graph Data Structure</a></div>
+            <div class="chapters-dropdown-item"><a href="#basic-operations-on-graph-data-structure">Basic Operations on Graph Data Structure</a></div>
+            <div class="chapters-dropdown-item"><a href="#advantages-and-disadvantages-of-graph-data-structure">Advantages and Disadvantages of Graph Data Structure</a></div>
+        </div>
+    </div>
+    </div>
 
+    <!-- Post Content Here -->
+    <div class="content">
+      <div class="content-heading">
+          <h1 id="what-is-graph-data-structure">Graph Data Structure</h1>
+      </div>
+      <div class="content-subheading">
+          <p>Graph is a non-linear data structure consisting of vertices and edges. The vertices are sometimes also referred to as nodes and the edges are lines or arcs that connect any two nodes in the graph. More formally a Graph is composed of a set of vertices (V) and a set of edges (E). The graph is denoted by G(V, E).</p>
+          <p>Imagine a game of football as a web of connections, where players are the nodes and their interactions on the field are the edges. This web of connections is exactly what a graph data structure represents, and it’s the key to unlocking insights into team performance and player dynamics in sports.</p>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="content-heading">
+        <h2 id="components-of-graph-data-structures">Components of Graph Data Structure</h2>
+    </div>
+    <div class="content-subheading">
+        <p><strong>Vertices:</strong> Vertices are the fundamental units of the graph. Sometimes, vertices are also known as vertex or nodes. Every node/vertex can be labeled or unlabelled.</p>
+        <p><strong>Edges:</strong> Edges are drawn or used to connect two nodes of the graph. It can be ordered pair of nodes in a directed graph. Edges can connect any two nodes in any possible way. There are no rules. Sometimes, edges are also known as arcs. Every edge can be labelled/unlabelled.</p>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+      <h2 id="components-of-graph-data-structure">Components of Graph Data Structure</h2>
+  </div>
+  <div class="content-subheading">
+      <p><strong>Vertices:</strong> Vertices are the fundamental units of the graph. Sometimes, vertices are also known as vertex or nodes. Every node/vertex can be labeled or unlabelled.</p>
+      <p><strong>Edges:</strong> Edges are drawn or used to connect two nodes of the graph. It can be ordered pair of nodes in a directed graph. Edges can connect any two nodes in any possible way. There are no rules. Sometimes, edges are also known as arcs. Every edge can be labelled/unlabelled.</p>
+  </div>
+  <div class="content-heading">
+      <h2 id="types-of-graph-data-structure">Types Of Graph Data Structure</h2>
+  </div>
+  <div class="content-subheading">
+      <p><strong>1. Null Graph:</strong> A graph is known as a null graph if there are no edges in the graph.</p>
+      <p><strong>2. Trivial Graph:</strong> Graph having only a single vertex, it is also the smallest graph possible.</p>
+      <p><strong>3. Undirected Graph:</strong> A graph in which edges do not have any direction. That is the nodes are unordered pairs in the definition of every edge.</p>
+      <p><strong>4. Directed Graph:</strong> A graph in which edge has direction. That is the nodes are ordered pairs in the definition of every edge.</p>
+      <p><strong>5. Connected Graph:</strong> The graph in which from one node we can visit any other node in the graph is known as a connected graph.</p>
+      <p><strong>6. Disconnected Graph:</strong> The graph in which at least one node is not reachable from a node is known as a disconnected graph.</p>
+      <p><strong>7. Regular Graph:</strong> The graph in which the degree of every vertex is equal to K is called K regular graph.</p>
+      <p><strong>8. Complete Graph:</strong> The graph in which from each node there is an edge to each other node.</p>
+      <p><strong>9. Cycle Graph:</strong> The graph in which the graph is a cycle in itself, the degree of each vertex is 2.</p>
+      <p><strong>10. Cyclic Graph:</strong> A graph containing at least one cycle is known as a Cyclic graph.</p>
+      <p><strong>11. Directed Acyclic Graph:</strong> A Directed Graph that does not contain any cycle.</p>
+      <p><strong>12. Bipartite Graph:</strong> A graph in which vertex can be divided into two sets such that vertex in each set does not contain any edge between them.</p>
+      <p><strong>13. Weighted Graph:</strong> A graph in which the edges are already specified with suitable weight is known as a weighted graph. Weighted graphs can be further classified as directed weighted graphs and undirected weighted graphs.</p>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="content-heading">
+    <h2 id="representation-of-graph-data-structure">Representation of Graph Data Structure</h2>
+</div>
+<div class="content-subheading">
+    <p>There are two ways to store a graph:</p>
+    <ul>
+        <li><strong>Adjacency Matrix</strong></li>
+        <li><strong>Adjacency List</strong></li>
+    </ul>
+</div>
+<div class="content-subheading">
+    <h3 id="adjacency-matrix-representation">Adjacency Matrix Representation of Graph Data Structure</h3>
+    <p>In this method, the graph is stored in the form of the 2D matrix where rows and columns denote vertices. Each entry in the matrix represents the weight of the edge between those vertices.</p>
+    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20200630125356/adjacency_list.jpg" alt="Adjacency Matrix">
+    <p>Below is the implementation of Graph Data Structure represented using Adjacency Matrix:</p>
+    <pre>
+<code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+vector&lt;vector&lt;int&gt; &gt;
+createAdjacencyMatrix(vector&lt;vector&lt;int&gt; &gt;&amp; graph,
+                  int numVertices)
+{
+// Initialize the adjacency matrix with zeros
+vector&lt;vector&lt;int&gt; &gt; adjMatrix(
+    numVertices, vector&lt;int&gt;(numVertices, 0));
+
+// Fill the adjacency matrix based on the edges in the
+// graph
+for (int i = 0; i &lt; numVertices; ++i) {
+    for (int j = 0; j &lt; numVertices; ++j) {
+        if (graph[i][j] == 1) {
+            adjMatrix[i][j] = 1;
+            adjMatrix[j][i]
+                = 1; // For undirected graph, set
+                     // symmetric entries
+        }
+    }
+}
+
+return adjMatrix;
+}
+
+int main()
+{
+// The indices represent the vertices, and the values
+// are lists of neighboring vertices
+vector&lt;vector&lt;int&gt; &gt; graph = { { 0, 1, 0, 0 },
+                               { 1, 0, 1, 0 },
+                               { 0, 1, 0, 1 },
+                               { 0, 0, 1, 0 } };
+
+int numVertices = graph.size();
+
+// Create the adjacency matrix
+vector&lt;vector&lt;int&gt; &gt; adjMatrix
+    = createAdjacencyMatrix(graph, numVertices);
+
+// Print the adjacency matrix
+for (int i = 0; i &lt; numVertices; ++i) {
+    for (int j = 0; j &lt; numVertices; ++j) {
+        cout &lt;&lt; adjMatrix[i][j] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+return 0;
+}
+</code>
+    </pre>
+</div>
+<div class="content-subheading">
+    <h3 id="adjacency-list-representation">Adjacency List Representation of Graph</h3>
+    <p>This graph is represented as a collection of linked lists. There is an array of pointer which points to the edges connected to that vertex.</p>
+    <p>Below is the implementation of Graph Data Structure represented using Adjacency List:</p>
+    <pre>
+<code>
+#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+vector&lt;vector&lt;int&gt;&gt; createAdjacencyList(vector&lt;vector&lt;int&gt; &gt;&amp; edges, int numVertices)
+{
+// Initialize the adjacency list 
+vector&lt;vector&lt;int&gt; &gt; adjList(numVertices);
+
+// Fill the adjacency list based on the edges in the
+// graph
+for (int i=0; i &lt; edges.size(); i++) {
+    int u = edges[i][0];
+      int v = edges[i][1];
+      // Since the graph is undirected, therefore we push the edges in both the directions
+      adjList[u].push_back(v);
+      adjList[v].push_back(u);
+}
+
+return adjList;
+}
+
+int main()
+{
+  // Undirected Graph of 4 nodes
+  int numVertices = 4;
+  vector&lt;vector&lt;int&gt;&gt; edges = {{0, 1}, {0, 2}, {1, 2}, {2, 3}, {3, 1}};
+
+// Create the adjacency List
+vector&lt;vector&lt;int&gt;&gt; adjList = createAdjacencyList(edges, numVertices);
+
+// Print the adjacency List
+for (int i = 0; i &lt; numVertices; ++i) {
+      cout &lt;&lt; i &lt;&lt; " -&gt; ";
+    for (int j = 0; j &lt; adjList[i].size(); ++j) {
+        cout &lt;&lt; adjList[i][j] &lt;&lt; " ";
+    }
+    cout &lt;&lt; endl;
+}
+
+return 0;
+}
+</code>
+    </pre>
+    <p>Output:</p>
+    <pre>
+<code>
+0 -&gt; 1 2 
+1 -&gt; 0 2 3 
+2 -&gt; 0 1 3 
+3 -&gt; 2 1 
+</code>
+    </pre>
+</div>
+<div class="content-subheading">
+    <h3 id="comparison">Comparison between Adjacency Matrix and Adjacency List</h3>
+    <p>When the graph contains a large number of edges then it is good to store it as a matrix because only some entries in the matrix will be empty. An algorithm such as Prim’s and Dijkstra adjacency matrix is used to have less complexity.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Action</th>
+                <th>Adjacency Matrix</th>
+                <th>Adjacency List</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Adding Edge</td>
+                <td>O(1)</td>
+                <td>O(1)</td>
+            </tr>
+            <tr>
+                <td>Removing an edge</td>
+                <td>O(1)</td>
+                <td>O(N)</td>
+            </tr>
+            <tr>
+                <td>Initializing</td>
+                <td>O(N*N)</td>
+                <td>O(N)</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="content-heading">
+  <h1 id="graph-data-structure">Graph Data Structure</h1>
+</div>
+<div class="content-subheading">
+  <p>Graph is a non-linear data structure consisting of vertices and edges. The vertices are sometimes also referred to as nodes and the edges are lines or arcs that connect any two nodes in the graph. More formally a Graph is composed of a set of vertices (V) and a set of edges (E). The graph is denoted by G(V, E).</p>
+  <p>Imagine a game of football as a web of connections, where players are the nodes and their interactions on the field are the edges. This web of connections is exactly what a graph data structure represents, and it’s the key to unlocking insights into team performance and player dynamics in sports.</p>
+</div>
+<div class="content-heading">
+  <h2 id="components-of-graph-data-structure">Components of Graph Data Structure</h2>
+</div>
+<div class="content-subheading">
+  <p><strong>Vertices:</strong> Vertices are the fundamental units of the graph. Sometimes, vertices are also known as vertex or nodes. Every node/vertex can be labeled or unlabelled.</p>
+  <p><strong>Edges:</strong> Edges are drawn or used to connect two nodes of the graph. It can be ordered pair of nodes in a directed graph. Edges can connect any two nodes in any possible way. There are no rules. Sometimes, edges are also known as arcs. Every edge can be labelled/unlabelled.</p>
+</div>
+<div class="content-heading">
+  <h2 id="types-of-graph-data-structure">Types Of Graph Data Structure</h2>
+</div>
+<div class="content-subheading">
+  <p><strong>1. Null Graph:</strong> A graph is known as a null graph if there are no edges in the graph.</p>
+  <p><strong>2. Trivial Graph:</strong> Graph having only a single vertex, it is also the smallest graph possible.</p>
+  <p><strong>3. Undirected Graph:</strong> A graph in which edges do not have any direction. That is the nodes are unordered pairs in the definition of every edge.</p>
+  <p><strong>4. Directed Graph:</strong> A graph in which edge has direction. That is the nodes are ordered pairs in the definition of every edge.</p>
+  <p><strong>5. Connected Graph:</strong> The graph in which from one node we can visit any other node in the graph is known as a connected graph.</p>
+  <p><strong>6. Disconnected Graph:</strong> The graph in which at least one node is not reachable from a node is known as a disconnected graph.</p>
+  <p><strong>7. Regular Graph:</strong> The graph in which the degree of every vertex is equal to K is called K regular graph.</p>
+  <p><strong>8. Complete Graph:</strong> The graph in which from each node there is an edge to each other node.</p>
+  <p><strong>9. Cycle Graph:</strong> The graph in which the graph is a cycle in itself, the degree of each vertex is 2.</p>
+  <p><strong>10. Cyclic Graph:</strong> A graph containing at least one cycle is known as a Cyclic graph.</p>
+  <p><strong>11. Directed Acyclic Graph:</strong> A Directed Graph that does not contain any cycle.</p>
+  <p><strong>12. Bipartite Graph:</strong> A graph in which vertex can be divided into two sets such that vertex in each set does not contain any edge between them.</p>
+  <p><strong>13. Weighted Graph:</strong> A graph in which the edges are already specified with suitable weight is known as a weighted graph. Weighted graphs can be further classified as directed weighted graphs and undirected weighted graphs.</p>
+</div>
+<div class="content-heading">
+  <h2 id="representation-of-graph-data-structure">Representation of Graph Data Structure</h2>
+</div>
+<div class="content-subheading">
+  <p>There are two ways to store a graph:</p>
+  <ul>
+      <li><strong>Adjacency Matrix</strong></li>
+      <li><strong>Adjacency List</strong></li>
+  </ul>
+</div>
+<div class="content-subheading">
+  <h3 id="adjacency-matrix-representation">Adjacency Matrix Representation of Graph Data Structure</h3>
+  <p>In this method, the graph is stored in the form of the 2D matrix where rows and columns denote vertices. Each entry in the matrix represents the weight of the edge between those vertices.</p>
+  <img src="adjacency_mat1-(1)-copy.png" alt="Adjacency Matrix">
+  <p>Below is the implementation of Graph Data Structure represented using Adjacency Matrix:</p>
+  <pre>
+<code>
+#include &lt;iostream&gt;
+#include &lt;vector&gt;
+
+using namespace std;
+
+vector&lt;vector&lt;int&gt; &gt;
+createAdjacencyMatrix(vector&lt;vector&lt;int&gt; &gt;&amp; graph,
+                int numVertices)
+{
+// Initialize the adjacency matrix with zeros
+vector&lt;vector&lt;int&gt; &gt; adjMatrix(
+  numVertices, vector&lt;int&gt;(numVertices, 0));
+
+// Fill the adjacency matrix based on the edges in the
+// graph
+for (int i = 0; i &lt; numVertices; ++i) {
+  for (int j = 0; j &lt; numVertices; ++j) {
+      if (graph[i][j] == 1) {
+          adjMatrix[i][j] = 1;
+          adjMatrix[j][i]
+              = 1; // For undirected graph, set
+                   // symmetric entries
+      }
+  }
+}
+
+return adjMatrix;
+}
+
+int main()
+{
+// The indices represent the vertices, and the values
+// are lists of neighboring vertices
+vector&lt;vector&lt;int&gt; &gt; graph = { { 0, 1, 0, 0 },
+                             { 1, 0, 1, 0 },
+                             { 0, 1, 0, 1 },
+                             { 0, 0, 1, 0 } };
+
+int numVertices = graph.size();
+
+// Create the adjacency matrix
+vector&lt;vector&lt;int&gt; &gt; adjMatrix
+  = createAdjacencyMatrix(graph, numVertices);
+
+// Print the adjacency matrix
+for (int i = 0; i &lt; numVertices; ++i) {
+  for (int j = 0; j &lt; numVertices; ++j) {
+      cout &lt;&lt; adjMatrix[i][j] &lt;&lt; " ";
+  }
+  cout &lt;&lt; endl;
+}
+
+return 0;
+}
+</code>
+  </pre>
+</div>
+<div class="content-subheading">
+  <h3 id="adjacency-list-representation">Adjacency List Representation of Graph</h3>
+  <p>This graph is represented as a collection of linked lists. There is an array of pointer which points to the edges connected to that vertex.</p>
+  <p>Below is the implementation of Graph Data Structure represented using Adjacency List:</p>
+  <pre>
+<code>
+#include &lt;bits/stdc++.h&gt;
+
+using namespace std;
+
+vector&lt;vector&lt;int&gt;&gt; createAdjacencyList(vector&lt;vector&lt;int&gt; &gt;&amp; edges, int numVertices)
+{
+// Initialize the adjacency list 
+vector&lt;vector&lt;int&gt; &gt; adjList(numVertices);
+
+// Fill the adjacency list based on the edges in the
+// graph
+for (int i=0; i &lt; edges.size(); i++) {
+  int u = edges[i][0];
+    int v = edges[i][1];
+    // Since the graph is undirected, therefore we push the edges in both the directions
+    adjList[u].push_back(v);
+    adjList[v].push_back(u);
+}
+
+return adjList;
+}
+
+int main()
+{
+// Undirected Graph of 4 nodes
+int numVertices = 4;
+vector&lt;vector&lt;int&gt;&gt; edges = {{0, 1}, {0, 2}, {1, 2}, {2, 3}, {3, 1}};
+
+// Create the adjacency List
+vector&lt;vector&lt;int&gt;&gt; adjList = createAdjacencyList(edges, numVertices);
+
+// Print the adjacency List
+for (int i = 0; i &lt; numVertices; ++i) {
+    cout &lt;&lt; i &lt;&lt; " -&gt; ";
+  for (int j = 0; j &lt; adjList[i].size(); ++j) {
+      cout &lt;&lt; adjList[i][j] &lt;&lt; " ";
+  }
+  cout &lt;&lt; endl;
+}
+
+return 0;
+}
+</code>
+  </pre>
+  <p>Output:</p>
+  <pre>
+<code>
+0 -&gt; 1 2 
+1 -&gt; 0 2 3 
+2 -&gt; 0 1 3 
+3 -&gt; 2 1 
+</code>
+  </pre>
+</div>
+<div class="content-subheading">
+  <h3 id="comparison">Comparison between Adjacency Matrix and Adjacency List</h3>
+  <p>When the graph contains a large number of edges then it is good to store it as a matrix because only some entries in the matrix will be empty. An algorithm such as Prim’s and Dijkstra adjacency matrix is used to have less complexity.</p>
+  <table>
+      <thead>
+          <tr>
+              <th>Action</th>
+              <th>Adjacency Matrix</th>
+              <th>Adjacency List</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Adding Edge</td>
+              <td>O(1)</td>
+              <td>O(1)</td>
+          </tr>
+          <tr>
+              <td>Removing an edge</td>
+              <td>O(1)</td>
+              <td>O(N)</td>
+          </tr>
+          <tr>
+              <td>Initializing</td>
+              <td>O(N*N)</td>
+              <td>O(N)</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+<div class="content-heading">
+  <h2 id="basic-operations-on-graph-data-structure">Basic Operations on Graph Data Structure</h2>
+</div>
+<div class="content-subheading">
+  <p>Below are the basic operations on the graph:</p>
+  <ul>
+      <li>Insertion or Deletion of Nodes in the graph</li>
+      <ul>
+          <li>Add and Remove vertex in Adjacency List representation of Graph</li>
+          <li>Add and Remove vertex in Adjacency Matrix representation of Graph</li>
+      </ul>
+      <li>Insertion or Deletion of Edges in the graph</li>
+      <ul>
+          <li>Add and Remove Edge in Adjacency List representation of a Graph</li>
+          <li>Add and Remove Edge in Adjacency Matrix representation of a Graph</li>
+      </ul>
+      <li>Searching in Graph Data Structure- Search an entity in the graph.</li>
+      <li>Traversal of Graph Data Structure- Traversing all the nodes in the graph.</li>
+  </ul>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="content-heading">
+  <h2 id="advantages-and-disadvantages-of-graph-data-structure">Advantages of Graph Data Structure</h2>
+</div>
+<div class="content-subheading">
+  <p>Graph Data Structure is used to represent a wide range of relationships and data structures.</p>
+  <p>They can be used to model and solve a wide range of problems, including pathfinding, data clustering, network analysis, and machine learning.</p>
+  <p>Graph algorithms are often very efficient and can be used to solve complex problems quickly and effectively.</p>
+  <p>Graph Data Structure can be used to represent complex data structures in a simple and intuitive way, making them easier to understand and analyze.</p>
+</div>
+<div class="content-heading">
+  <h2 id="disadvantages-of-graph-data-structure">Disadvantages of Graph Data Structure</h2>
+</div>
+<div class="content-subheading">
+  <p>Graph Data Structure can be complex and difficult to understand, especially for people who are not familiar with graph theory or related algorithms.</p>
+  <p>Creating and manipulating graphs can be computationally expensive, especially for very large or complex graphs.</p>
+  <p>Graph algorithms can be difficult to design and implement correctly, and can be prone to bugs and errors.</p>
+  <p>Graph Data Structure can be difficult to visualize and analyze, especially for very large or complex graphs, which can make it challenging to extract meaningful insights from the data.</p>
+</div>
+  </div>
 
 
     <!-- Footer -->
@@ -356,6 +798,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../index.js"></script>
   <script src="../pages.js"></script>
+  <!-- Highlight JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 
 </body>

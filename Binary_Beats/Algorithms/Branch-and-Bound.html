@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pages.css">
     <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
 </head>
 <body>
     
@@ -80,14 +82,6 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Easy</a></li>
-                      <li><a class="dropdown-item" href="#">Medium</a></li>
-                      <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                  </li>
                   <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
                 </ul>
               </li>
@@ -205,8 +199,8 @@
   <section id="main-content">
     <div class=" container">
       <div class="main-header p-3 pb-md-4 mx-auto">
-        <h2 class="fs-1">DSA for Beginners</h2>
-        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+        <h2 class="fs-1">Branch and Bound</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Branch and Bound, you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
       </div>
     </div>
     <div class="container px-4 py-5" id="hanging-icons">
@@ -221,7 +215,7 @@
           </div>
           <div>
             <h3 class="fs-2">Chapters</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <p>5 Chapters are there for this module. We will cover all concepts related to Branch and Bound.</p>
             <a href="#chapters-section" class="btn btn-primary">
               Start learning  
             </a>
@@ -235,9 +229,9 @@
           </div>
           <div>
             <h3 class="fs-2">Quizs</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Quiz on the topics being learnt in this module to enusure your knowlege.</p>
+            <a href="../Practice/Quiz.html" class="btn btn-primary">
+              Quiz
             </a>
           </div>
         </div>
@@ -250,9 +244,9 @@
           </div>
           <div>
             <h3 class="fs-2">Problems</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Practice Problems on the topics being covered in this module.</p>
+            <a href="../Practice/All-DSA-Problems.html" class="btn btn-primary">
+              Practice
             </a>
           </div>
         </div>
@@ -263,44 +257,236 @@
   <!-- Steps to learn DSA part -->
   <section id="steps">
     <div class="container">
-      <h3 class="fs-1" id="chapters-section">Chapters</h3>
-      <div class="steps">
-        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
-          <div class="single-chapter-heading-div">
-              <h3 class="single-chapter-title">Introduction to DSA</h3>
-              <p class="single-chapter-icon-heading">
-                  <span class="single-chapter-icon single-chapter-icon-0">
-                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
-                  </span>
-              </p>
-          </div>
-          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
-              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
-          </div>
-          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
-              <a href="https://www.geeksforgeeks.org/what-is-dsa-dsa-full-form/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is DSA | DSA Full Form</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/data-structure-meaning/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Data Structure?</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/most-important-type-of-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Most important type of Algorithms</p>
-              </a>
-          </div>
+      <div class="sub-heading">
+        <h3 class="fs-1" id="chapters-section">Chapters</h3>
       </div>
-      </div>
-      </div>
+      <!-- New Collapsible Section for DSA Introduction -->
+      <div class="dropdown-container">
+        <div class="dropdown-header" onclick="toggleDropdown()">
+          Branch and Bound
+            <span class="dropdown-arrow">▲</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="chapters-dropdown-item"><a href="#introduction-to-branch-and-bound">Introduction to Branch and Bound Algorithms</a></div>
+            <div class="chapters-dropdown-item"><a href="#when-to-apply-branch-and-bound">When to Apply Branch and Bound Algorithm</a></div>
+            <div class="chapters-dropdown-item"><a href="#types-of-branch-and-bound">Types of Branch and Bound Solutions</a></div>
+            <div class="chapters-dropdown-item"><a href="#problems-that-can-be-solved">Problems that can be solved using Branch and Bound Algorithm</a></div>
+            <div class="chapters-dropdown-item"><a href="#advantages-and-disadvantage">Advantages and Disadvantages of Branch and Bound Algorithm</a></div>
+        </div>
+    </div>
+    </div>
       
   </section>
 
+  <!-- Post Content Here -->
+  <div class="content">
+    <div class="content-heading">
+        <h1 id="introduction-to-branch-and-bound">Introduction to Branch and Bound Algorithms</h1>
+    </div>
+    <p>Branch and bound algorithms are essential in solving combinatorial optimization problems where the goal is to find the optimal solution from a large set of possible solutions. These algorithms systematically explore the search space, efficiently pruning branches that cannot lead to a better solution than the one already found.</p>
 
+    <div class="content-subheading">Key Concepts:</div>
+    <ol>
+        <li><strong>Optimal Solution Search:</strong> Branch and bound algorithms guarantee finding the optimal solution for NP-Hard problems by exploring the entire search space methodically.</li>
+        <li><strong>Exploration of Search Space:</strong> They identify potential solutions step-by-step by traversing through subsets (branches) of the solution space.</li>
+    </ol>
+
+    <div class="content-subheading">Search Techniques in Branch and Bound:</div>
+    <p>Branch and bound algorithms incorporate various search strategies to navigate the state space tree effectively. Common techniques include:</p>
+    <ul>
+        <li><strong>LC Search (Least Cost Search):</strong> Uses a heuristic cost function to compute bound values at each node. Nodes with the lowest cost function values are prioritized for exploration.</li>
+        <li><strong>BFS (Breadth-First Search):</strong> Explores all nodes at the present depth level before moving on to nodes at the next depth level. It uses a queue to manage nodes, ensuring all possibilities at each depth are examined before deeper nodes.</li>
+        <li><strong>DFS (Depth-First Search):</strong> Explores as far as possible along each branch before backtracking. It employs a stack to manage nodes, diving deeply into one branch of the search tree before moving to others.</li>
+    </ul>
+
+    <div class="content-subheading">Example Implementation (Python):</div>
+    <pre>
+<code class="language-python">
+from queue import Queue
+
+# Example function to solve a problem using BFS in branch and bound
+def branch_and_bound_bfs(initial_state):
+# Initialize queue for BFS
+queue = Queue()
+queue.put(initial_state)
+
+while not queue.empty():
+    current_state = queue.get()
+    
+    # Check if current state is a solution
+    if is_solution(current_state):
+        return current_state
+    
+    # Generate child states and enqueue them
+    for child_state in generate_children(current_state):
+        queue.put(child_state)
+
+# If no solution found
+return None
+
+# Example functions (to be defined)
+def is_solution(state):
+pass
+
+def generate_children(state):
+pass
+</code>
+    </pre>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+      <h1 id="when-to-apply-branch-and-bound">When to Apply Branch and Bound Algorithm</h1>
+  </div>
+  <p>Branch and bound is an effective solution to problems that involve discrete optimization and combinatory optimization. Below are cases where branching and bounding are appropriate:</p>
+
+  <ul>
+      <li><strong>Discrete Optimization:</strong> Applies to problems where variables belong to a discrete set, such as 0-1 Integer Programming and Network Flow problems.</li>
+      <li><strong>Combinatory Optimization:</strong> Useful for optimizing problems by finding the maximum or minimum of an objective function, including Boolean Satisfiability and Integer Linear Programming.</li>
+  </ul>
+
+  <div class="content-subheading">Basic Concepts of Branch and Bound:</div>
+  <ul>
+      <li><strong>Generation of a State Space Tree:</strong> Similar to backtracking, B&amp;B generates a state space tree to explore potential solutions efficiently.</li>
+      <li><strong>Evaluation of a Candidate Solution:</strong> Involves evaluating bounds on the solution's criterion function values at each node.</li>
+      <li><strong>Bounding Function:</strong> A heuristic function that evaluates lower and upper bounds on possible solutions at each node to guide the search.</li>
+  </ul>
+
+  <div class="content-subheading">Reasons to Dismiss a Search Path at Current Node:</div>
+  <ol>
+      <li>The node's bound value is worse than the best solution obtained so far.</li>
+      <li>The node represents infeasible solutions violating problem constraints.</li>
+      <li>The node represents a subset of a feasible solution that does not improve upon the current best solution.</li>
+  </ol>
+
+  <div class="content-subheading">Example Code:</div>
+  <pre>
+<code class="language-python">
+// Example pseudocode illustrating the branch and bound process
+function branchAndBound(problem):
+initialize()
+while not finished:
+  selectNextNode()
+  if node is promising:
+      processNode()
+      if node is solution:
+          updateBestSolution()
+          pruneSubtree()
+      else if node is feasible:
+          branchFurther()
+      else:
+          discardNode()
+  else:
+      discardNode()
+
+return bestSolution
+</code>
+  </pre>
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="content-heading">
+    <h1 id="types-of-branch-and-bound">Types of Branch and Bound Solutions</h1>
+</div>
+<p>The solution of the Branch and Bound problem can be represented in two main ways:</p>
+
+<ol>
+    <li><strong>Variable Size Solution:</strong> Represents subsets of a given set that optimize the problem. For example, selecting elements {A, B} from {A, B, C, D}.</li>
+    <li><strong>Fixed-Size Solution:</strong> Uses binary indicators (0s and 1s) to denote inclusion or exclusion of elements. For example, {1, 1, 0, 0} means selecting the first two elements.</li>
+</ol>
+
+<div class="content-subheading">Classification of Branch and Bound Problems:</div>
+
+<ol>
+    <li>
+        <strong>FIFO Branch and Bound:</strong>
+        <p>Uses a queue for exploring the state space tree in breadth-first manner.</p>
+        <p>Example state space tree for set {A, B, C, D} is explored level-wise.</p>
+    </li>
+
+    <li>
+        <strong>LIFO Branch and Bound:</strong>
+        <p>Uses a stack for exploring the state space tree in depth-first manner.</p>
+        <p>Example state space tree for set {A, B, C, D} is explored deeply before moving to other nodes.</p>
+    </li>
+
+    <li>
+        <strong>Least Cost-Branch and Bound:</strong>
+        <p>Uses a cost function to prioritize nodes for exploration, aiming to minimize/maximize the objective function efficiently.</p>
+        <p>Example involves exploring nodes based on their associated costs to find an optimal solution.</p>
+    </li>
+</ol>
+
+<br>
+<hr>
+<br>
+
+<div class="content-heading">
+            <h1 id="problems-that-can-be-solved">Problems that can be solved using Branch and Bound Algorithm</h1>
+        </div>
+
+        <ul>
+            <li>
+                <a href="https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/">0/1 Knapsack Problem</a>
+                <ul>
+                    <li><a href="https://www.geeksforgeeks.org/0-1-knapsack-problem-dp-10/">Introduction with 0/1 Knapsack</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://www.geeksforgeeks.org/a-search-algorithm/">8 Puzzle Problem</a>
+                <ul>
+                    <li><a href="https://www.geeksforgeeks.org/a-search-algorithm/">Introduction with 8 Puzzle</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://www.geeksforgeeks.org/hungarian-algorithm-assignment-problem-set-1-introduction/">Job Assignment Problem</a>
+                <ul>
+                    <li><a href="https://www.geeksforgeeks.org/hungarian-algorithm-assignment-problem-set-1-introduction/">Introduction with Job Assignment</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/">N Queen Problem</a>
+                <ul>
+                    <li><a href="https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/">Introduction with N Queen</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="https://www.geeksforgeeks.org/travelling-salesman-problem-set-1/">Traveling Salesman Problem</a>
+                <ul>
+                    <li><a href="https://www.geeksforgeeks.org/travelling-salesman-problem-set-1/">Introduction with Traveling Salesman</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="content-heading">
+            <h1 id="advantages-and-disadvantage">Advantages and Disadvantages of Branch and Bound Algorithm</h1>
+        </div>
+
+        <div class="advantages">
+            <h2>Advantages:</h2>
+            <ul>
+                <li>We don’t explore all the nodes in a branch and bound algorithm. Due to this, the branch and bound algorithm have a lower time complexity than other algorithms.</li>
+                <li>Whenever the problem is small and the branching can be completed in a reasonable amount of time, the algorithm finds an optimal solution.</li>
+                <li>By using the branch and bound algorithm, the optimal solution is reached in a minimal amount of time. When exploring a tree, it does not repeat nodes.</li>
+            </ul>
+        </div>
+
+        <div class="disadvantages">
+            <h2>Disadvantages:</h2>
+            <ul>
+                <li>It takes a long time to run the branch and bound algorithm.</li>
+                <li>In the worst-case scenario, the number of nodes in the tree may be too large based on the size of the problem.</li>
+            </ul>
+        </div>
+</div>
 
     <!-- Footer -->
     <sectionc id="footer">
@@ -363,6 +549,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../index.js"></script>
   <script src="../pages.js"></script>
+  <!-- Highlight JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 
 </body>

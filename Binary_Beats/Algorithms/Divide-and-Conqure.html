@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pages.css">
     <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
 </head>
 <body>
     
@@ -72,14 +74,6 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Easy</a></li>
-                      <li><a class="dropdown-item" href="#">Medium</a></li>
-                      <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                  </li>
                   <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
                 </ul>
               </li>
@@ -197,8 +191,8 @@
   <section id="main-content">
     <div class=" container">
       <div class="main-header p-3 pb-md-4 mx-auto">
-        <h2 class="fs-1">DSA for Beginners</h2>
-        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+        <h2 class="fs-1">Divide and Conquer</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Divide and Conquer, you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
       </div>
     </div>
     <div class="container px-4 py-5" id="hanging-icons">
@@ -213,7 +207,7 @@
           </div>
           <div>
             <h3 class="fs-2">Chapters</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <p>8 Chapters are there for this module. We will cover all concepts related to Divide and Conquer.</p>
             <a href="#chapters-section" class="btn btn-primary">
               Start learning  
             </a>
@@ -227,9 +221,9 @@
           </div>
           <div>
             <h3 class="fs-2">Quizs</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Quiz on the topics being learnt in this module to enusure your knowlege.</p>
+            <a href="../Practice/Quiz.html" class="btn btn-primary">
+              Quiz
             </a>
           </div>
         </div>
@@ -242,9 +236,9 @@
           </div>
           <div>
             <h3 class="fs-2">Problems</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Practice Problems on the topics being covered in this module.</p>
+            <a href="../Practice/All-DSA-Problems.html" class="btn btn-primary">
+              Practice
             </a>
           </div>
         </div>
@@ -253,45 +247,214 @@
   </section>
 
   <!-- Steps to learn DSA part -->
-  <section id="steps">
-    <div class="container">
-      <h3 class="fs-1" id="chapters-section">Chapters</h3>
-      <div class="steps">
-        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
-          <div class="single-chapter-heading-div">
-              <h3 class="single-chapter-title">Introduction to DSA</h3>
-              <p class="single-chapter-icon-heading">
-                  <span class="single-chapter-icon single-chapter-icon-0">
-                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
-                  </span>
-              </p>
+    <section id="steps">
+      <div class="container">
+        <div class="sub-heading">
+          <h3 class="fs-1" id="chapters-section">Chapters</h3>
+        </div>
+        <!-- New Collapsible Section for DSA Introduction -->
+        <div class="dropdown-container">
+          <div class="dropdown-header" onclick="toggleDropdown()">
+              Divide and Conqure
+              <span class="dropdown-arrow">▲</span>
           </div>
-          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
-              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
-          </div>
-          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
-              <a href="https://www.geeksforgeeks.org/what-is-dsa-dsa-full-form/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is DSA | DSA Full Form</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/data-structure-meaning/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Data Structure?</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/most-important-type-of-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Most important type of Algorithms</p>
-              </a>
+          <div class="dropdown-content">
+              <div class="chapters-dropdown-item"><a href="#divide-and-conquer-algorithm-definition">Divide and Conquer Algorithm Definition</a></div>
+              <div class="chapters-dropdown-item"><a href="#working-of-divide-and-conquer-algorithm">Working of Divide and Conquer Algorithm</a></div>
+              <div class="chapters-dropdown-item"><a href="#characteristics-of-divide-and-conquer-algorithm">Characteristics of Divide and Conquer Algorithm</a></div>
+              <div class="chapters-dropdown-item"><a href="#examples-of-divide-and-conquer-algorithm">Examples of Divide and Conquer Algorithm</a></div>
+              <div class="chapters-dropdown-item"><a href="#complexity-analysis-of-divide-and-conquer-algorithm">Complexity Analysis of Divide and Conquer Algorithm</a></div>
+              <div class="chapters-dropdown-item"><a href="#applications-of-divide-and-conquer-algorithm">Applications of Divide and Conquer Algorithm</a></div>
+              <div class="chapters-dropdown-item"><a href="#advantages-of-divide-and-conquer-algorithm">Advantages of Divide and Conquer Algorithm</a></div>
+              <div class="chapters-dropdown-item"><a href="#disadvantages-of-divide-and-conquer-algorithm">Disadvantages of Divide and Conquer Algorithm</a></div>
           </div>
       </div>
       </div>
-      </div>
-      
-  </section>
 
+      <!-- Post Content Here -->
+      <div class="content">
+        <div class="content-heading">
+            <h1 id="divide-and-conquer-algorithm-definition">Divide and Conquer Algorithm</h1>
+        </div>
+        <p>The Divide and Conquer Algorithm is a fundamental approach to problem-solving that involves decomposing a larger problem into smaller, more manageable subproblems. These subproblems are solved independently, and their solutions are then combined to solve the original, larger problem. The core idea is to recursively break down the problem into simpler subproblems until they are straightforward enough to be solved directly. After solving these subproblems, their solutions are merged to obtain the final solution.</p>
+
+        <div class="content-subheading">Key Steps:</div>
+        <ol>
+            <li><strong>Divide:</strong> Break the original problem into smaller subproblems.</li>
+            <li><strong>Conquer:</strong> Solve each subproblem independently. If the subproblem is still complex, apply the divide and conquer strategy recursively.</li>
+            <li><strong>Combine:</strong> Merge the solutions of the subproblems to solve the original problem.</li>
+        </ol>
+
+        <div class="content-subheading">Example:</div>
+        <p>An example of a divide and conquer algorithm is the Merge Sort algorithm. Here, the array is divided into two halves, each half is sorted independently using the same strategy, and then the two sorted halves are merged to produce the final sorted array.</p>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="content-heading">
+        <h1 id="working-of-divide-and-conquer-algorithm">Working of Divide and Conquer Algorithm</h1>
+    </div>
+    <p>Divide and Conquer Algorithm can be divided into three steps: Divide, Conquer, and Merge.</p>
+
+    <div class="content-subheading">Working of Divide and Conquer Algorithm:</div>
+    <ol>
+        <li><strong>Divide:</strong>
+            <ul>
+                <li>Break down the original problem into smaller subproblems.</li>
+                <li>Each subproblem should represent a part of the overall problem.</li>
+                <li>The goal is to divide the problem until no further division is possible.</li>
+            </ul>
+        </li>
+        <li><strong>Conquer:</strong>
+            <ul>
+                <li>Solve each of the smaller subproblems individually.</li>
+                <li>If a subproblem is small enough (often referred to as the “base case”), solve it directly without further recursion.</li>
+                <li>The goal is to find solutions for these subproblems independently.</li>
+            </ul>
+        </li>
+        <li><strong>Merge:</strong>
+            <ul>
+                <li>Combine the subproblems to get the final solution of the whole problem.</li>
+                <li>Once the smaller subproblems are solved, recursively combine their solutions to get the solution of the larger problem.</li>
+                <li>The goal is to formulate a solution for the original problem by merging the results from the subproblems.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+      <h1 id="characteristics-of-divide-and-conquer-algorithm">Characteristics of Divide and Conquer Algorithm</h1>
+  </div>
+  <p>Divide and Conquer Algorithm involves breaking down a problem into smaller, more manageable parts, solving each part individually, and then combining the solutions to solve the original problem. The characteristics of Divide and Conquer Algorithm are:</p>
+
+  <div class="content-subheading">Key Characteristics:</div>
+  <ol>
+      <li><strong>Dividing the Problem:</strong>
+          <ul>
+              <li>The first step is to break the problem into smaller, more manageable subproblems.</li>
+              <li>This division can be done recursively until the subproblems become simple enough to solve directly.</li>
+          </ul>
+      </li>
+      <li><strong>Independence of Subproblems:</strong>
+          <ul>
+              <li>Each subproblem should be independent of the others.</li>
+              <li>Solving one subproblem does not depend on the solution of another, allowing for parallel processing or concurrent execution.</li>
+          </ul>
+      </li>
+      <li><strong>Conquering Each Subproblem:</strong>
+          <ul>
+              <li>Once divided, the subproblems are solved individually.</li>
+              <li>This may involve applying the same divide and conquer approach recursively or using a different algorithm or technique.</li>
+          </ul>
+      </li>
+      <li><strong>Combining Solutions:</strong>
+          <ul>
+              <li>After solving the subproblems, their solutions are combined to obtain the solution to the original problem.</li>
+              <li>This combination step should be relatively efficient and straightforward, as the solutions to the subproblems should fit together seamlessly.</li>
+          </ul>
+      </li>
+  </ol>
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="content-heading">
+    <h1 id="examples-of-divide-and-conquer-algorithm">Examples of Divide and Conquer Algorithm</h1>
+</div>
+<div class="content-subheading">1. Finding the Maximum Element in an Array:</div>
+<p>We can use the Divide and Conquer Algorithm to find the maximum element in an array by dividing the array into two equal-sized subarrays. By recursively finding the maximum in each subarray and then comparing these maxima, we can determine the overall maximum element.</p>
+<pre><code class="language-python">
+// Function to find the maximum number in a given array
+int findMax(int a[], int lo, int hi) {
+// If lo becomes greater than hi, return minimum integer possible
+if (lo > hi)
+    return INT_MIN;
+// If the subarray has only one element, return the element
+if (lo == hi)
+    return a[lo];
+int mid = (lo + hi) / 2;
+// Get the maximum element from the left half
+int leftMax = findMax(a, lo, mid);
+// Get the maximum element from the right half
+int rightMax = findMax(a, mid + 1, hi);
+// Return the maximum element from the left and right half
+return max(leftMax, rightMax);
+}
+</code></pre>
+
+<div class="content-subheading">2. Finding the Minimum Element in an Array:</div>
+<p>Similarly, the Divide and Conquer Algorithm can be used to find the minimum element in an array by dividing the array into two equal-sized subarrays. By recursively finding the minimum in each subarray and then comparing these minima, we can determine the overall minimum element.</p>
+
+<div class="content-subheading">3. Merge Sort:</div>
+<p>We can use the Divide and Conquer Algorithm to sort an array in ascending or descending order. This involves dividing the array into smaller subarrays, sorting each smaller subarray, and then merging the sorted subarrays to obtain the sorted original array.</p>
+
+<br>
+<hr>
+<br>
+
+<div class="content-heading">
+        <h1 id="complexity-analysis-of-divide-and-conquer-algorithm">Complexity Analysis of Divide and Conquer Algorithm</h1>
+    </div>
+    <p>The complexity of a Divide and Conquer Algorithm can be represented using the recurrence relation:</p>
+    <pre><code class="language-python">T(n) = aT(n/b) + f(n)</code></pre>
+    <p>where:</p>
+    <ul>
+        <li><strong>n</strong> = size of the input</li>
+        <li><strong>a</strong> = number of subproblems in the recursion</li>
+        <li><strong>n/b</strong> = size of each subproblem. All subproblems are assumed to have the same size.</li>
+        <li><strong>f(n)</strong> = cost of the work done outside the recursive calls, which includes the cost of dividing the problem and the cost of merging the solutions.</li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+        <h1 id="applications-of-divide-and-conquer-algorithm">Applications of Divide and Conquer Algorithm</h1>
+    </div>
+    <p>The following are some standard algorithms that follow the Divide and Conquer approach:</p>
+    <ul>
+        <li><strong>Quicksort:</strong> A sorting algorithm that picks a pivot element and rearranges the array elements so that all elements smaller than the pivot move to the left side, and all greater elements move to the right side. Finally, it recursively sorts the subarrays on the left and right of the pivot element.</li>
+        <li><strong>Merge Sort:</strong> A sorting algorithm that divides the array into two halves, recursively sorts them, and finally merges the two sorted halves.</li>
+        <li><strong>Closest Pair of Points:</strong> The problem of finding the closest pair of points in a set of points in the x-y plane. It can be solved in O(n^2) time by calculating and comparing the distances of every pair of points, but the Divide and Conquer algorithm solves it in O(N log N) time.</li>
+        <li><strong>Strassen’s Algorithm:</strong> An efficient algorithm for matrix multiplication. While a simple method requires 3 nested loops and runs in O(n^3) time, Strassen’s algorithm multiplies two matrices in O(n^2.8974) time.</li>
+        <li><strong>Cooley–Tukey Fast Fourier Transform (FFT) Algorithm:</strong> The most common algorithm for FFT, which works in O(N log N) time.</li>
+        <li><strong>Karatsuba Algorithm:</strong> A fast multiplication algorithm for binary strings, performing the multiplication in O(n^1.59) time where n is the length of the binary string.</li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+        <h1 id="advantages-of-divide-and-conquer-algorithm">Advantages of Divide and Conquer Algorithm</h1>
+    </div>
+    <ul>
+        <li><strong>Solving Difficult Problems:</strong> The divide and conquer technique is effective for solving complex problems by breaking them into smaller, more manageable subproblems. For example, the Tower of Hanoi puzzle requires breaking down the problem into smaller discs and solving each independently before combining them.</li>
+        <li><strong>Algorithm Efficiency:</strong> Divide and conquer algorithms often lead to the discovery of efficient solutions. Examples include Quick Sort, Merge Sort, and fast Fourier transforms (FFT), which are crucial algorithms known for their efficiency.</li>
+        <li><strong>Parallelism:</strong> These algorithms are suitable for parallel processing on multi-processor machines with shared-memory systems. Different processors can handle distinct subproblems simultaneously, enhancing overall efficiency without extensive pre-planning for data communication.</li>
+        <li><strong>Memory Access:</strong> Divide and conquer algorithms naturally optimize memory usage, particularly cache memory. Subproblems are typically small enough to fit within cache, reducing reliance on slower main memory. This cache-efficient behavior is referred to as cache obliviousness.</li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+        <h1 id="disadvantages-of-divide-and-conquer-algorithm">Disadvantages of Divide and Conquer Algorithm</h1>
+    </div>
+    <ul>
+        <li><strong>Overhead:</strong> Dividing the problem into subproblems and combining their solutions can introduce additional time and resource overhead. This overhead may become significant, especially for problems that are inherently small or already have straightforward solutions.</li>
+        <li><strong>Complexity:</strong> Dividing a problem into smaller subproblems can increase the overall complexity of the solution. This complexity can arise when subproblems are interdependent and must be solved in a specific order or when managing the merging of solutions.</li>
+        <li><strong>Difficulty of Implementation:</strong> Some problems are not naturally suited for division into smaller subproblems, or the process of dividing them requires a complex algorithm itself. Implementing a divide and conquer approach for such problems can be challenging.</li>
+        <li><strong>Memory Limitations:</strong> Working with large datasets can impose significant memory requirements, especially when storing intermediate results of subproblems. This can become a limiting factor in the efficiency of the algorithm, particularly if the memory available is constrained.</li>
+    </ul>
+    </div>
 
 
     <!-- Footer -->
@@ -355,6 +518,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../index.js"></script>
   <script src="../pages.js"></script>
+  <!-- Highlight JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 
 </body>

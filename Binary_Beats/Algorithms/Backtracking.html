@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pages.css">
     <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
 </head>
 <body>
     
@@ -72,14 +74,6 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Easy</a></li>
-                      <li><a class="dropdown-item" href="#">Medium</a></li>
-                      <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                  </li>
                   <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
                 </ul>
               </li>
@@ -198,8 +192,8 @@
   <section id="main-content">
     <div class=" container">
       <div class="main-header p-3 pb-md-4 mx-auto">
-        <h2 class="fs-1">DSA for Beginners</h2>
-        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+        <h2 class="fs-1">Backtracking</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Backtracking, you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
       </div>
     </div>
     <div class="container px-4 py-5" id="hanging-icons">
@@ -214,7 +208,7 @@
           </div>
           <div>
             <h3 class="fs-2">Chapters</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <p>9 Chapters are there for this module. We will cover all concepts related to Backtracking.</p>
             <a href="#chapters-section" class="btn btn-primary">
               Start learning  
             </a>
@@ -227,10 +221,10 @@
             </svg>
           </div>
           <div>
-            <h3 class="fs-2">Quizs</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <h3 class="fs-2">../Practice/All-DSA-Problems.html</h3>
+            <p>Quiz on the topics being learnt in this module to enusure your knowlege.</p>
+            <a href="../Practice/Quiz.html" class="btn btn-primary">
+              Quiz
             </a>
           </div>
         </div>
@@ -243,9 +237,9 @@
           </div>
           <div>
             <h3 class="fs-2">Problems</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Practice Problems on the topics being covered in this module.</p>
+            <a href="../Practice/All-DSA-Problems.html" class="btn btn-primary">
+              Practice
             </a>
           </div>
         </div>
@@ -256,44 +250,222 @@
   <!-- Steps to learn DSA part -->
   <section id="steps">
     <div class="container">
-      <h3 class="fs-1" id="chapters-section">Chapters</h3>
-      <div class="steps">
-        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
-          <div class="single-chapter-heading-div">
-              <h3 class="single-chapter-title">Introduction to DSA</h3>
-              <p class="single-chapter-icon-heading">
-                  <span class="single-chapter-icon single-chapter-icon-0">
-                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
-                  </span>
-              </p>
-          </div>
-          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
-              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
-          </div>
-          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
-              <a href="https://www.geeksforgeeks.org/what-is-dsa-dsa-full-form/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is DSA | DSA Full Form</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/data-structure-meaning/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Data Structure?</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/most-important-type-of-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Most important type of Algorithms</p>
-              </a>
-          </div>
+      <div class="sub-heading">
+        <h3 class="fs-1" id="chapters-section">Chapters</h3>
       </div>
-      </div>
-      </div>
+      <!-- New Collapsible Section for DSA Introduction -->
+      <div class="dropdown-container">
+        <div class="dropdown-header" onclick="toggleDropdown()">
+          Backtracking
+            <span class="dropdown-arrow">▲</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="chapters-dropdown-item"><a href="#what-is-Backtracking">What is Backtracking?</a></div>
+            <div class="chapters-dropdown-item"><a href="#types-of-backtracking-problems">Types of Backtracking Problems</a></div>
+            <div class="chapters-dropdown-item"><a href="#how-does-backtracking-works">How does Backtracking works?</a></div>
+            <div class="chapters-dropdown-item"><a href="#determining-backtracking-problems">Determining Backtracking Problems</a></div>
+            <div class="chapters-dropdown-item"><a href="#pseudocode-for-backtracking">Pseudocode for Backtracking</a></div>
+            <div class="chapters-dropdown-item"><a href="#complexity-analysis-of-backtracking">Complexity Analysis of Backtracking</a></div>
+            <div class="chapters-dropdown-item"><a href="#how-backtracking-is-different-from-recursion">How Backtracking is different from Recursion?</a></div>
+            <div class="chapters-dropdown-item"><a href="#applications-of-backtracking">Applications of Backtracking</a></div>
+            <div class="chapters-dropdown-item"><a href="#must-do-backtracking-problems">Must Do Backtracking Problems</a></div>
+        </div>
+    </div>
+    </div>
       
   </section>
 
+  <!-- Post Content Here -->
+  <div class="content">
+    <h1 id="what-is-Backtracking">What is Backtracking?</h1>
+    <p>Backtracking is a problem-solving algorithmic technique that involves finding a solution incrementally by trying different options and undoing them if they lead to a dead end. It is commonly used in situations where you need to explore multiple possibilities to solve a problem, like searching for a path in a maze or solving puzzles like Sudoku. When a dead end is reached, the algorithm backtracks to the previous decision point and explores a different path until a solution is found or all possibilities have been exhausted.</p>
+    <p>Backtracking can be defined as a general algorithmic technique that considers searching every possible combination in order to solve a computational problem.</p>
+    
+    <hr>
+  
+    <h2 id="basic-terminologies">Basic Terminologies</h2>
+    <ul>
+      <li><strong>Candidate:</strong> A potential choice or element that can be added to the current solution.</li>
+      <li><strong>Solution:</strong> A valid and complete configuration that satisfies all problem constraints.</li>
+      <li><strong>Partial Solution:</strong> An intermediate or incomplete configuration being constructed during the backtracking process.</li>
+      <li><strong>Decision Space:</strong> The set of all possible candidates or choices at each decision point.</li>
+      <li><strong>Decision Point:</strong> A specific step in the algorithm where a candidate is chosen and added to the partial solution.</li>
+      <li><strong>Feasible Solution:</strong> A partial or complete solution that adheres to all constraints.</li>
+      <li><strong>Dead End:</strong> Occurs when a partial solution cannot be extended without violating constraints.</li>
+      <li><strong>Backtrack:</strong> Involves undoing previous decisions and returning to a prior decision point.</li>
+      <li><strong>Search Space:</strong> Includes all possible combinations of candidates and choices.</li>
+      <li><strong>Optimal Solution:</strong> The best possible solution in optimization problems.</li>
+    </ul>
 
+    <br>
+    <hr>
+    <br>
+
+    <h1 id="types-of-backtracking-problems">Types of Backtracking Problems</h1>
+  <p>Backtracking problems can be categorized into three main types:</p>
+  <ul>
+    <li><strong>Decision Problems:</strong> These involve searching for a feasible solution. For example, determining if there exists a subset of numbers that sum up to a given value.</li>
+    <li><strong>Optimization Problems:</strong> In these problems, the goal is to find the best solution among all feasible solutions. An example is finding the shortest path in a graph.</li>
+    <li><strong>Enumeration Problems:</strong> These require finding all possible feasible solutions. For instance, generating all permutations of a given set of numbers.</li>
+  </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <h1 id="how-does-backtracking-works">How Does Backtracking Work?</h1>
+    <p>Backtracking algorithms explore each possible path in order to find a valid solution. This exploration can be understood through the following concepts:</p>
+    
+    <div class="image-container">
+      <!-- Replace the placeholder below with the actual image path -->
+      <img src="https://media.geeksforgeeks.org/wp-content/uploads/20231010124142/backtracking.png" alt="Backtracking Diagram">
+    </div>
+    
+    <p>As shown in the image, “IS” represents the Initial State where the recursion call starts to find a valid solution.</p>
+    <ul>
+      <li><strong>IS (Initial State):</strong> The starting point of the recursion.</li>
+      <li><strong>C (Checkpoints):</strong> Different stages in the recursive calls where decisions are made.</li>
+      <li><strong>TN (Terminal Nodes):</strong> Points where no further recursive calls can be made. These nodes act as the base cases of the recursion, where the current solution is evaluated.</li>
+    </ul>
+    <p>At each Checkpoint, the program makes decisions and moves to other checkpoints until it reaches a Terminal Node. At the Terminal Node, the program determines if the current solution is valid. If the solution is not valid, the program backtracks to the previous checkpoints and explores other paths. For example, in the diagram, TN1 to TN5 are terminal nodes where the solution is not acceptable, while TN6 is where a valid solution is found.</p>
+    <p>The back arrows in the image illustrate backtracking in action, where the program reverts changes made at checkpoints and explores alternative paths.</p>
+
+    <br>
+    <hr>
+    <br>
+    <h1 id="determining-backtracking-problems">Determining Backtracking Problems</h1>
+  <p>Generally, every constraint satisfaction problem can be solved using backtracking. But is it optimal to use backtracking every time? The answer is no. Many problems can be solved using Greedy or Dynamic Programming approaches in logarithmic or polynomial time complexity, which is far better than the exponential complexity of backtracking. However, many problems still exist that can only be solved using backtracking.</p>
+  <p>To understand whether a problem is backtracking-based, consider the following example:</p>
+  
+  <h2 id="problem-example">Problem Example</h2>
+  <p><strong>Problem:</strong> Imagine you have three closed boxes, among which two are empty and one has a gold coin. Your task is to find the gold coin.</p>
+  
+  <h3 id="why-dp-fails">Why Dynamic Programming Fails</h3>
+  <p>Does opening or closing one box affect the other boxes? No, each box is independent, and the state of one box cannot determine the transition for the other boxes. Hence, dynamic programming fails because there is no overlapping subproblem or optimal substructure property.</p>
+  
+  <h3 id="why-greedy-fails">Why Greedy Fails</h3>
+  <p>The Greedy algorithm chooses a local maximum to get a global maximum. In this problem, each box has an equal probability (1/3) of containing the gold coin, so there is no criterion to make a greedy choice.</p>
+  
+  <h3 id="why-backtracking-works">Why Backtracking Works</h3>
+  <p>Backtracking works by brute-forcing each choice. We can choose each box one by one to find the gold coin. If a box is empty, we can close it back, which acts as a backtracking step.</p>
+  
+  <h2 id="backtracking-algorithm">Backtracking Algorithm</h2>
+  <p>For backtracking problems:</p>
+  <ul>
+    <li>The algorithm builds a solution by exploring all possible paths created by the choices in the problem, starting with an empty set <code class="language-python">S = {}</code>.</li>
+    <li>Each choice creates a new subset <code class="language-python">s</code>, which we add to our set <code class="language-python">S</code>.</li>
+    <li>Two cases arise:
+      <ul>
+        <li><code class="language-python">S + s</code> is a valid set.</li>
+        <li><code class="language-python">S + s</code> is not a valid set.</li>
+      </ul>
+    </li>
+  </ul>
+  <p>If the set is valid, we make further choices and repeat the process until a solution is found. Otherwise, we backtrack our decision of including <code class="language-python">s</code> and explore other paths until a solution is found or all possible paths are exhausted.</p>
+
+  <br>
+  <hr>
+  <br>
+
+  <h1 id="pseudocode-for-backtracking">Pseudocode for Backtracking</h1>
+  <p>The best way to implement backtracking is through recursion. The backtracking algorithm can be summarized with the following pseudocode:</p>
+  
+  <pre>
+    <code class="language-python">
+void FIND_SOLUTIONS(parameters):
+
+    if (valid_solution):
+        store_the_solution
+        return
+
+    for (all_choices):
+        if (valid_choice):
+            APPLY(choice)
+            FIND_SOLUTIONS(parameters)
+            BACKTRACK(remove_choice)
+
+    return
+    </code>
+  </pre>
+
+  <br>
+  <hr>
+  <br>
+
+  <h1 id="complexity-analysis-of-backtracking">Complexity Analysis of Backtracking</h1>
+  <p>Since the backtracking algorithm is purely brute force, it performs very poorly in terms of time complexity. Generally, backtracking can have the following time complexities:</p>
+  <ul>
+    <li><strong>Exponential (O(K^N)):</strong> This complexity arises when there are multiple choices at each step, leading to a rapid increase in the number of paths and sub-trees.</li>
+    <li><strong>Factorial (O(N!)):</strong> This complexity occurs in problems where all permutations or combinations are considered, resulting in factorial growth of possible solutions.</li>
+  </ul>
+  <p>These complexities are due to the fact that at each state, we have multiple choices, causing the number of paths to increase and sub-trees to expand rapidly.</p>
+
+  <br>
+  <hr>
+  <br>
+
+  <h1 id="how-backtracking-is-different-from-recursion">How Backtracking is Different from Recursion?</h1>
+  <p>Recursion and backtracking are related concepts in computer science and programming, but they are not the same thing. Let’s explore the key differences between them:</p>
+  
+  <table>
+    <thead>
+      <tr>
+        <th>Recursion</th>
+        <th>Backtracking</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Recursion does not always need backtracking.</td>
+        <td>Backtracking always uses recursion to solve problems.</td>
+      </tr>
+      <tr>
+        <td>Solves problems by breaking them into smaller, similar subproblems and solving them recursively.</td>
+        <td>Solves problems with multiple choices, exploring options systematically, and backtracking when needed.</td>
+      </tr>
+      <tr>
+        <td>Controlled by function calls and call stack.</td>
+        <td>Managed explicitly with loops and state.</td>
+      </tr>
+      <tr>
+        <td>Applications of Recursion: Tree and Graph Traversal, Towers of Hanoi, Divide and Conquer Algorithms, Merge Sort, Quick Sort, and Binary Search.</td>
+        <td>Applications of Backtracking: N Queen problem, Rat in a Maze problem, Knight’s Tour Problem, Sudoku solver, and Graph coloring problems.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <hr>
+  <br>
+
+  <h1 id="applications-of-backtracking">Applications of Backtracking</h1>
+  <p>Backtracking is a powerful algorithmic technique that finds application in various fields. Some notable applications include:</p>
+  <ul>
+    <li><strong>Creating Smart Bots for Board Games:</strong> Used in games like Chess to explore possible moves and strategies.</li>
+    <li><strong>Solving Mazes and Puzzles:</strong> Effective for problems such as the N-Queen problem, Sudoku, and other complex puzzles.</li>
+    <li><strong>Network Routing and Congestion Control:</strong> Helps in finding optimal paths and managing network traffic efficiently.</li>
+    <li><strong>Decryption:</strong> Used in cryptographic algorithms to explore possible keys and decrypt messages.</li>
+    <li><strong>Text Justification:</strong> Used in formatting text to ensure proper alignment and spacing in documents.</li>
+  </ul>
+
+  <br>
+  <hr>
+  <br>
+
+  <h1 id="must-do-backtracking-problems">Must Do Backtracking Problems</h1>
+  <p>Here are some essential backtracking problems you should try:</p>
+  <ul>
+    <li><a href="https://www.geeksforgeeks.org/n-queen-problem-backtracking-3/" target="_blank">N-Queen Problem</a></li>
+    <li><a href="https://www.geeksforgeeks.org/sudoku-backtracking-7/" target="_blank">Solve Sudoku</a></li>
+    <li><a href="https://www.geeksforgeeks.org/m-coloring-problem-backtracking-5/" target="_blank">M-Coloring Problem</a></li>
+    <li><a href="https://www.geeksforgeeks.org/rat-in-a-maze-backtracking-2/" target="_blank">Rat in a Maze</a></li>
+    <li><a href="https://www.geeksforgeeks.org/the-knights-tour-problem-backtracking-1/" target="_blank">The Knight’s Tour Problem</a></li>
+    <li><a href="https://www.geeksforgeeks.org/write-a-c-program-to-print-all-permutations-of-a-given-string/" target="_blank">Permutation of Given String</a></li>
+  </ul>
+  </div>
+  
+  </div>
+  
 
     <!-- Footer -->
     <sectionc id="footer">
@@ -357,6 +529,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../index.js"></script>
   <script src="../pages.js"></script>
+  <!-- Highlight JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 
 </body>

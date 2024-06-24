@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pages.css">
     <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
 </head>
 <body>
     
@@ -72,14 +74,6 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Easy</a></li>
-                      <li><a class="dropdown-item" href="#">Medium</a></li>
-                      <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                  </li>
                   <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
                 </ul>
               </li>
@@ -197,8 +191,8 @@
   <section id="main-content">
     <div class=" container">
       <div class="main-header p-3 pb-md-4 mx-auto">
-        <h2 class="fs-1">DSA for Beginners</h2>
-        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+        <h2 class="fs-1">Greedy Algorithms</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Greedy Algorithm, you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
       </div>
     </div>
     <div class="container px-4 py-5" id="hanging-icons">
@@ -213,7 +207,7 @@
           </div>
           <div>
             <h3 class="fs-2">Chapters</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <p>6 Chapters are there for this module. We will cover all concepts related to Graph Algorithms.</p>
             <a href="#chapters-section" class="btn btn-primary">
               Start learning  
             </a>
@@ -227,9 +221,9 @@
           </div>
           <div>
             <h3 class="fs-2">Quizs</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Quiz on the topics being learnt in this module to enusure your knowlege.</p>
+            <a href="../Practice/Quiz.html" class="btn btn-primary">
+              Quiz
             </a>
           </div>
         </div>
@@ -242,9 +236,9 @@
           </div>
           <div>
             <h3 class="fs-2">Problems</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Practice Problems on the topics being covered in this module.</p>
+            <a href="../Practice/All-DSA-Problems.html" class="btn btn-primary">
+              Practice
             </a>
           </div>
         </div>
@@ -255,42 +249,167 @@
   <!-- Steps to learn DSA part -->
   <section id="steps">
     <div class="container">
-      <h3 class="fs-1" id="chapters-section">Chapters</h3>
-      <div class="steps">
-        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
-          <div class="single-chapter-heading-div">
-              <h3 class="single-chapter-title">Introduction to DSA</h3>
-              <p class="single-chapter-icon-heading">
-                  <span class="single-chapter-icon single-chapter-icon-0">
-                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
-                  </span>
-              </p>
-          </div>
-          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
-              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
-          </div>
-          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
-              <a href="https://www.geeksforgeeks.org/what-is-dsa-dsa-full-form/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is DSA | DSA Full Form</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/data-structure-meaning/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Data Structure?</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/most-important-type-of-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Most important type of Algorithms</p>
-              </a>
-          </div>
+      <div class="sub-heading">
+        <h3 class="fs-1" id="chapters-section">Chapters</h3>
       </div>
+      <!-- New Collapsible Section for DSA Introduction -->
+      <div class="dropdown-container">
+        <div class="dropdown-header" onclick="toggleDropdown()">
+            Greedy Algorithms
+            <span class="dropdown-arrow">▲</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="chapters-dropdown-item"><a href="#what-is-greedy-algorithm">What is Greedy Algorithm?</a></div>
+            <div class="chapters-dropdown-item"><a href="#characteristics-of-greedy-algorithm">Characteristics of Greedy Algorithm</a></div>
+            <div class="chapters-dropdown-item"><a href="#examples-of-greedy-algorithm">Examples of Greedy Algorithm</a></div>
+            <div class="chapters-dropdown-item"><a href="#how-does-the-greedy-algorithm-works">How does the Greedy Algorithm works?</a></div>
+            <div class="chapters-dropdown-item"><a href="#applications-of-greedy-algorithms">Applications of Greedy Algorithms</a></div>
+            <div class="chapters-dropdown-item"><a href="#advantages-and-disadvantages-of-greedy-algorithms">Advantages and Disadvantages of Greedy Algorithms</a></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Post Content Here -->
+    <div class="content">
+      <div class="content-heading">
+          <h1 id="what-is-greedy-algorithm">What is Greedy Algorithm?</h1>
       </div>
+      <div class="content-subheading">
+          <p>A greedy algorithm is a problem-solving technique that makes the best local choice at each step in the hope of finding the global optimum solution. It prioritizes immediate benefits over long-term consequences, making decisions based on the current situation without considering future implications. While this approach can be efficient and straightforward, it doesn’t guarantee the best overall outcome for all problems.</p>
+          <p>However, it’s important to note that not all problems are suitable for greedy algorithms. They work best when the problem exhibits the following properties:</p>
       </div>
-      
-  </section>
+      <div class="content-list">
+          <h2>Properties Suitable for Greedy Algorithms:</h2>
+          <ul>
+              <li><strong>Greedy Choice Property:</strong> The optimal solution can be constructed by making the best local choice at each step.</li>
+              <li><strong>Optimal Substructure:</strong> The optimal solution to the problem contains the optimal solutions to its subproblems.</li>
+          </ul>
+      </div>
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="content-heading">
+        <h1 id="characteristics-of-greedy-algorithm">Characteristics of Greedy Algorithm</h1>
+    </div>
+    <div class="content-list">
+        <h2>Characteristics:</h2>
+        <ul>
+            <li><strong>Simple and Easy to Implement:</strong> Greedy algorithms are straightforward to understand and implement.</li>
+            <li><strong>Efficient Time Complexity:</strong> They often provide quick solutions with efficient time complexity.</li>
+            <li><strong>Optimization for Local Optimal Choice:</strong> Greedy algorithms aim for a locally optimal solution, which ideally leads to a globally optimal solution.</li>
+            <li><strong>Immediate Decision Making:</strong> Decisions in greedy algorithms are made based on current information without reconsidering previous choices.</li>
+            <li><strong>Suitable for Problems with Optimal Substructure:</strong> They are effective for problems that exhibit optimal substructure, where the optimal solution can be constructed from optimal solutions to subproblems.</li>
+        </ul>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+      <h1 id="examples-of-greedy-algorithm">Examples of Greedy Algorithm</h1>
+  </div>
+  <div class="content-list">
+      <h2>Examples:</h2>
+      <ul>
+          <li><strong>Dijkstra’s Algorithm:</strong> Finds the shortest path between two nodes in a graph by always choosing the shortest edge available from the current node.</li>
+          <li><strong>Kruskal’s Algorithm:</strong> Finds the minimum spanning tree of a graph by always choosing the edge with the minimum weight that does not create a cycle.</li>
+          <li><strong>Fractional Knapsack Problem:</strong> Selects items with the highest value-to-weight ratio to fill a knapsack with a limited capacity. Items are chosen in decreasing order of their value-to-weight ratio until the knapsack is full.</li>
+          <li><strong>Scheduling and Resource Allocation:</strong> Can be used to schedule jobs or allocate resources efficiently based on immediate gains.</li>
+          <li><strong>Coin Change Problem:</strong> Makes change for a given amount with the minimum number of coins by always choosing the coin with the highest value that is less than the remaining amount to be changed.</li>
+          <li><strong>Huffman Coding:</strong> Generates a prefix-free code for data compression by constructing a binary tree where characters with higher frequencies receive shorter codes, ensuring efficient compression.</li>
+      </ul>
+  </div>
+
+  <div class="content-heading">
+    <h1 id="how-does-the-greedy-algorithm-works">How Does the Greedy Algorithm Work?</h1>
+</div>
+<div class="content-text">
+    <p>Greedy algorithms solve optimization problems by making the best local choice at each step in the hope of finding the global optimum. Here’s a breakdown of how they work:</p>
+    <ol>
+        <li>Start with the initial state of the problem. This is your starting point.</li>
+        <li>Evaluate all possible choices you can make from the current state.</li>
+        <li>Choose the option that seems best at that moment, without considering future consequences. This is the "greedy" part.</li>
+        <li>Move to the new state based on your chosen option.</li>
+        <li>Repeat steps 2-4 until you reach the goal state or no further progress is possible.</li>
+    </ol>
+    <p>For example, consider making change for 36 using coins with values {1, 2, 5, 10, 20, 50, 100}:</p>
+    <ol>
+        <li>Start with the largest coin value less than or equal to 36, which is 20.</li>
+        <li>Subtract 20 from 36 to get 16, and add one 20 coin to the solution.</li>
+        <li>Repeat with the next largest coin (10), then (5), and finally (1) until the amount to be changed becomes 0.</li>
+    </ol>
+    <p>Using the greedy algorithm, the optimal solution for making change for 36 is one 20 coin, one 10 coin, one 5 coin, and one 1 coin.</p>
+    <p>However, the greedy approach is not always optimal for every problem. For example, it fails to find the maximum weighted path in a graph:</p>
+    <ul>
+        <li>Starting from the root node 10, if we greedily choose the next node with the highest weight, we might end up with a suboptimal path like 10 -> 5, which gives a total weight of 15.</li>
+        <li>The optimal path, however, could be 10 -> 1 -> 30, which gives a total weight of 41.</li>
+    </ul>
+    <p>Therefore, in such cases, a greedy approach is insufficient, and more exhaustive methods are needed to find the optimal solution.</p>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="content-heading">
+  <h1 id="applications-of-greedy-algorithms">Applications of Greedy Algorithms</h1>
+</div>
+<div class="content-text">
+  <p>Greedy algorithms find applications in various optimization problems where making the locally optimal choice at each step leads to a globally optimal solution. Here are some notable applications:</p>
+  <ol>
+      <li>
+          <strong>Dijkstra’s Shortest Path Algorithm:</strong>
+          <p>Finds the shortest path between two nodes in a graph, using a priority queue to always expand the least cost node.</p>
+      </li>
+      <li>
+          <strong>Kruskal’s Minimum Spanning Tree Algorithm:</strong>
+          <p>Finds the minimum spanning tree of a weighted graph by adding edges in increasing order of their weights, ensuring no cycles are formed.</p>
+      </li>
+      <li>
+          <strong>Huffman Coding:</strong>
+          <p>Creates an optimal prefix code for a set of symbols based on their frequencies, where symbols with higher frequencies are assigned shorter codes.</p>
+      </li>
+      <li>
+          <strong>Fractional Knapsack Problem:</strong>
+          <p>Determines the most valuable items to carry in a knapsack with a limited weight capacity, using items’ value-to-weight ratios to maximize the total value.</p>
+      </li>
+      <li>
+          <strong>Activity Selection Problem:</strong>
+          <p>Chooses the maximum number of non-overlapping activities from a set of activities scheduled for the same time period, sorted by their finishing times.</p>
+      </li>
+  </ol>
+  <p>Greedy algorithms are chosen for these applications because they efficiently find solutions that are often close to optimal, leveraging local choices to achieve global optimization.</p>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="content-heading">
+  <h1 id="advantages-and-disadvantages-of-greedy-algorithms">Advantages and Disadvantages of Greedy Algorithms</h1>
+</div>
+<div class="content-text">
+  <h2>Advantages</h2>
+  <ul>
+      <li><strong>Simple and easy to understand:</strong> Greedy algorithms are straightforward to implement and comprehend.</li>
+      <li><strong>Efficient for certain problems:</strong> They provide optimal solutions for specific problems, such as finding the shortest path in graphs with non-negative weights.</li>
+      <li><strong>Fast execution time:</strong> Greedy algorithms generally have lower time complexity compared to other algorithms for certain problems, leading to faster execution.</li>
+      <li><strong>Intuitive and easy to explain:</strong> The decision-making process in greedy algorithms is often intuitive and easy to justify.</li>
+      <li><strong>Can be used as building blocks:</strong> Greedy algorithms can serve as foundational components for more complex algorithms, enhancing problem-solving capabilities.</li>
+  </ul>
+  <h2>Disadvantages</h2>
+  <ul>
+      <li><strong>Not always optimal:</strong> Greedy algorithms may not always produce the best possible solution, as they prioritize local optima.</li>
+      <li><strong>Difficult to prove optimality:</strong> Proving the optimality of a greedy algorithm can be challenging and may require rigorous analysis.</li>
+      <li><strong>Sensitive to input order:</strong> The order of input data can significantly impact the solution generated by a greedy algorithm.</li>
+      <li><strong>Limited applicability:</strong> Greedy algorithms are not suitable for all problems, especially those with complex constraints or where a global optimal solution is necessary.</li>
+  </ul>
+  <p>Despite their limitations, greedy algorithms remain valuable tools for solving optimization problems efficiently and effectively in many practical scenarios.</p>
+</div>
+  </div>
 
 
 
@@ -355,6 +474,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../index.js"></script>
   <script src="../pages.js"></script>
+  <!-- Highlight JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 
 </body>

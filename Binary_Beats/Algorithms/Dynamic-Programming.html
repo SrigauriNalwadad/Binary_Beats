@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pages.css">
     <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
 </head>
 <body>
     
@@ -72,14 +74,6 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Easy</a></li>
-                      <li><a class="dropdown-item" href="#">Medium</a></li>
-                      <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                  </li>
                   <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
                 </ul>
               </li>
@@ -197,8 +191,8 @@
   <section id="main-content">
     <div class=" container">
       <div class="main-header p-3 pb-md-4 mx-auto">
-        <h2 class="fs-1">DSA for Beginners</h2>
-        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+        <h2 class="fs-1">Dynamic Programming</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Dynamic Programming, you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
       </div>
     </div>
     <div class="container px-4 py-5" id="hanging-icons">
@@ -213,7 +207,7 @@
           </div>
           <div>
             <h3 class="fs-2">Chapters</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <p>6 Chapters are there for this module. We will cover all concepts related to Dynamic Programming.</p>
             <a href="#chapters-section" class="btn btn-primary">
               Start learning  
             </a>
@@ -227,9 +221,9 @@
           </div>
           <div>
             <h3 class="fs-2">Quizs</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Quiz on the topics being learnt in this module to enusure your knowlege.</p>
+            <a href="../Practice/Quiz.html" class="btn btn-primary">
+              Quiz
             </a>
           </div>
         </div>
@@ -242,9 +236,9 @@
           </div>
           <div>
             <h3 class="fs-2">Problems</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Practice Problems on the topics being covered in this module.</p>
+            <a href="../Practice/All-DSA-Problems.html" class="btn btn-primary">
+              Practice
             </a>
           </div>
         </div>
@@ -255,42 +249,295 @@
   <!-- Steps to learn DSA part -->
   <section id="steps">
     <div class="container">
-      <h3 class="fs-1" id="chapters-section">Chapters</h3>
-      <div class="steps">
-        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
-          <div class="single-chapter-heading-div">
-              <h3 class="single-chapter-title">Introduction to DSA</h3>
-              <p class="single-chapter-icon-heading">
-                  <span class="single-chapter-icon single-chapter-icon-0">
-                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
-                  </span>
-              </p>
-          </div>
-          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
-              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
-          </div>
-          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
-              <a href="https://www.geeksforgeeks.org/what-is-dsa-dsa-full-form/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is DSA | DSA Full Form</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/data-structure-meaning/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Data Structure?</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/most-important-type-of-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Most important type of Algorithms</p>
-              </a>
-          </div>
+      <div class="sub-heading">
+        <h3 class="fs-1" id="chapters-section">Chapters</h3>
       </div>
-      </div>
-      </div>
-      
-  </section>
+      <!-- New Collapsible Section for DSA Introduction -->
+      <div class="dropdown-container">
+        <div class="dropdown-header" onclick="toggleDropdown()">
+            Dynamic Programming
+            <span class="dropdown-arrow">▲</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="chapters-dropdown-item"><a href="#what-is-dynamic-programming">What is Dynamic Programming (DP)?</a></div>
+            <div class="chapters-dropdown-item"><a href="#characteristics-of-dynamic-programming-algorithm">Characteristics of Dynamic Programming Algorithm</a></div>
+            <div class="chapters-dropdown-item"><a href="#techniques-to-solve-dynamic-programming-problems">Techniques to solve Dynamic Programming Problems</a></div>
+            <div class="chapters-dropdown-item"><a href="#tabulation-vs-memoization">Tabulation(Dynamic Programming) vs Memoization</a></div>
+            <div class="chapters-dropdown-item"><a href="#how-to-solve-a-dynamic-programming-problem">How to solve a Dynamic Programming Problem?</a></div>
+            <div class="chapters-dropdown-item"><a href="#how-to-solve-a-dynamic-programming-problem-through-example">How to solve Dynamic Programming problems through Example?</a></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Post Content Here -->
+     <div class="content">
+    <div class="content-heading">
+        <h1 id="what-is-dynamic-programming">What is Dynamic Programming (DP)?</h1>
+    </div>
+    <p>Last Updated: 14 Mar, 2024</p>
+    <p>Dynamic Programming (DP) is defined as a technique that solves some particular types of problems in polynomial time. DP solutions are faster than the exponential brute-force method and can be easily proven correct.</p>
+    <p>Dynamic Programming is mainly an optimization over plain recursion. Wherever we encounter a recursive solution with repeated calls for the same inputs, Dynamic Programming allows us to optimize by storing the results of subproblems. This avoids redundant computations, thereby reducing time complexities from exponential to polynomial.</p>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+      <h1 id="characteristics-of-dynamic-programming-algorithm">Characteristics of Dynamic Programming Algorithm</h1>
+  </div>
+  <p>In general, Dynamic Programming (DP) is one of the most powerful techniques for solving a certain class of problems. It involves an elegant formulation approach, a straightforward thinking process, and simple coding.</p>
+  <p>Essentially, DP works by solving a problem with a given input and storing the result for future reference, avoiding recomputation. This principle can be summarized as "Remember your Past" :).</p>
+  <p>A strong indicator for using DP is if the problem can be divided into smaller subproblems, with overlapping subproblems. The Optimal Substructure Property ensures that optimal solutions to these subproblems contribute to the optimal solution of the entire problem.</p>
+  <p>The solutions to subproblems can be stored in a table or array (memoization) or computed in a bottom-up manner (tabulation) to prevent redundant computation.</p>
+  <p>Dynamic Programming can be implemented using a recursive algorithm, where solutions to subproblems are found recursively, or using an iterative algorithm, where solutions are derived by working through subproblems in a specific order.</p>
+  <p>Dynamic Programming works based on the following principles:</p>
+  <ol>
+      <li>Characterize the structure of the optimal solution by building a mathematical model.</li>
+      <li>Recursively define the value of the optimal solution.</li>
+      <li>Using a bottom-up approach, compute the value of the optimal solution for each possible subproblem.</li>
+      <li>Construct the optimal solution for the original problem using information computed in the previous step.</li>
+  </ol>
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="content-heading">
+        <h1 id="techniques-to-solve-dynamic-programming-problems">Techniques to Solve Dynamic Programming Problems</h1>
+    </div>
+    <ol>
+        <li><strong>Top-Down (Memoization):</strong> Break down the given problem and check if it has already been solved by looking up the saved answer. If solved, return the saved result; if not, solve it and save the result. This approach is intuitive and easy to implement. It is referred to as Memoization.</li>
+        <li><strong>Bottom-Up (Tabulation):</strong> Analyze the problem to determine the order in which subproblems should be solved, starting from the simplest subproblem and working up to the original problem. This ensures that all required subproblems are solved before tackling the main problem. It is referred to as Dynamic Programming.</li>
+    </ol>
+    <div class="content-subheading">Types of Dynamic Programming Approaches:</div>
+    <p>Dynamic Programming algorithms can be categorized into two main types based on their approach:</p>
+    <ul>
+        <li><strong>Top-Down (Memoization):</strong> Starts solving the problem by breaking it down into smaller subproblems and storing the results of these subproblems. This approach often uses recursion to solve the subproblems.</li>
+        <li><strong>Bottom-Up (Tabulation):</strong> Solves the problem iteratively by solving all subproblems first and using the results to build up to the solution of the original problem. This approach typically uses loops to iterate through the subproblems.</li>
+    </ul>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+      <h1 id="tabulation-vs-memoization">Tabulation vs Memoization</h1>
+  </div>
+  <p>There are two different ways to store the values so that the values of a sub-problem can be reused. Here, we will discuss two patterns of solving dynamic programming (DP) problems:</p>
+  <ul>
+      <li><strong>Tabulation: Bottom-Up</strong></li>
+      <li><strong>Memoization: Top-Down</strong></li>
+  </ul>
+  <p>Before getting to the definitions of the above two terms, consider the following statements:</p>
+  <ul>
+      <li><strong>Version 1:</strong> I will study the theory of DP from GeeksforGeeks, then I will practice some problems on classic DP and hence I will master DP.</li>
+      <li><strong>Version 2:</strong> To Master DP, I would have to practice Dynamic problems and practice problems – Firstly, I would have to study some theories of DP from GeeksforGeeks.</li>
+  </ul>
+  <p>Both versions convey the same idea but differ in the way of conveying the message, which is analogous to the difference between Bottom-Up and Top-Down DP. Version 1 relates to Bottom-Up DP, while Version 2 relates to Top-Down DP.</p>
+  <table>
+      <caption>Comparison of Tabulation and Memoization</caption>
+      <thead>
+          <tr>
+              <th>Criteria</th>
+              <th>Tabulation</th>
+              <th>Memoization</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>State transition relation</td>
+              <td>Difficult to think</td>
+              <td>Easy to think</td>
+          </tr>
+          <tr>
+              <td>Code complexity</td>
+              <td>Gets complicated when many conditions are required</td>
+              <td>Easy and less complicated</td>
+          </tr>
+          <tr>
+              <td>Speed</td>
+              <td>Fast, directly accesses previous states from the table</td>
+              <td>Slow due to a lot of recursive calls and return statements</td>
+          </tr>
+          <tr>
+              <td>Subproblem solving</td>
+              <td>If all subproblems must be solved at least once, outperforms memoized algorithm by a constant factor</td>
+              <td>Only solves subproblems that are definitely required</td>
+          </tr>
+          <tr>
+              <td>Table entries</td>
+              <td>Starting from the first entry, all entries are filled one by one</td>
+              <td>Not all entries are necessarily filled; filled on demand</td>
+          </tr>
+          <tr>
+              <td>Approach</td>
+              <td>Iterative approach (dynamic programming)</td>
+              <td>Recursive approach</td>
+          </tr>
+      </tbody>
+  </table>
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="content-heading">
+        <h1 id="how-to-solve-a-dynamic-programming-problem">How to solve a Dynamic Programming Problem?</h1>
+    </div>
+    <p>To dynamically solve a problem, we need to check two necessary conditions:</p>
+    <ol>
+        <li><strong>Overlapping Subproblems:</strong> When the solutions to the same subproblems are needed repetitively for solving the actual problem. The problem is said to have the overlapping subproblems property.</li>
+        <li><strong>Optimal Substructure Property:</strong> If the optimal solution of the given problem can be obtained by using optimal solutions of its subproblems, then the problem is said to have the optimal substructure property.</li>
+    </ol>
+    <h2>Steps to solve a Dynamic programming problem:</h2>
+    <ol>
+        <li><strong>Identify if it is a Dynamic programming problem.</strong></li>
+        <li><strong>Decide a state expression with the Least parameters.</strong></li>
+        <li><strong>Formulate state and transition relationships.</strong></li>
+        <li><strong>Do tabulation (or memorization).</strong></li>
+    </ol>
+    <h3>1) How to classify a problem as a Dynamic Programming algorithm Problem?</h3>
+    <p>Typically, problems that involve maximizing or minimizing certain quantities, counting problems under certain conditions, or probability problems can be solved using Dynamic Programming. All dynamic programming problems satisfy the overlapping subproblems property, and most classic DP problems also satisfy the optimal substructure property.</p>
+    <h3>2) Deciding the state:</h3>
+    <p>Dynamic programming problems are primarily concerned with defining states and their transitions. The choice of the state must be made carefully to minimize state space and optimize solution complexity.</p>
+    <h3>3) Formulating a relation among the states:</h3>
+    <p>The most challenging part of solving a DP problem involves defining relationships between states. This step requires intuition, observation, and practice to identify how solutions to larger problems can be built from solutions to smaller subproblems.</p>
+    <h3>Example:</h3>
+    <p>Given 3 numbers {1, 3, 5}, find the total number of ways to form a number N using these numbers (allowing repetitions and different arrangements).</p>
+    <ul>
+        <li>State definition: Let state(N) denote the total number of arrangements to form N using {1, 3, 5}.</li>
+        <li>Transition relation: state(N) = state(N-1) + state(N-3) + state(N-5)</li>
+    </ul>
+    <h3>3.1) How to Compute the state?</h3>
+    <p>Compute state(N) by adding the results of smaller subproblems:</p>
+    <ul>
+        <li>state(N) = state(N-1) + state(N-3) + state(N-5)</li>
+    </ul>
+    <h3>4) Adding memoization or tabulation for the state</h3>
+    <p>Memoization optimizes the recursive approach by storing previously computed results:</p>
+    <pre><code class="language-cpp">// Initialize to -1 
+int dp[MAXN];
+
+// This function returns the number of 
+// arrangements to form 'n' 
+int solve(int n) 
+{ 
+    // base case 
+    if (n &lt; 0) 
+        return 0; 
+    if (n == 0) 
+        return 1; 
+
+    // Checking if already calculated 
+    if (dp[n]!=-1) 
+        return dp[n]; 
+
+    // Storing the result and returning 
+    return dp[n] = solve(n-1) + solve(n-3) + solve(n-5); 
+}
+</code></pre>
+    <p>Memoization reduces time complexity by storing and reusing intermediate results, avoiding redundant calculations.</p>
+    <p><strong>Time Complexity:</strong> O(n), as previously computed results are reused.</p>
+    <p><strong>Auxiliary Space:</strong> O(n), due to recursion call stack and storage of computed results.</p>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+      <h1 id="how-to-solve-a-dynamic-programming-problem-through-example">How to solve Dynamic Programming problems through Example?</h1>
+  </div>
+  <p>To dynamically solve a problem, we need to check two necessary conditions:</p>
+  <ol>
+      <li><strong>Overlapping Subproblems:</strong> When the solutions to the same subproblems are needed repetitively for solving the actual problem. The problem is said to have the overlapping subproblems property.</li>
+      <li><strong>Optimal Substructure Property:</strong> If the optimal solution of the given problem can be obtained by using optimal solutions of its subproblems, then the problem is said to have the optimal substructure property.</li>
+  </ol>
+  <h2>Steps to solve a Dynamic programming problem:</h2>
+  <ol>
+      <li><strong>Identify if it is a Dynamic programming problem.</strong></li>
+      <li><strong>Decide a state expression with the Least parameters.</strong></li>
+      <li><strong>Formulate state and transition relationships.</strong></li>
+      <li><strong>Do tabulation (or memorization).</strong></li>
+  </ol>
+  <h3>1) How to classify a problem as a Dynamic Programming algorithm Problem?</h3>
+  <p>Typically, problems that involve maximizing or minimizing certain quantities, counting problems under certain conditions, or probability problems can be solved using Dynamic Programming. All dynamic programming problems satisfy the overlapping subproblems property, and most classic DP problems also satisfy the optimal substructure property.</p>
+  <h3>2) Deciding the state:</h3>
+  <p>Dynamic programming problems are primarily concerned with defining states and their transitions. The choice of the state must be made carefully to minimize state space and optimize solution complexity.</p>
+  <h3>3) Formulating a relation among the states:</h3>
+  <p>The most challenging part of solving a DP problem involves defining relationships between states. This step requires intuition, observation, and practice to identify how solutions to larger problems can be built from solutions to smaller subproblems.</p>
+  <h3>Example:</h3>
+  <p>Given 3 numbers {1, 3, 5}, find the total number of ways to form a number N using these numbers (allowing repetitions and different arrangements).</p>
+  <ul>
+      <li>State definition: Let state(N) denote the total number of arrangements to form N using {1, 3, 5}.</li>
+      <li>Transition relation: state(N) = state(N-1) + state(N-3) + state(N-5)</li>
+  </ul>
+  <h3>3.1) How to Compute the state?</h3>
+  <p>Compute state(N) by adding the results of smaller subproblems:</p>
+  <ul>
+      <li>state(N) = state(N-1) + state(N-3) + state(N-5)</li>
+  </ul>
+  <h3>4) Adding memoization or tabulation for the state</h3>
+  <p>Memoization optimizes the recursive approach by storing previously computed results:</p>
+  <pre><code class="language-cpp">// Initialize to -1 
+  int dp[MAXN];
+  
+  // This function returns the number of 
+  // arrangements to form 'n' 
+  int solve(int n) 
+  { 
+      // base case 
+      if (n &lt; 0) 
+          return 0; 
+      if (n == 0) 
+          return 1; 
+  
+      // Checking if already calculated 
+      if (dp[n]!=-1) 
+          return dp[n]; 
+  
+      // Storing the result and returning 
+      return dp[n] = solve(n-1) + solve(n-3) + solve(n-5); 
+  }
+  </code></pre>
+  <p>Memoization reduces time complexity by storing and reusing intermediate results, avoiding redundant calculations.</p>
+  <p><strong>Time Complexity:</strong> O(n), as previously computed results are reused.</p>
+  <p><strong>Auxiliary Space:</strong> O(n), due to recursion call stack and storage of computed results.</p>
+  <h3>Optimized approach:</h3>
+  <p>Using a bottom-up approach to calculate the Fibonacci sequence, which optimizes both time and space complexities:</p>
+  <pre><code class="language-cpp">// Function for calculating the nth Fibonacci number 
+  int fibo(int n) 
+  { 
+      int prevPrev, prev, curr; 
+    
+      // Storing the base cases 
+      prevPrev = 0; 
+      prev = 1; 
+      curr = 1; 
+    
+      // Using the bottom-up approach 
+      for (int i = 2; i <= n; i++) { 
+          curr = prev + prevPrev; 
+          prevPrev = prev; 
+          prev = curr; 
+      } 
+    
+      // Returning the final answer 
+      return curr; 
+  } 
+    
+  // Drivers code 
+  int main() 
+  { 
+      int n = 5; 
+    
+      // Function Call 
+      cout << fibo(n); 
+      return 0; 
+  }
+  </code></pre>
+  <p>This optimized approach reduces the space complexity to O(1) by storing only the necessary previous two values to compute the next Fibonacci number iteratively.</p>
+  
+</div>
 
 
 
@@ -355,6 +602,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../index.js"></script>
   <script src="../pages.js"></script>
+  <!-- Highlight JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 
 </body>

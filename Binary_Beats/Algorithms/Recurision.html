@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="../pages.css">
     <link rel="icon" type="image/x-icon" href="../Images/Binary_Beats_logo.png">
+    <!-- CSS for code highlight -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/base16/pop.min.css">
 </head>
 <body>
     
@@ -72,14 +74,6 @@
                 </button>
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li><a class="dropdown-item" href="../Practice/All-DSA-Problems.html">All DSA Problems</a></li>
-                  <li class="dropdown-submenu">
-                    <a class="dropdown-item dropdown-toggle" href="#">Practice Problems Difficulty Wise</a>
-                    <ul class="dropdown-menu dropdown-menu-dark">
-                      <li><a class="dropdown-item" href="#">Easy</a></li>
-                      <li><a class="dropdown-item" href="#">Medium</a></li>
-                      <li><a class="dropdown-item" href="#">Hard</a></li>
-                    </ul>
-                  </li>
                   <li><a class="dropdown-item" href="../Practice/Quiz.html">Quiz on DSA</a></li>
                 </ul>
               </li>
@@ -197,8 +191,8 @@
   <section id="main-content">
     <div class=" container">
       <div class="main-header p-3 pb-md-4 mx-auto">
-        <h2 class="fs-1">DSA for Beginners</h2>
-        <p class="fs-6 text-body-secondary">This introductory guide to Data Structures and Algorithms (DSA), you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
+        <h2 class="fs-1">Recursion</h2>
+        <p class="fs-6 text-body-secondary">This introductory guide to Recursion, you will explore the foundational principles of DSA, understand their significance and applications, discover effective strategies for learning, and step-by-step journey for beginners.</p>
       </div>
     </div>
     <div class="container px-4 py-5" id="hanging-icons">
@@ -213,7 +207,7 @@
           </div>
           <div>
             <h3 class="fs-2">Chapters</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+            <p>6 Chapters are there for this module. We will cover all concepts related to Recursion.</p>
             <a href="#chapters-section" class="btn btn-primary">
               Start learning  
             </a>
@@ -227,9 +221,9 @@
           </div>
           <div>
             <h3 class="fs-2">Quizs</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Quiz on the topics being learnt in this module to enusure your knowlege.</p>
+            <a href="../Practice/Quiz.html" class="btn btn-primary">
+              Quiz
             </a>
           </div>
         </div>
@@ -242,9 +236,9 @@
           </div>
           <div>
             <h3 class="fs-2">Problems</h3>
-            <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
-            <a href="#" class="btn btn-primary">
-              Primary button
+            <p>Practice Problems on the topics being covered in this module.</p>
+            <a href="../Practice/All-DSA-Problems.html" class="btn btn-primary">
+              Practice
             </a>
           </div>
         </div>
@@ -255,42 +249,138 @@
   <!-- Steps to learn DSA part -->
   <section id="steps">
     <div class="container">
-      <h3 class="fs-1" id="chapters-section">Chapters</h3>
-      <div class="steps">
-        <div class="single-chapter-div chapter-0" onclick="handleChapterClick(0)">
-          <div class="single-chapter-heading-div">
-              <h3 class="single-chapter-title">Introduction to DSA</h3>
-              <p class="single-chapter-icon-heading">
-                  <span class="single-chapter-icon single-chapter-icon-0">
-                      <i class="single-chapter-symbol" style="transform: rotate(-90deg);">▼</i>
-                  </span>
-              </p>
-          </div>
-          <div class="single-chapter-extra-content-div single-chapter-extra-content-div-0" style="max-height: 0;">
-              <p class="single-chapter-second-icon-heading"><span class="single-chapter-second-icon"></span>5 articles</p>
-          </div>
-          <div class="single-chapter-hidden-div single-chapter-hidden-div-0" style="max-height: 0;">
-              <a href="https://www.geeksforgeeks.org/what-is-dsa-dsa-full-form/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is DSA | DSA Full Form</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/data-structure-meaning/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Data Structure?</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/what-is-data-structure-types-classifications-and-applications/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Data Structure Types, Classifications and Applications</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">What is Algorithm | Introduction to Algorithms</p>
-              </a>
-              <a href="https://www.geeksforgeeks.org/most-important-type-of-algorithms/?ref=roadmap" class="indexes-link" data-page-id="1">
-                  <p class="single-track-title">Most important type of Algorithms</p>
-              </a>
-          </div>
+      <div class="sub-heading">
+        <h3 class="fs-1" id="chapters-section">Chapters</h3>
       </div>
+      <!-- New Collapsible Section for DSA Introduction -->
+      <div class="dropdown-container">
+        <div class="dropdown-header" onclick="toggleDropdown()">
+            Recursion
+            <span class="dropdown-arrow">▲</span>
+        </div>
+        <div class="dropdown-content">
+            <div class="chapters-dropdown-item"><a href="#what-is-an-recursion">What is an Recursion?</a></div>
+            <div class="chapters-dropdown-item"><a href="#need-of-recursion">Need of Recursion</a></div>
+            <div class="chapters-dropdown-item"><a href="#properties-of-recursion">Properties of Recursion</a></div>
+            <div class="chapters-dropdown-item"><a href="#algorithm-steps-for-recursion">Algorithm: Steps for Recursion</a></div>
+            <div class="chapters-dropdown-item"><a href="#example-real-life">Example: Real Applications of Recursion in Programming</a></div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Post Content Here -->
+    <div class="content">
+      <div class="content-heading">
+          <h1 id="what-is-an-recursion">Recursion</h1>
       </div>
+      <div class="content-text">
+          <p>The process in which a function calls itself directly or indirectly is called recursion, and the corresponding function is called a recursive function. Recursive algorithms are particularly useful for solving problems that can be broken down into smaller, similar subproblems.</p>
+          <p>Examples of problems commonly solved using recursion include:</p>
+          <ul>
+              <li>Towers of Hanoi (TOH)</li>
+              <li>Inorder/Preorder/Postorder Tree Traversals</li>
+              <li>Depth-First Search (DFS) of Graph</li>
+          </ul>
+          <p>A recursive function solves a problem by calling a copy of itself to work on a smaller subproblem. This process continues until a base case is reached, which is a scenario where the problem can be solved without further recursion.</p>
+          <p>Key points about recursion:</p>
+          <ul>
+              <li>Recursion involves a function calling itself.</li>
+              <li>It breaks down a problem into smaller, simpler instances of the same problem.</li>
+              <li>Every recursive function must have a base case to terminate the recursion.</li>
+              <li>Recursion is used in various algorithms where problems exhibit a recursive structure.</li>
+          </ul>
+          <p>While recursion can be elegant and intuitive for certain problems, it is essential to manage the recursion depth and ensure that base cases are correctly defined to avoid infinite recursion.</p>
       </div>
-      
-  </section>
+
+      <br>
+      <hr>
+      <br>
+
+      <div class="content-heading">
+        <h2 id="need-of-recursion">Need of Recursion</h2>
+    </div>
+    <div class="content-text">
+        <p>Recursion is a powerful technique that simplifies code structure and enhances readability. It offers several advantages over iterative approaches, which will be elaborated upon later. Recursion is particularly well-suited for tasks that can be defined in terms of smaller, similar subtasks.</p>
+        <p>For example, computing the factorial of a number:</p>
+        <ul>
+            <li>The factorial of a number \( n \) (denoted as \( n! \)) is computed as \( n \times (n-1) \times (n-2) \times \ldots \times 1 \).</li>
+            <li>Using recursion, the factorial function can be defined in a straightforward manner:</li>
+        </ul>
+        <pre><code class="language-cpp">int factorial(int n) {
+    // Base case
+    if (n == 0 || n == 1) {
+        return 1;
+    }
+    // Recursive case
+    return n * factorial(n - 1);
+}</code></pre>
+        <p>In this example, the factorial function calls itself with a smaller input until it reaches the base case (when \( n \) equals 0 or 1), at which point the recursion stops.</p>
+        <p>Key reasons for using recursion include:</p>
+        <ul>
+            <li>Simplicity: Recursion often leads to simpler and more elegant code.</li>
+            <li>Readability: It can make code easier to understand and maintain.</li>
+            <li>Natural fit: Some problems are inherently recursive in nature, making recursion a natural choice for their solution.</li>
+            <li>Reduction of complexity: Recursion can reduce the complexity of code compared to iterative approaches in certain scenarios.</li>
+        </ul>
+        <p>However, recursion requires careful handling of base cases and recursion depth to avoid potential pitfalls such as infinite recursion.</p>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="content-heading">
+      <h2 id="properties-of-recursion">Properties of Recursion</h2>
+  </div>
+  <div class="content-text">
+      <p>Recursion is characterized by several key properties that define its behavior and usage:</p>
+      <ol>
+          <li><strong>Repeated Operations:</strong> Recursion involves performing the same sequence of operations multiple times, with each invocation addressing a smaller or simpler subset of the original problem.</li>
+          <li><strong>Reduction of Input:</strong> At each recursive step, the function operates on smaller inputs, progressively reducing the problem size until reaching a base case.</li>
+          <li><strong>Base Condition:</strong> A critical aspect of recursion is defining a base case, which serves as the termination condition. Without a base case, the recursion would continue indefinitely, leading to stack overflow or infinite loops.</li>
+      </ol>
+      <p>These properties enable recursion to effectively break down complex problems into smaller, manageable subproblems and solve them iteratively until reaching a termination condition.</p>
+  </div>
+
+  <br>
+  <hr>
+  <br>
+
+  <div class="content-heading">
+    <h2 id="algorithm-steps-for-recursion">Algorithm: Steps for Recursion</h2>
+</div>
+<div class="content-text">
+    <p>The algorithmic steps for implementing recursion in a function are outlined below:</p>
+    <ol>
+        <li><strong>Step 1 - Define a base case:</strong> Identify the simplest case where the solution is known or trivial. This base case serves as the termination condition for the recursion, preventing infinite loops.</li>
+        <li><strong>Step 2 - Define a recursive case:</strong> Express the problem in terms of smaller subproblems. Break down the original problem into smaller versions of itself, and call the function recursively to solve each subproblem.</li>
+        <li><strong>Step 3 - Ensure termination:</strong> Ensure that the recursive function progresses towards the base case with each recursive call. This ensures that the recursion terminates and does not continue indefinitely.</li>
+        <li><strong>Step 4 - Combine the solutions:</strong> Combine the solutions of the subproblems to obtain the solution to the original problem. This involves aggregating or processing the results from each recursive call.</li>
+    </ol>
+    <p>By following these steps, recursion can effectively break down complex problems into simpler ones, solve them recursively, and combine the results to achieve the desired solution.</p>
+</div>
+
+<br>
+<hr>
+<br>
+
+<div class="content-heading">
+        <h2 id="example-real-life">Example: Real Applications of Recursion in Programming</h2>
+    </div>
+    <div class="content-text">
+        <p>Recursion is a fundamental technique in computer science and programming with numerous practical applications:</p>
+        <ul>
+            <li><strong>Tree and graph traversal:</strong> Recursive algorithms are used to traverse and search tree and graph data structures, exploring nodes or vertices systematically.</li>
+            <li><strong>Sorting algorithms:</strong> Algorithms like quicksort and merge sort employ recursion to divide data into smaller subarrays or sublists, sort them recursively, and then merge them back together.</li>
+            <li><strong>Divide-and-conquer algorithms:</strong> Recursive techniques are essential in divide-and-conquer approaches, such as the binary search algorithm, which breaks down problems into smaller subproblems.</li>
+            <li><strong>Fractal generation:</strong> Recursive algorithms generate complex fractal patterns like the Mandelbrot set by iteratively applying formulas to generate intricate structures.</li>
+            <li><strong>Backtracking algorithms:</strong> Algorithms that involve making a sequence of decisions, like solving puzzles or finding paths, use recursion to explore all possible solutions and backtrack when necessary.</li>
+            <li><strong>Memoization:</strong> This optimization technique involves caching results of expensive function calls to avoid redundant computations. Recursive functions can be memoized to store and reuse computed results.</li>
+        </ul>
+        <p>These examples illustrate how recursion enables elegant solutions to complex problems in various domains of computer science, making it a versatile and powerful tool for programmers.</p>
+    </div>
+  </div>
+  
 
 
 
@@ -355,6 +445,9 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="../index.js"></script>
   <script src="../pages.js"></script>
+  <!-- Highlight JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
 </body>
 </html>

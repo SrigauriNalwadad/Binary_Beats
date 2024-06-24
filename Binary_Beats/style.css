@@ -155,3 +155,9 @@ body{
 #signinModal .invalid-feedback {
   color: #01b3ef;
 }
+
+#voice-search-btn {
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 25px;
+}

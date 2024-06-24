@@ -135,3 +135,98 @@ function logout(){
     alert("Logout Successful");
     
 }
+
+async function subscribe() {
+    try {
+        // Save order
+        const orderResponse = await fetch("http://localhost:5454/api/order/sub", {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MTkxODc0MDIsImV4cCI6MzQzODM3NTcwNSwiZW1haWwiOiJhY2MxMUBnbWFpbC5jb20ifQ.TB8j0Yup6YnX9gQjqbXeF-Ki7nAwsUjnJEqfNRqKalo'
+            }
+        });
+
+        if (!orderResponse.ok) {
+            throw new Error('Failed to save order: ' + orderResponse.statusText);
+        }
+
+        const order = await orderResponse.json();
+
+        // Payment
+        const paymentResponse = await fetch(`http://localhost:5454/api/payment/${order.id}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        if (!paymentResponse.ok) {
+            throw new Error('Failed to get payment link: ' + paymentResponse.statusText);
+        }
+
+        const payment = await paymentResponse.json();
+        console.log(payment);
+
+        // Redirect to the payment link
+        window.location.href = payment.payment_link_url;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-input');
+    const voiceSearchBtn = document.getElementById('voice-search-btn');
+    const contentItems = document.querySelectorAll('.content-item');
+    const resultsContainer = document.getElementById('search-results');
+
+    // Check if the browser supports the Web Speech API
+    if ('webkitSpeechRecognition' in window) {
+        const recognition = new webkitSpeechRecognition();
+        recognition.continuous = false;
+        recognition.interimResults = false;
+        recognition.lang = 'en-US';
+
+        recognition.onresult = (event) => {
+            const transcript = event.results[0][0].transcript;
+            searchInput.value = transcript;
+            search();
+        };
+
+        recognition.onerror = (event) => {
+            console.error('Speech recognition error:', event.error);
+        };
+
+        voiceSearchBtn.addEventListener('click', () => {
+            recognition.start();
+        });
+    } else {
+        console.warn('Speech recognition not supported in this browser.');
+        voiceSearchBtn.disabled = true;
+    }
+
+    const search = () => {
+        const query = searchInput.value.toLowerCase();
+        resultsContainer.innerHTML = '';
+
+        contentItems.forEach(item => {
+            const title = item.getAttribute('data-title').toLowerCase();
+            if (title.includes(query)) {
+                item.style.display = 'block';
+                resultsContainer.appendChild(item.cloneNode(true));
+            } else {
+                item.style.display = 'none';
+            }
+        });
+    };
+
+    searchInput.addEventListener('input', search);
+});
+
+function searchBtnClick() {
+    const searchInput = document.getElementById('search-input');
+    window.open("http://127.0.0.1:5500/Binary_Beats/Search/Search-results.html?search=" + searchInput.value, "_blank");
+    // alert(searchInput.value);wait let me think
+}
